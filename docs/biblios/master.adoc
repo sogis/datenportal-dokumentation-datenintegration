@@ -1,0 +1,25 @@
+:lang: de
+:imagesdir: images
+:example-caption!:
+:table-caption: Tabelle
+:figure-caption: Abbildung
+:note-caption: Hinweis
+:tip-caption: Tipp
+:xrefstyle: full
+:chapter-refsig: Kapitel
+:section-refsig: Kapitel
+:doctype: book
+:revdate: {localdate}
+:author: Amt für Geoinformation Kanton Solothurn
+
+= Datenintegration
+
+include::datenaufbereitung.adoc[]
+
+include::datenformat_datenstruktur.adoc[]
+
+include::metadaten.adoc[]
+
+include::datenanlieferung.adoc[]
+
+
