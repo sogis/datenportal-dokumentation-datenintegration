@@ -12,7 +12,13 @@
 :revdate: {localdate}
 :author: Amt für Geoinformation Kanton Solothurn
 
-= Datenintegration
+= Datenpublikation
+
+Diese Anleitung begleitet Datenlieferanten der kantonalen Fachämter von der ersten Anmeldung bis zur laufenden Aktualisierung auf daten.so.ch. Sie erklärt, welche Angaben und Dateien Sie vorbereiten, wer Sie unterstützt und wie die Veröffentlichung abläuft.
+
+include::einstieg.adoc[]
+
+include::publikationsprozess.adoc[]
 
 include::datenaufbereitung.adoc[]
 
@@ -22,4 +28,5 @@ include::metadaten.adoc[]
 
 include::datenanlieferung.adoc[]
 
+include::fragen_und_unterstuetzung.adoc[]
 

@@ -1,0 +1,20 @@
+[[einstieg]]
+== Einstieg und Voraussetzungen
+
+Das Datenportal https://daten.so.ch[daten.so.ch] macht öffentliche Statistik- und Verwaltungsdaten des Kantons Solothurn an einem Ort zugänglich: strukturiert, maschinenlesbar und mit Metadaten, die Inhalt und Verwendung erklären. Es ergänzt das https://statistik.so.ch[Statistikportal] und das https://data.geo.so.ch[Geoportal]; es ersetzt diese Angebote nicht.
+
+=== Wer übernimmt welche Aufgabe
+
+Als Fachamt entscheiden Sie, welche Daten Sie bereitstellen möchten, und bleiben für deren Inhalt und Aktualität verantwortlich. Sie bereiten die Daten auf, beschreiben sie und pflegen sie gemäss dem vereinbarten Intervall.
+
+Der Statistikdienst des Amts für Finanzen (AFIN) begleitet Anmeldung, Metadatenerfassung und Qualitätssicherung. Er prüft die Eignung zur Publikation und den Datenschutz und erteilt die fachliche Freigabe. Das Amt für Geoinformation (AGI) verantwortet die technische Integration und den Betrieb. Die <<kontakt,Ansprechpersonen>> unterstützen Sie bei Fragen.
+
+=== Vor der Anmeldung klären
+
+* Der Datensatz ist für die Öffentlichkeit bestimmt und enthält keine schützenswerten privaten Daten oder internen Arbeitsdaten.
+* Er enthält keine Personendaten und ermöglicht keine Rückschlüsse auf Einzelpersonen. Unsicherheiten klären Sie mit AFIN, bevor Sie Dateien zur Publikation anliefern.
+* Die eigentlichen Daten können als <<datenformat,CSV in UTF-8>> bereitgestellt werden. Bei Schwierigkeiten helfen AFIN und AGI bei der Vorbereitung.
+* Eine verantwortliche Person oder Fachstelle mit laufend überwachter E-Mail-Adresse ist benannt.
+* Das vorgesehene Aktualisierungsintervall ist bekannt, beispielsweise jährlich oder quartalsweise.
+
+Metadaten beschreiben das Datenangebot und seine Attribute. Sie werden im <<metadaten,Datenblatt-Editor>> erfasst und getrennt von der CSV-Datei als Datenblatt exportiert. XLSX und Parquet entstehen bei der Verarbeitung aus der CSV-Datei und werden nicht zusätzlich angeliefert.

@@ -1,3 +1,60 @@
-== Datenanlieferung
+[[datenanlieferung]]
+== Daten anliefern und aktualisieren
 
+Wenn Sie die CSV-Datei vorbereitet und das Datenblatt exportiert haben, öffnen Sie die https://daten.so.ch/anlieferung[Datenanlieferung]. Dort gelangen Sie zur Anlieferungsoberfläche in Jenkins, über die Sie Ihre Dateien hochladen und die Verarbeitung starten.
 
+AGI stellt den Organisationsjob und die erforderlichen Berechtigungen bereit. Den Zugang zu Jenkins erhalten Sie von AGI. Wenn Ihre Organisation oder Ihr Datenangebot nicht zur Auswahl steht, wenden Sie sich an die <<kontakt,technische Kontaktstelle>>.
+
+[[lieferpruefung]]
+=== Vor der Lieferung prüfen
+
+* Die fachliche Vorbereitung und die Abstimmung mit AFIN sind erfolgt. Daten und Metadaten enthalten keine Angaben, die einer öffentlichen Publikation entgegenstehen.
+* Die Datendatei erfüllt die <<datenformat,Format- und Strukturvorgaben>>: CSV, UTF-8, Semikolon, eindeutige Spaltennamen, einheitliche Datentypen und keine Erläuterungs- oder Leerzeilen.
+* Spaltennamen und Reihenfolge entsprechen der Attributliste; Einheiten, Codes, Rundungen und fehlende Werte sind verständlich beschrieben.
+* Das Datenblatt lässt sich im Editor exportieren. Prüfen Sie Warnungen ebenfalls fachlich.
+* Datenherr, Kontakt, Nachführung und Zeitbezug sind aktuell. Bei Serien ist klar, welche Ausgabe Sie liefern.
+
+=== Was automatisch geprüft wird
+
+Der Datenblatt-Editor prüft unter anderem Pflichtangaben, Datumswerte und den Zeitbezug. Fehlende Attributbeschreibungen und doppelte Attributnamen führen dort zu Warnungen. Ein exportierbares Datenblatt ist deshalb noch kein Nachweis für die fachliche Qualität oder eine passende CSV-Datei.
+
+Die Lieferverarbeitung prüft nichtleere, eindeutige CSV-Spaltennamen. Ist eine Attributliste hinterlegt, prüft sie deren Namen und Reihenfolge, die Konvertierbarkeit in die deklarierten Datentypen und fehlende Werte in Pflichtspalten. Eine zusätzliche Prüfung gegen ein Datenmodell erfolgt nur, wenn ein solches Modell hinterlegt ist. Die Verarbeitung erstellt XLSX und Parquet aus den CSV-Daten.
+
+Die Einhaltung aller redaktionellen Vorgaben, fachliche Plausibilität, Vollständigkeit der Beschreibungen und Datenschutz beurteilen Fachamt und AFIN beziehungsweise AGI. Eine erfolgreiche automatische Prüfung ersetzt diese Aufgaben nicht.
+
+=== Lieferung in Jenkins starten
+
+. Öffnen Sie den berechtigten Organisationsjob über «Jobs starten» und wählen Sie Ihr Datenangebot.
+. Wählen Sie «Lieferung verarbeiten».
+. Laden Sie je nach Änderung die CSV-Datei, das exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) oder beides hoch. Mindestens eine Datei ist erforderlich.
+. Wenn Sie eine CSV für eine Serie liefern, geben Sie im Feld «Ausgabe» die vereinbarte Bezeichnung ein, beispielsweise `2025`. Bei einer reinen Metadatenlieferung wird keine Ausgabe angegeben.
+. Beschreiben Sie die Änderung im Kommentar, beispielsweise «Jahreslieferung 2025» oder «Erhebungsmethode präzisiert».
+. Stimmen Sie mit AGI ab, ob «Portal nach Veröffentlichung neu laden» gesetzt werden soll. Die Option ist standardmässig ausgeschaltet und setzt eine entsprechende Einrichtung voraus.
+. Wählen Sie «Job starten» und prüfen Sie anschliessend das Ergebnis und gegebenenfalls die Prüfmeldungen.
+
+[cols="1,2,2",options="header"]
+|===
+|Änderung |Dateien |Wirkung
+|Neue oder korrigierte Daten |CSV |Verwendet das bereits angenommene Datenblatt; falls noch keines vorhanden ist, das für das Thema im Repository bereitgestellte Datenblatt.
+|Nur Metadaten |Datenblatt |Aktualisiert die fachlichen Angaben des gesamten Datenblatts. Vorhandene technische Lieferinformationen bleiben erhalten; Daten werden nicht neu konvertiert.
+|Daten und Metadaten |CSV und Datenblatt |Übernimmt die geänderten Beschreibungen und verarbeitet die CSV damit.
+|===
+
+Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gezielten Abgleich eines von AGI beziehungsweise der Themenintegration im Repository gepflegten Datenblatts. Dabei werden keine Dateien hochgeladen. Für Ihre eigenen Dateien verwenden Sie «Lieferung verarbeiten».
+
+=== Rückmeldungen bearbeiten und Veröffentlichung kontrollieren
+
+Bei einem Fehler prüfen Sie die Meldung und korrigieren die betroffene Datei. Beispiele sind abweichende Spaltennamen, eine vertauschte Spaltenreihenfolge, ein Text in einer Zahlenspalte oder ein fehlender Pflichtwert. Exportieren Sie ein korrigiertes Datenblatt erneut und liefern Sie die betroffenen Dateien nochmals an. Bei unklaren technischen Fehlern teilen Sie AGI den betroffenen Job, den Lauf und die Fehlermeldung mit; fachliche Fragen klären Sie mit AFIN.
+
+Ein erfolgreicher Lauf bedeutet nicht in jedem Fall, dass der neue Stand schon im Portal sichtbar ist. Die technische Publikation muss freigegeben sein; ausserdem muss das Portal den veröffentlichten Stand neu laden. AGI übernimmt die technische Freischaltung und kontrolliert den Ladevorgang. Prüfen Sie danach Titel, Zeitbezug, Ausgabe, Metadaten und Downloads im Portal. Ist weiterhin der alte Stand sichtbar, kontaktieren Sie AGI.
+
+[[aktualisierung]]
+=== Bestehende Datenangebote aktualisieren
+
+* *Regelmässige Lieferung:* Aktualisieren Sie gemäss «Nachführung». Behalten Sie CSV-Format, Attributnamen, Reihenfolge und Datentypen bei. Liefern Sie nur die CSV, wenn das Datenblatt weiterhin zutrifft; aktualisieren und liefern Sie es andernfalls mit.
+* *Neue Serienausgabe:* Pflegen Sie Zeitbezug, Beschreibung und gegebenenfalls abweichende Attribute im Datenblatt und stimmen Sie die Freigabe mit AFIN ab. Geben Sie bei der CSV-Lieferung die passende Ausgabe an. Eine bisher unbekannte Ausgabe kann technisch angenommen werden, ist dadurch aber noch nicht fachlich freigegeben.
+* *Metadatenkorrektur:* Importieren Sie das aktuelle Datenblatt, passen Sie beispielsweise Kontakt oder Beschreibung an und liefern Sie das vollständig exportierte Datenblatt ohne CSV. Eine Serienkorrektur betrifft das ganze Datenblatt, nicht nur eine im Lieferformular ausgewählte Ausgabe.
+* *Inhaltliche oder methodische Änderung:* Informieren Sie AFIN und ergänzen Sie die Beschreibung beziehungsweise Erhebungsmethode.
+* *Strukturänderung:* Stimmen Sie neue oder entfernte Spalten, andere Datentypen und ein geändertes Erhebungsdesign vorab mit AFIN und AGI ab. Durchlaufen Sie die Metadatenerfassung und anschliessenden Prüf- und Freigabeschritte erneut. Ändern Sie Identifier oder die Einordnung als einzelner Datensatz beziehungsweise Serie nicht im normalen Lieferlauf.
+
+AFIN pflegt die Übersicht der vereinbarten Aktualisierungsrhythmen und meldet sich bei ausstehenden Lieferungen. Melden Sie absehbare Verzögerungen an die fachliche Kontaktstelle.

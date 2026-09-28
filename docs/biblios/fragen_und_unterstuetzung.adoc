@@ -1,0 +1,44 @@
+[[fragen]]
+== Fragen und Unterstützung
+
+=== Wer entscheidet über die Publikation
+
+Sie schlagen die Daten vor, die Ihr Fachamt bereitstellen möchte. AFIN prüft die Eignung und den Datenschutz und erteilt die fachliche Freigabe. AGI übernimmt die technische Veröffentlichung. Der vollständige Ablauf steht unter <<publikationsprozess,Publikationsprozess>>.
+
+=== Was geschieht bei Personendaten
+
+Daten mit Personendaten oder Rückschlussmöglichkeiten auf Einzelpersonen werden im beschriebenen Publikationsprozess nicht veröffentlicht. AFIN bespricht mit Ihnen, ob eine geeignete Aggregation möglich ist. Klären Sie dies vor der Anlieferung.
+
+=== Wer hilft bei Metadaten und CSV
+
+AFIN unterstützt Sie beim <<metadaten,Erfassen der Metadaten>>. Bei technischen Schwierigkeiten mit dem CSV-Export hilft AGI; die <<csv-aus-excel,Exportanleitung>> beschreibt die wichtigsten Kontrollen. CSV in UTF-8 ist das Anlieferungsformat. XLSX und Parquet werden aus der CSV-Datei erzeugt.
+
+=== Was passiert nach der Anmeldung
+
+AFIN bestätigt Ihre Anmeldung innert weniger Werktage und begleitet die weiteren Schritte. Je nach Umfang und Korrekturbedarf dauert es erfahrungsgemäss einige Wochen bis zur Erstpublikation.
+
+=== Wie oft muss ich aktualisieren
+
+Gemäss dem mit AFIN vereinbarten und im Feld «Nachführung» festgehaltenen Intervall. AFIN meldet sich bei ausstehenden Lieferungen. Für Metadatenkorrekturen und Änderungen am Datenaufbau siehe <<aktualisierung,Aktualisierung>>.
+
+=== Weshalb sehe ich trotz erfolgreichem Lauf noch alte Daten
+
+Verarbeitung, Veröffentlichung und Laden des Portalstands sind getrennte Schritte. Lassen Sie AGI prüfen, ob die technische Publikation freigegeben war und der neue Stand im Portal geladen wurde. Ein im Browser gespeicherter Editorentwurf wurde noch nicht angeliefert.
+
+[[kontakt]]
+=== Kontakt und Unterstützung
+
+[cols="1,2,2",options="header"]
+|===
+|Anliegen |Kontakt |Erreichbarkeit
+|Inhalt, Metadaten, Prozess und Freigabe
+|Patrick Balles, Statistikdienst AFIN
+|mailto:Patrick.Balles@fd.so.ch[Patrick.Balles@fd.so.ch] +
++41 32 627 20 67
+|Technik, Datenformat, Zugang und Infrastruktur
+|Stefan Ziegler, Amt für Geoinformation AGI
+|mailto:Stefan.Ziegler@bd.so.ch[Stefan.Ziegler@bd.so.ch] +
++41 32 627 75 96
+|===
+
+Das öffentliche Portal erreichen Sie unter https://daten.so.ch[daten.so.ch].

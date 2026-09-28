@@ -1,3 +1,4 @@
+[[datenformat]]
 == Datenformat und Datenstruktur
 
 Diese Dokumentation behandelt das Format und die Struktur der anzuliefernden Daten, nicht jedoch die vom Datenportal angebotenen Datenformate.
@@ -7,7 +8,7 @@ Diese Dokumentation behandelt das Format und die Struktur der anzuliefernden Dat
 
 Die Daten müssen im CSV-Format an das Datenportal angeliefert werden. Weil CSV alleine nicht genügend standardisiert ist, müssen weitere Vorgaben gemacht werden.
 
-Die CSV-Dateien müssen UTF-8 kodiert sein und als Trennzeichen das Semikolon (`;`) verwenden. Es wird kein Textbegrenzungszeichen verwendet:
+Die CSV-Dateien müssen UTF-8 kodiert sein und als Trennzeichen das Semikolon (`;`) verwenden. Die erste Zeile enthält die Spaltennamen. Einfache Werte benötigen keine Textbegrenzung; für Texte mit Semikolons oder Anführungszeichen gelten die Regeln unter <<csv-text,Text>>:
 
 ```csv 
 Jahrgang;Auslaender;Auslaenderinnen;Schweizer;Schweizerinnen
@@ -21,10 +22,9 @@ Jahrgang;Auslaender;Auslaenderinnen;Schweizer;Schweizerinnen
 1927;2;1;14;46
 1928;1;1;27;81
 1929;5;5;45;118
-...
 ```
 
-Das entspricht dem Standard-CSV-Export aus Excel. Siehe dazu auch Dokumentation XXXX (Link auf "Prozess-Doku". -> dort ein Einschub wie man mit Excel CSV herstellt).
+Der <<csv-aus-excel,CSV-Export aus Excel>> muss auf diese Vorgaben kontrolliert werden; die regionalen Einstellungen können das Ergebnis beeinflussen.
 
 === Datenstruktur
 
@@ -38,13 +38,17 @@ Die CSV-Dateien werden nach dem Prinzip https://openscapes.org/blog/2020-10-12-t
 
 Keine Spalten-Hierarchien, also keine miteinander zusammengeführten Zellen (z.B. um Ober- und Unterkategorien zu repräsentieren), sondern Oberkategorien in einer ersten Spalte, Unterkategorien in einer zweiten Spalte. 
 
-Spaltenüberschriften (Variabeln):
+[[attributnamen]]
+Spaltenüberschriften (Variablen):
 
+- sind nicht leer und eindeutig, auch bei einem Vergleich ohne Berücksichtigung der Gross- und Kleinschreibung,
 - sind keine alleinstehenden Jahreszahlen oder andere Datumsangaben,
 - beginnen nicht mit einer Zahl,
-- haben keine Leerzeichen, sondern sind entweder zusammengeschrieben (Gross- und Kleinbuchstaben sind möglich) oder besser mittels &laquo;Underscore&raquo; verbunden (z.B. `messtelle_name`),
+- haben keine Leerzeichen, sondern sind entweder zusammengeschrieben (Gross- und Kleinbuchstaben sind möglich) oder besser mittels &laquo;Underscore&raquo; verbunden (z.B. `messstelle_name`),
 - haben keine Umlaute, sondern sind ausgeschrieben als `ae`, `oe`, `ue` und
 - haben keine Sonderzeichen, sondern sind ausgeschrieben (z.B. `prozent` statt `%`).
+
+Namen und Reihenfolge stimmen mit der <<attributbeschreibungen,Attributliste im Datenblatt>> überein.
 
 ==== Pro Beobachtung eine Zeile
 
@@ -65,9 +69,10 @@ Alle Zellen einer Spalte haben dasselbe Daten-Format. Die häufigsten sind:
 
 Einheitsangaben dürfen nicht zusammen mit Werten in derselben Zelle stehen. 
 
+[[csv-text]]
 ===== Text
 
-Werte mit Daten-Format `Text`, die Semikolons enthalten, werden zwingend mittels Anführungs- und Schlusszeichen ein (z.B. `"Französisch; Deutsch"`) geklammert. Das ist wichtig, damit diese Text-Inhalte zusammengehörend interpretiert werden. In Excel entspricht das dem Standardverhalten beim Speichern der Mappe in eine CSV-Datei:
+Textwerte mit Semikolons werden in doppelte Anführungszeichen eingeschlossen, beispielsweise `"Französisch; Deutsch"`. Dadurch bleibt der Inhalt eine einzelne Zelle. Enthält der Text selbst doppelte Anführungszeichen, werden diese verdoppelt und der gesamte Text wird eingeschlossen:
 
 ```csv 
 sprache;jahr
@@ -75,11 +80,16 @@ sprache;jahr
 Deutsch;2026
 ```
 
+```csv
+bezeichnung;jahr
+"Messstelle ""Nord""";2026
+```
+
 ===== Zahl
 
 Werte mit Daten-Format `Zahl` werden einheitlich ohne Hochkommas, Leerzeichen oder andere 1000er-Trennzeichen formatiert.
 
-- Als Dezimaltrennzeichen wir der Punkt verwendet.
+- Als Dezimaltrennzeichen wird der Punkt verwendet.
 - Ob man rundet oder nicht, kommt auf den Datensatz und die Nutzung an. Falls gerundet wird, muss dies aber in den Metadaten deklariert werden.
 
 ===== Datum
@@ -113,7 +123,7 @@ Auf Redundanzen ist zu verzichten. Es sollen keine `Total`-Spalten oder ähnlich
 Spalte `total` ist überflüssig:
 
 ```csv 
-jahr;geprueft;teilweise_geprueft,total
+jahr;geprueft;teilweise_geprueft;total
 2016;10;5;15
 ```
 
@@ -121,12 +131,12 @@ Es kann Fälle geben, wo die Angabe einer Gesamtsumme oder eines Totals sinnvoll
 
 ===== Ausserhalb Nachweisgrenze
 
-Insbesondere bei Messungen kann es vorkommen, dass einzelne Messwerte unter oder über einer Nachweisgrenze sind. In diesem Fall darf bei einer Nachweisgrenze von z.B. `0.01` nicht der Text `< 0.01`, sondern es muss der Werte der Nachweisgrenze eingetragen werden (`0.01`) und es benötigt ein zusätzliches Boolean-Attribut `ist_nachweisgrenze`:
+Insbesondere bei Messungen kann es vorkommen, dass einzelne Messwerte unter oder über einer Nachweisgrenze sind. In diesem Fall darf bei einer Nachweisgrenze von z.B. `0.01` nicht der Text `< 0.01`, sondern es muss der Wert der Nachweisgrenze eingetragen werden (`0.01`) und es benötigt ein zusätzliches Boolean-Attribut `ist_nachweisgrenze`:
 
 ```csv 
 stoff;wert;ist_nachweisgrenze
 giftiger Stoff;0.5;false
-gefährlicher Stoff;0.1;true
+gefährlicher Stoff;0.01;true
 ```
 
-In den Metadaten müssen Nachweisgrenzen pro Attribut beschrieben werden.
+In den Metadaten müssen Nachweisgrenzen pro Attribut beschrieben werden, einschliesslich der Bedeutung und der Richtung der Grenze. Das Boolean-Attribut allein unterscheidet nicht zwischen einer unteren und einer oberen Grenze. Falls beide Fälle in derselben Spalte vorkommen, stimmen Sie deren eindeutige Abbildung mit AFIN und AGI ab.

@@ -1,4 +1,86 @@
-== Erfassung und Nachführung von Metadaten
+[[metadaten]]
+== Metadaten erfassen und nachführen
 
+Metadaten erklären, was Ihre Daten bedeuten, woher sie stammen und wie sie verwendet werden können. Erfassen Sie diese Angaben mit Unterstützung von AFIN im https://daten.so.ch/datenblatt-editor[Datenblatt-Editor].
 
+=== Im Datenblatt-Editor arbeiten
+
+. Legen Sie über «Neues Datenblatt anlegen» einen einzelnen Datensatz oder eine Serie an. Stimmen Sie diese Wahl und den Identifier zuvor mit AGI ab. Für eine Änderung importieren Sie das aktuelle Datenblatt mit «Datenblatt importieren»; bei Serien umfasst es Serienkopf und Ausgaben.
+. Ergänzen Sie die Grundangaben, den Kontakt, Themen, Keywords und den Zeitbezug. Erfassen Sie die Attribute in der Reihenfolge der CSV-Spalten.
+. Prüfen Sie die Meldungen des Editors. Fehler verhindern den Export; Warnungen, insbesondere fehlende Attributbeschreibungen, sind fachlich zu bearbeiten.
+. Wählen Sie «Datenblatt exportieren» und bewahren Sie die XTF-Datei auf. Sie dient der <<datenanlieferung,Anlieferung>> und der späteren Weiterbearbeitung.
+
+Der Editor speichert Entwürfe lokal in Ihrem Browser. Diese Speicherung ist keine Einreichung und keine Sicherung ausserhalb des Browsers. Exportieren Sie wichtige Arbeitsstände. Das Bearbeiten oder Exportieren eines Datenblatts veröffentlicht noch keine Daten im Portal.
+
+=== Fachliche Angaben und Feldnamen
+
+Bereiten Sie die folgenden acht Angaben vor. Die Tabelle ordnet sie den sichtbaren Feldern des Editors zu; sie ist keine vollständige Liste seiner technischen Pflichtfelder.
+
+[cols="1,2,3",options="header"]
+|===
+|Angabe |Feld im Editor |Was Sie vorbereiten
+|Titel |Titel |Aussagekräftiger Name mit geografischem Bezug, mindestens auf Deutsch.
+|Beschreibung |Beschreibung |Inhalt, Zweck, Erhebungsgegenstand und fachliche Einschränkungen. Der Editor erlaubt bis zu 1024 Zeichen.
+|Herausgeber beziehungsweise fachlich verantwortliche Organisation |Datenherr |Das verantwortliche Amt aus der Liste wählen. Fehlt es, AGI kontaktieren.
+|Kontaktstelle |Zuständigkeiten / Kontakt |Name, Organisationseinheit und laufend überwachte Adresse unter «E-Mail / URI»; bei Bedarf Telefon und URL ergänzen.
+|Lizenz beziehungsweise Nutzungsbedingungen |Kein Eingabefeld |Mit AFIN und AGI klären; siehe <<nutzungsbedingungen,Nutzungsbedingungen>>.
+|Stichwörter |Keywords |Aussagekräftige Begriffe mit Kommas trennen, beispielsweise `Wasserqualität, Grundwasser, Nitrat`.
+|Aktualisierungsintervall |Nachführung |Die passende Auswahl verwenden, beispielsweise «Jährlich», «Quartalsweise» oder «Monatlich».
+|Zeitliche Abdeckung |Zeitbezug der Daten |«Zeitraum» mit «Von» und «Bis» oder «Stichtag» mit «Datum» wählen. Datumswerte werden als `YYYY-MM-DD` geführt. «Kein Zeitbezug» nur wählen, wenn fachlich zutreffend.
+|===
+
+Zusätzlich verlangt der Editor unter anderem *Identifier*, *Zugänglichkeit*, *Publikationsstatus*, mindestens ein *Thema* und *Modified*. Übernehmen Sie den mit AGI vereinbarten Identifier unverändert. Die Zugänglichkeit und den Publikationsstatus stimmen Sie mit AFIN ab; eine Statusauswahl ersetzt die formelle Freigabe nicht. «Modified» enthält das Änderungsdatum. Es ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden. Bei der Verarbeitung einer Datenlieferung wird das technische Änderungsdatum anhand des Annahmetags gesetzt.
+
+[[nutzungsbedingungen]]
+=== Nutzungsbedingungen abstimmen
+
+Klären Sie mit AFIN die zulässige Nutzung und lassen Sie AGI prüfen, ob sie in den veröffentlichten Metadaten korrekt abgebildet ist. Der Datenblatt-Editor bietet derzeit kein Lizenzfeld. Die bestehende Verarbeitung erhält vorhandene Lizenzwerte im Katalog; der RDF-Export verwendet derzeit für alle Distributionen `terms_open`. Eine abweichende Vereinbarung ist deshalb vor der Publikation mit AGI abzustimmen und technisch umzusetzen. Eine Lizenzangabe allein im Beschreibungstext ändert diese Verarbeitung nicht.
+
+=== Beispiel für die Erfassung im Browser
+
+Das folgende fiktive Beispiel zeigt die fachlichen Angaben für ein Datenblatt. Identifier und Kontakt sind für eine tatsächliche Lieferung durch die vereinbarten Werte zu ersetzen.
+
+[cols="1,3",options="header"]
+|===
+|Feld |Beispieleingabe
+|Titel |Wasserqualität Grundwasser Kanton Solothurn
+|Beschreibung |Messwerte ausgewählter Stoffe im Grundwasser des Kantons Solothurn. Die Daten dienen dem langfristigen Monitoring. Werte an der Nachweisgrenze sind gekennzeichnet; Einzelheiten stehen in den Attributbeschreibungen.
+|Datenherr |Amt für Umwelt aus dem Katalog auswählen
+|Organisationseinheit |Abteilung Wasser
+|E-Mail / URI |`mailto:grundwasser@example.com` (fiktive Kontaktadresse)
+|Themen |Raum und Umwelt
+|Keywords |`Wasserqualität, Grundwasser, Nitrat`
+|Nachführung |Jährlich
+|Zeitbezug der Daten |Zeitraum: Von `2003-01-01` bis `2024-12-31`
+|===
+
+[[attributbeschreibungen]]
+=== Jede Datenspalte beschreiben
+
+Beschreiben Sie jedes Attribut so, dass auch Personen ohne Kenntnis der Erhebung den Wert richtig verstehen. Das hilft bei der Weiterverwendung und insbesondere bei der Interpretation durch KI-Anwendungen. Der Editor analysiert die CSV-Datei nicht automatisch; die Attributliste ist von Ihnen zu erfassen und mit den Daten abzugleichen.
+
+Verwenden Sie unter «Attribute» beziehungsweise «Serien-Attribute» die Felder *Name*, *Typ*, *Beschreibung*, *Einheit*, *CodeList* und *Pflicht*. Namen und Reihenfolge müssen mit den CSV-Spalten übereinstimmen. «Pflicht» bedeutet, dass in dieser Spalte keine Werte fehlen dürfen. «CodeList» nimmt eine URI zur Codeliste auf; einzelne Codes und ihre Bedeutung können Sie in der Beschreibung erläutern.
+
+Das folgende fiktive Beispiel beschreibt einen Messwert unter einer unteren Nachweisgrenze:
+
+[cols="1,1,3,1",options="header"]
+|===
+|Name |Typ |Beschreibung |Einheit
+|messstelle |TEXT |Kennung der Messstelle; führende Nullen gehören zur Kennung. |Keine
+|messdatum |DATE |Datum der Probenahme. |Keine
+|wert |DECIMAL |Stoffkonzentration. Zulässige Werte sind nicht negativ. Leer bedeutet: kein Messwert verfügbar. Bei `ist_nachweisgrenze=true` ist der eingetragene Wert die untere Nachweisgrenze, nicht eine exakt gemessene Konzentration. |mg/l
+|ist_nachweisgrenze |BOOLEAN |`true`: Wert liegt unter der angegebenen Nachweisgrenze; `false`: regulärer Messwert. Leer, wenn kein Messwert vorliegt. |Keine
+|===
+
+`messstelle` und `messdatum` sind in diesem Beispiel Pflichtattribute, `wert` und `ist_nachweisgrenze` nicht. Es wird keine externe Codeliste benötigt; «CodeList» bleibt leer. Beschreiben Sie für Ihren Datensatz insbesondere Wertebereiche, Codes, Rundungen, fehlende Werte und die Richtung einer Nachweisgrenze. Verwenden Sie keine erfundenen Grenzwerte aus dem Beispiel für reale Daten.
+
+Für die Anlieferung werden die Typen `TEXT`, `INTEGER`, `NUMERIC`, `DECIMAL`, `BOOLEAN`, `DATE` und `DATETIME` verarbeitet. Für eine Spalte mit URLs verwenden Sie derzeit `TEXT`: Die im Editor ebenfalls angebotene Auswahl `URI` wird von der CSV-Verarbeitung noch nicht unterstützt.
+
+=== Ergänzende Angaben und Serien
+
+Ergänzen Sie bei Bedarf *Erhebungsmethode*, *Verfügbare Daten ab*, *Weitere Verwendungen* und *Hilfsdaten*. Fachliche Bemerkungen gehören in die passende Beschreibung. Diese Angaben helfen auch bei der weiteren Katalogisierung und Interoperabilität. Ein ausgefülltes Datenblatt bedeutet nicht automatisch eine Veröffentlichung auf I14Y.
+
+Das Feld *Datenmodell* füllen Sie nach Abstimmung mit AGI aus. Ist ein Modell hinterlegt, verwendet die Verarbeitung es für eine zusätzliche CSV-Prüfung.
+
+Bei einer Serie erfassen Sie gemeinsame Angaben und Attribute im Serienkopf und pflegen die einzelnen Ausgaben. Prüfen Sie abweichende Angaben jeder Ausgabe und markieren Sie genau eine als aktuelle Ausgabe. Stimmen Sie neue Ausgaben und deren Freigabe mit AFIN ab. Für eine Metadatenkorrektur exportieren Sie das ganze Datenblatt einschliesslich der Ausgaben.
 

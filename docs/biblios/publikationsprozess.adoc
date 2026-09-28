@@ -1,0 +1,34 @@
+[[publikationsprozess]]
+== Publikationsprozess
+
+Ein neues Datenangebot durchläuft sieben Schritte. AFIN begleitet Sie durch den gesamten Ablauf; fachliche Freigabe und technische Veröffentlichung sind dabei getrennte Aufgaben.
+
+=== Anmeldung
+
+Schreiben Sie an die <<kontakt,fachliche Kontaktstelle bei AFIN>>. Nennen Sie den Arbeitstitel, eine kurze Inhaltsbeschreibung, Ihre erste Einschätzung zur öffentlichen Zugänglichkeit und das geplante Aktualisierungsintervall. AFIN bestätigt die Anmeldung innert weniger Werktage und klärt offene Fragen mit Ihnen.
+
+=== Metadaten erfassen
+
+Sie erfassen mit Unterstützung von AFIN die fachlichen Angaben im <<metadaten,Datenblatt-Editor>>. Stimmen Sie mit AGI den Identifier und die Einordnung als einzelner Datensatz oder Datensatzserie ab. Beschreiben Sie auch jede Datenspalte. Ergebnis ist ein geprüftes, als XTF exportiertes Datenblatt; AFIN prüft die Angaben begleitend auf Verständlichkeit und Vollständigkeit.
+
+=== Compliance prüfen
+
+AFIN prüft die Datenschutzvorgaben nach InfoDG/InfoDV und die Eignung zur Publikation. Dabei wird insbesondere geklärt, ob Personendaten oder Rückschlüsse auf Einzelpersonen ausgeschlossen sind und ob eine Aggregation nötig ist. Bei Bedarf zieht AFIN den kantonalen Datenschutz bei. Sie erhalten eine Rückmeldung und gegebenenfalls konkrete Aufträge zur Überarbeitung.
+
+=== Lieferung validieren
+
+AGI prüft die technische Verarbeitbarkeit von Daten und Datenblatt. AFIN prüft die Metadaten inhaltlich auf Konsistenz und Vollständigkeit. Bereiten Sie dafür die Dateien gemäss der <<lieferpruefung,Prüfliste>> vor. Bei Mängeln erhalten Sie Korrekturhinweise; nach der Überarbeitung wird erneut geprüft.
+
+=== Fachlich freigeben
+
+Nach positiver Prüfung erteilt AFIN die formelle Freigabe und informiert AGI. Ein erfolgreiches Prüfergebnis im Editor oder ein technisch erfolgreicher Lauf ersetzt diese Freigabe nicht. Änderungen am Publikationsstatus erfolgen entsprechend dem abgestimmten Freigabeentscheid.
+
+=== Technisch veröffentlichen
+
+AGI richtet die erforderliche Verarbeitung und die Zugänge ein und sorgt für die technische Veröffentlichung. Die <<datenanlieferung,Lieferung>> erfolgt über den berechtigten Organisationsjob in Jenkins. AGI stellt sicher, dass der veröffentlichte Stand im Portal geladen wird. Erst danach kontrollieren Sie gemeinsam den Eintrag, die Metadaten und die Downloads auf daten.so.ch.
+
+Von der Anmeldung bis zur Erstpublikation sind je nach Umfang und Korrekturbedarf erfahrungsgemäss einige Wochen einzuplanen.
+
+=== Laufend aktualisieren
+
+Sie liefern die aktualisierten Daten gemäss der vereinbarten Nachführung. Inhaltliche Änderungen und Methodenänderungen melden Sie AFIN; Strukturänderungen stimmen Sie zusätzlich vorab mit AGI ab. Der Ablauf für <<aktualisierung,bestehende Datenangebote>> beschreibt auch reine Metadatenkorrekturen. AFIN führt die Übersicht der Aktualisierungsrhythmen und meldet sich bei ausstehenden Lieferungen.
