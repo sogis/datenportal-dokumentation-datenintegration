@@ -3,7 +3,7 @@
 
 Wenn Sie die CSV-Datei vorbereitet und das Datenblatt exportiert haben, öffnen Sie die https://daten.so.ch/anlieferung[Datenanlieferung]. Dort gelangen Sie zur Anlieferungsoberfläche in Jenkins, über die Sie Ihre Dateien hochladen und die Verarbeitung starten.
 
-AGI stellt den Organisationsjob und die erforderlichen Berechtigungen bereit. Den Zugang zu Jenkins erhalten Sie von AGI. Wenn Ihre Organisation oder Ihr Datenangebot nicht zur Auswahl steht, wenden Sie sich an die <<kontakt,technische Kontaktstelle>>.
+Melden Sie sich mit Ihrem kantonalen Benutzerkonto an. AGI vergibt die Berechtigungen für die Datenanlieferung. Wenn Ihre Organisation oder Ihr Datenangebot nicht zur Auswahl steht, wenden Sie sich an die <<kontakt,technische Kontaktstelle>>.
 
 [[lieferpruefung]]
 === Vor der Lieferung prüfen
