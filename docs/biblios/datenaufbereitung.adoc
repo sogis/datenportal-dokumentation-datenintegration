@@ -26,6 +26,8 @@ Erfüllt der Export die Vorgaben nicht, passen Sie die Exportmöglichkeiten an o
 
 === Datei benennen
 
-Verwenden Sie einen einfachen, sprechenden Dateinamen ohne Leerzeichen, Umlaute oder Sonderzeichen, beispielsweise `bevoelkerung_so.csv` oder `wasserqualitaet.csv`. Unterstriche können Wörter trennen; die Endung ist `.csv`.
+Für den Namen der angelieferten CSV-Datei gelten verbindliche Zeichenregeln: Vor der Dateiendung sind ausschliesslich die Buchstaben `A` bis `Z` und `a` bis `z`, die Ziffern `0` bis `9` sowie Unterstriche (`_`) erlaubt. Leerzeichen, Umlaute und andere Zeichen, beispielsweise Bindestriche oder zusätzliche Punkte, sind unzulässig. Die Endung lautet `.csv`; ihre Gross- und Kleinschreibung ist beliebig, sodass auch `.CSV` zulässig ist. Verwenden Sie einen einfachen, sprechenden Namen, beispielsweise `bevoelkerung_so.csv` oder `wasserqualitaet.csv`. Unterstriche können Wörter trennen.
+
+Wenn Sie die Datei über den Integrationsagenten liefern, prüft dieser den ursprünglichen Dateinamen vor der Weitergabe. Bei einem ungültigen Namen meldet er die Abweichung, schlägt einen zulässigen Namen vor und hält die Weitergabe an. Er benennt die Datei nur auf Ihren ausdrücklichen Auftrag um; die Dateiinhalte bleiben dabei unverändert.
 
 Eine Jahreszahl oder ein Datum im Dateinamen ist nicht vorgeschrieben. Die Verarbeitung vergibt die veröffentlichten Dateinamen. Den fachlichen Datenstand beschreiben Sie über den Zeitbezug im Datenblatt und bei Serien über die Ausgabe im Lieferformular. Die verbindlichen Namensregeln für *Attribute* stehen separat unter <<attributnamen,Spaltenüberschriften>>.
