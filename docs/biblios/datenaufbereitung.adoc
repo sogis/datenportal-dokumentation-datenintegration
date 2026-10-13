@@ -8,6 +8,7 @@ Bereiten Sie eine Tabelle vor, in der jede Zeile eine Beobachtung und jede Spalt
 . Entfernen Sie Fussnoten und Erläuterungstexte aus dem Datenbereich. Beschreiben Sie fachliche Einschränkungen im Datenblatt; beobachtungsbezogene Hinweise können eine eigene, beschriebene Spalte erhalten.
 . Trennen Sie Werte und Einheiten. Beschreiben Sie die Einheit im Datenblatt. Verwenden Sie pro Spalte einen einheitlichen Datentyp und lassen Sie fehlende Werte leer.
 . Prüfen Sie Dezimalpunkte, Datumswerte und Kennungen mit führenden Nullen. Eine Kennung ist häufig Text und keine Zahl.
+. Prüfen Sie bei Daten mit Gemeindebezug, ob die offizielle Gemeindenummer (BFS-Nummer) als eigenes Attribut mitgeliefert wird. Dies wird für die Verknüpfung und Weiterverarbeitung empfohlen; siehe <<gemeindebezug,Gemeindebezug>>.
 . Gleichen Sie Spaltennamen und Reihenfolge mit der <<attributbeschreibungen,Attributliste im Datenblatt>> ab.
 
 [[csv-aus-excel]]
