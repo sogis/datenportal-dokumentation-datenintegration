@@ -31,6 +31,45 @@ Bereiten Sie die folgenden acht Angaben vor. Die Tabelle ordnet sie den sichtbar
 
 Zusätzlich verlangt der Editor unter anderem *Identifier*, *Zugänglichkeit*, *Publikationsstatus*, mindestens ein *Thema* und *Modified*. Übernehmen Sie den mit AGI vereinbarten Identifier unverändert. Die Zugänglichkeit und den Publikationsstatus stimmen Sie mit AFIN ab; eine Statusauswahl ersetzt die formelle Freigabe nicht. «Modified» enthält das Änderungsdatum. Es ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden. Bei der Verarbeitung einer Datenlieferung wird das technische Änderungsdatum anhand des Annahmetags gesetzt.
 
+[[metadaten-markdown]]
+=== Text mit Markdown strukturieren
+
+Beschreibende Metadaten unterstützen eine eingeschränkte Auswahl an Markdown. Sie können damit die *Beschreibungen von Datensätzen, Serien, Ausgaben und Attributen* sowie die Felder *Erhebungsmethode*, *Hilfsdaten* und *Weitere Verwendungen* strukturieren.
+
+Titel, Identifier, Attributnamen, Datentypen, Einheiten, Keywords, Modellnamen, Kontaktangaben, URLs und *Verfügbare Daten ab* bleiben normale Textwerte. Markdown-Zeichen werden dort wörtlich angezeigt.
+
+[cols="1,2l,3",options="header"]
+|===
+|Zweck |Eingabe |Wirkung
+|Technischer Begriff |`bfs_nummer` |Darstellung in einer Schrift mit gleicher Zeichenbreite.
+|Fett |**Wichtig** |Fette Hervorhebung.
+|Kursiv |*Hinweis* |Kursive Hervorhebung.
+|Zeilenumbruch |Eine tatsächlich erfasste neue Zeile |Sichtbarer Zeilenumbruch auf Detailseiten.
+|Absatz |Eine Leerzeile |Beginn eines neuen Absatzes.
+|Aufzählung |- Eintrag |Unnummerierte Liste; jeder Eintrag beginnt auf einer neuen Zeile.
+|Nummerierte Liste |1. Eintrag |Nummerierte Liste; jeder Eintrag beginnt auf einer neuen Zeile. Die Startnummer bleibt erhalten.
+|Wörtliche Sonderzeichen |\*wörtlich\* |Die Sterne bleiben sichtbar; der Text wird nicht kursiv.
+|===
+
+Verwenden Sie für Zeilenumbrüche tatsächlich neue Zeilen, nicht die Zeichenfolge `\n`. Zwei Leerzeichen am Zeilenende sind nicht erforderlich. Mehrzeilige Inhalte gehören in mehrzeilige Textfelder. Listen und Hervorhebungen können verschachtelt werden. Unterstriche sind ebenfalls als Hervorhebungszeichen möglich; innerhalb eines Namens wie `bfs_nummer` bleiben sie unverändert.
+
+Das folgende Beispiel können Sie als Beschreibung erfassen:
+
+....
+Das Attribut `bfs_nummer` enthält die offizielle Gemeindenummer (BFS-Nummer).
+Es dient als Fremdschlüssel zur Verknüpfung mit anderen Datensätzen.
+
+**Hinweise zur Verwendung:**
+- Verwenden Sie die BFS-Nummer für die Verknüpfung.
+- Beschreiben Sie *fehlende Werte* ausdrücklich.
+....
+
+Backticks kennzeichnen technische Begriffe oder Werte. Sie erzeugen keine automatische Verknüpfung mit dem Attributverzeichnis und keine fachliche Referenzprüfung. Wörtlich gemeinte Markdown-Zeichen können Sie mit einem vorangestellten Backslash maskieren, wie in der Tabelle gezeigt.
+
+HTML, Überschriften, Links, Bilder, Blockzitate, Trennlinien und Codeblöcke werden nicht als Formatierung unterstützt. Sie erscheinen einschliesslich ihrer Auszeichnungszeichen und Linkziele als wörtlicher Text. HTML wird nicht ausgeführt. Unvollständige Auszeichnungen verhindern den Import nicht.
+
+Detailseiten zeigen Absätze, Listen und Zeilenumbrüche. In kompakten Listen- und Kartenansichten werden deren Grenzen als Leerzeichen dargestellt; technische Begriffe sowie fette und kursive Hervorhebungen bleiben erhalten.
+
 [[nutzungsbedingungen]]
 === Nutzungsbedingungen abstimmen
 
@@ -61,6 +100,8 @@ Beschreiben Sie jedes Attribut so, dass auch Personen ohne Kenntnis der Erhebung
 
 Verwenden Sie unter «Attribute» beziehungsweise «Serien-Attribute» die Felder *Name*, *Typ*, *Beschreibung*, *Einheit*, *CodeList* und *Pflicht*. Namen und Reihenfolge müssen mit den CSV-Spalten übereinstimmen. «Pflicht» bedeutet, dass in dieser Spalte keine Werte fehlen dürfen. «CodeList» nimmt eine URI zur Codeliste auf; einzelne Codes und ihre Bedeutung können Sie in der Beschreibung erläutern.
 
+Im Feld *Beschreibung* können Sie <<metadaten-markdown,Text mit Markdown strukturieren>>.
+
 Das folgende fiktive Beispiel beschreibt einen Messwert unter einer unteren Nachweisgrenze:
 
 [cols="1,1,3,1",options="header"]
@@ -79,6 +120,8 @@ Für die Anlieferung werden die Typen `TEXT`, `INTEGER`, `NUMERIC`, `DECIMAL`, `
 === Ergänzende Angaben und Serien
 
 Ergänzen Sie bei Bedarf *Erhebungsmethode*, *Verfügbare Daten ab*, *Weitere Verwendungen* und *Hilfsdaten*. Fachliche Bemerkungen gehören in die passende Beschreibung. Diese Angaben helfen auch bei der weiteren Katalogisierung und Interoperabilität. Ein ausgefülltes Datenblatt bedeutet nicht automatisch eine Veröffentlichung auf I14Y.
+
+In *Erhebungsmethode*, *Weitere Verwendungen* und *Hilfsdaten* können Sie <<metadaten-markdown,Markdown verwenden>>. *Verfügbare Daten ab* bleibt ein normaler Textwert.
 
 Das Feld *Datenmodell* füllen Sie nach Abstimmung mit AGI aus. Ist ein Modell hinterlegt, verwendet die Verarbeitung es für eine zusätzliche CSV-Prüfung.
 
