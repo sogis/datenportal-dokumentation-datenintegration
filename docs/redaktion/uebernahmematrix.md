@@ -1,5 +1,49 @@
 # Übernahme der Lieferantenanleitung
 
+## Überarbeitung nach Version 0.7 vom Oktober 2026
+
+Stand: 13. November 2026. Die folgende Überarbeitung ergänzt den historischen
+Abgleich mit Version 0.1 weiter unten. Sie ersetzt dessen sieben Hauptkapitel
+durch neun Kapitel, ohne die Quellen-ID `datenpublikation` oder URL-Struktur
+zu ändern.
+
+| Inhalt aus Version 0.7 | Umsetzung |
+| --- | --- |
+| Zielgruppe, Rollen und Voraussetzungen | Einstieg mit Aufgabenverweisen; CSV-Lieferprozess, kein zusätzlicher Geodaten-Lieferweg. Fachliche Eigenprüfung und vorgängige Abklärung bei Bundesstatistik ergänzt. Keine neue eigenständige Gesetzesauslegung; genaue rechtliche Formulierungen vor Auslieferung fachlich bestätigen. |
+| Drei Schritte ins Portal | Fünf Stationen mit Ergebnis je Station; vorhandene Prüfungen und formelle Freigabe bleiben erhalten. |
+| Datei und Metadaten | Vorbereitung und bestehende technische Regeln in einem Kapitel; fachliche Beschreibung getrennt von der Editorbedienung. Keine ungeprüfte Übernahme von Pflichtfeldlisten, Semikolon-Keywords oder vermeintlich automatischen Feldern. |
+| Qualität und Verknüpfung | Datensatzspezifische Methoden, Grenzen und Vergleichbarkeit in die passenden Beschreibungen; kein erfundenes Feld «Bemerkungen». |
+| Formulierungsvorschlag und terms_by | Kein zu kopierender Haftungstext und keine pauschale Vorgabe für terms_by. Bestehendes terms_open für Geodaten bleibt. Eine zentrale automatische Darstellung allgemeiner Hinweise in Sodata ist eine separate, noch nicht umgesetzte Aufgabe. |
+| Nachführung und Fehlerkorrektur | Eigenes Kapitel mit regelmässiger Lieferung, Serienausgaben, Metadatenkorrektur, datiertem Korrekturhinweis und Meldung wesentlicher Fehler. Bestehende weitere Lieferpflichten ausdrücklich erhalten. |
+| Unterstützung | Kontakte zentral, Pascal Barrière aus Version 0.7 ergänzt. |
+| Screenshots | Zwei abschliessende Bedienungsanleitungen mit vollständigen Schritten und erwarteten Ergebnissen. Vorerst ausdrücklich nur Platzhalter E1–E6 und J1–J6; keine echten Screenshots. |
+
+### Abnahme dieser Überarbeitung
+
+Erstpublikation, regelmässige Lieferung und Fehler-/Metadatenkorrektur anhand
+der neuen Kapitel durchgehen. HTML-Build, neun Hauptkapitel, eindeutige
+Sprungziele und zwölf sichtbare Platzhalter prüfen. PDF-Export, PDF-Layout
+und echte Screenshots bleiben nachgelagerte Arbeiten.
+
+### Prüfergebnis der Überarbeitung
+
+- Biblios hat alle sechs lokalen Quellen erfolgreich gebaut; die Prüfausgabe liegt
+  separat unter `build/validation-site` des zentralen Dokumentationsrepos.
+- Die erzeugte Lieferantenanleitung enthält neun Hauptkapitel und alle zwölf
+  Screenshot-Platzhalter. Die expliziten bisherigen Sprungziele bleiben erhalten.
+- Die IDs im HTML sind eindeutig; alle fragmentinternen Links haben ein Ziel.
+  Include- oder Querverweis-Platzhalter bleiben nicht zurück.
+- Die Abläufe für Erstpublikation, regelmässige Lieferung und Fehler- beziehungsweise
+  Metadatenkorrektur sind in den zugehörigen Kapiteln beschrieben und gegenseitig
+  verlinkt. Die Bedienung wurde anhand der vorhandenen Editorquellen und der
+  Startformular-Dokumentation abgeglichen, ohne produktive Lieferungen auszuführen.
+- Eine visuelle Browserprüfung war in diesem Durchlauf nicht möglich: Der
+  vorhandene Vorschau-Tab zeigte eine Verbindungsfehlerseite. PDF-Ausgabe und
+  echte Screenshots wurden nicht erstellt.
+
+## Historischer Abgleich mit Version 0.1
+
+
 Quelle: `Anleitung_Datenlieferanten_V0_1.docx`, Patrick Balles, AFIN, Mai 2026;
 Kommentare von Stefan Ziegler vom 14. August 2026. Abgleich: 28. September 2026.
 Die organisatorischen Aussagen gelten gemäss Bestätigung des Auftraggebers als

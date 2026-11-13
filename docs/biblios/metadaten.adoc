@@ -1,16 +1,9 @@
 [[metadaten]]
-== Metadaten erfassen und nachführen
+== Daten verständlich beschreiben
 
 Metadaten erklären, was Ihre Daten bedeuten, woher sie stammen und wie sie verwendet werden können. Erfassen Sie diese Angaben mit Unterstützung von AFIN im https://daten.so.ch/datenblatt-editor[Datenblatt-Editor].
 
-=== Im Datenblatt-Editor arbeiten
-
-. Legen Sie über «Neues Datenblatt anlegen» einen einzelnen Datensatz oder eine Serie an. Stimmen Sie diese Wahl und den Identifier zuvor mit AGI ab. Für eine Änderung importieren Sie das aktuelle Datenblatt mit «Datenblatt importieren»; bei Serien umfasst es Serienkopf und Ausgaben.
-. Ergänzen Sie die Grundangaben, den Kontakt, Themen, Keywords und den Zeitbezug. Erfassen Sie die Attribute in der Reihenfolge der CSV-Spalten.
-. Prüfen Sie die Meldungen des Editors. Fehler verhindern den Export; Warnungen, insbesondere fehlende Attributbeschreibungen, sind fachlich zu bearbeiten.
-. Wählen Sie «Datenblatt exportieren» und bewahren Sie die XTF-Datei auf. Sie dient der <<datenanlieferung,Anlieferung>> und der späteren Weiterbearbeitung.
-
-Der Editor speichert Entwürfe lokal in Ihrem Browser. Diese Speicherung ist keine Einreichung und keine Sicherung ausserhalb des Browsers. Exportieren Sie wichtige Arbeitsstände. Das Bearbeiten oder Exportieren eines Datenblatts veröffentlicht noch keine Daten im Portal.
+Die <<anleitung-editor,Schritt-für-Schritt-Anleitung>> zeigt die Bedienung. Bereiten Sie zuerst die fachlichen Angaben in diesem Kapitel vor.
 
 === Fachliche Angaben und Feldnamen
 
@@ -31,51 +24,33 @@ Bereiten Sie die folgenden acht Angaben vor. Die Tabelle ordnet sie den sichtbar
 
 Zusätzlich verlangt der Editor unter anderem *Identifier*, *Zugänglichkeit*, *Publikationsstatus*, mindestens ein *Thema* und *Modified*. Übernehmen Sie den mit AGI vereinbarten Identifier unverändert. Die Zugänglichkeit und den Publikationsstatus stimmen Sie mit AFIN ab; eine Statusauswahl ersetzt die formelle Freigabe nicht. «Modified» enthält das Änderungsdatum. Es ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden. Bei der Verarbeitung einer Datenlieferung wird das technische Änderungsdatum anhand des Annahmetags gesetzt.
 
-[[metadaten-markdown]]
-=== Text mit Markdown strukturieren
+[[qualitaet-und-interpretation]]
+=== Qualität und Grenzen der Interpretation erklären
 
-Beschreibende Metadaten unterstützen eine eingeschränkte Auswahl an Markdown. Sie können damit die *Beschreibungen von Datensätzen, Serien, Ausgaben und Attributen* sowie die Felder *Erhebungsmethode*, *Hilfsdaten* und *Weitere Verwendungen* strukturieren.
+Beschreiben Sie die Daten so, dass Dritte ihre Aussagekraft beurteilen können. Das unterstützt die Suche, die Weiterverwendung und die Auswertung durch KI-Anwendungen und vermindert Rückfragen. Je nach Datenangebot sind insbesondere folgende Angaben wichtig:
 
-Titel, Identifier, Attributnamen, Datentypen, Einheiten, Keywords, Modellnamen, Kontaktangaben, URLs und *Verfügbare Daten ab* bleiben normale Textwerte. Markdown-Zeichen werden dort wörtlich angezeigt.
+* Wie wurden die Daten erhoben, gemessen oder berechnet? Welche Grundgesamtheit und Definitionen gelten?
+* Welche Lücken, Unsicherheiten, Rundungen oder Nachweisgrenzen sind zu beachten?
+* Welche Gebiete und Zeiträume sind vergleichbar? Ab wann haben sich Methode oder Definitionen geändert?
+* Welche Schlüssel eignen sich für die Verknüpfung mit anderen Daten? Welche Unterschiede bei Stichtagen, Gebietsständen oder Definitionen sind dabei zu beachten?
 
-[cols="1,2l,3",options="header"]
-|===
-|Zweck |Eingabe |Wirkung
-|Technischer Begriff |`bfs_nummer` |Darstellung in einer Schrift mit gleicher Zeichenbreite.
-|Fett |**Wichtig** |Fette Hervorhebung.
-|Kursiv |*Hinweis* |Kursive Hervorhebung.
-|Zeilenumbruch |Eine tatsächlich erfasste neue Zeile |Sichtbarer Zeilenumbruch auf Detailseiten.
-|Absatz |Eine Leerzeile |Beginn eines neuen Absatzes.
-|Aufzählung |- Eintrag |Unnummerierte Liste; jeder Eintrag beginnt auf einer neuen Zeile.
-|Nummerierte Liste |1. Eintrag |Nummerierte Liste; jeder Eintrag beginnt auf einer neuen Zeile. Die Startnummer bleibt erhalten.
-|Wörtliche Sonderzeichen |\*wörtlich\* |Die Sterne bleiben sichtbar; der Text wird nicht kursiv.
-|===
+Ordnen Sie diese Hinweise der Beschreibung des Datenangebots, der Erhebungsmethode oder dem betroffenen Attribut zu. Ein eigenes Feld «Bemerkungen» wird im aktuellen Editor nicht angeboten. Wiederholen Sie allgemeine Hinweise zur Nutzung und Verantwortung nicht in jedem Datenblatt.
 
-Verwenden Sie für Zeilenumbrüche tatsächlich neue Zeilen, nicht die Zeichenfolge `\n`. Zwei Leerzeichen am Zeilenende sind nicht erforderlich. Mehrzeilige Inhalte gehören in mehrzeilige Textfelder. Listen und Hervorhebungen können verschachtelt werden. Unterstriche sind ebenfalls als Hervorhebungszeichen möglich; innerhalb eines Namens wie `bfs_nummer` bleiben sie unverändert.
-
-Das folgende Beispiel können Sie als Beschreibung erfassen:
-
-....
-Das Attribut `bfs_nummer` enthält die offizielle Gemeindenummer (BFS-Nummer).
-Es dient als Fremdschlüssel zur Verknüpfung mit anderen Datensätzen.
-
-**Hinweise zur Verwendung:**
-- Verwenden Sie die BFS-Nummer für die Verknüpfung.
-- Beschreiben Sie *fehlende Werte* ausdrücklich.
-....
-
-Backticks kennzeichnen technische Begriffe oder Werte. Sie erzeugen keine automatische Verknüpfung mit dem Attributverzeichnis und keine fachliche Referenzprüfung. Wörtlich gemeinte Markdown-Zeichen können Sie mit einem vorangestellten Backslash maskieren, wie in der Tabelle gezeigt.
-
-HTML, Überschriften, Links, Bilder, Blockzitate, Trennlinien und Codeblöcke werden nicht als Formatierung unterstützt. Sie erscheinen einschliesslich ihrer Auszeichnungszeichen und Linkziele als wörtlicher Text. HTML wird nicht ausgeführt. Unvollständige Auszeichnungen verhindern den Import nicht.
-
-Detailseiten zeigen Absätze, Listen und Zeilenumbrüche. In kompakten Listen- und Kartenansichten werden deren Grenzen als Leerzeichen dargestellt; technische Begriffe sowie fette und kursive Hervorhebungen bleiben erhalten.
+Für das Grundwasserbeispiel könnte eine fachliche Ergänzung lauten: «Ab 2020 wurde die Messmethode geändert. Die Werte früherer Jahre sind deshalb nur eingeschränkt vergleichbar.» Eine solche Aussage darf nur verwendet werden, wenn sie auf den tatsächlichen Datensatz zutrifft. Wie Nachweisgrenzen beschrieben werden, zeigt das <<attributbeschreibungen,Attributbeispiel>>.
 
 [[nutzungsbedingungen]]
-=== Nutzungsbedingungen abstimmen
+=== Nutzungsbedingungen und Verantwortung
 
-Klären Sie mit AFIN die zulässige Nutzung und lassen Sie AGI prüfen, ob sie in den veröffentlichten Metadaten korrekt abgebildet ist. Der Datenblatt-Editor bietet derzeit kein Lizenzfeld. Die bestehende Verarbeitung erhält vorhandene Lizenzwerte im Katalog; der RDF-Export verwendet derzeit für alle Distributionen `terms_open`. Eine abweichende Vereinbarung ist deshalb vor der Publikation mit AGI abzustimmen und technisch umzusetzen. Eine Lizenzangabe allein im Beschreibungstext ändert diese Verarbeitung nicht.
+Die Dienststelle verantwortet Inhalt und Qualität der gelieferten Daten im Rahmen der dokumentierten Methode. Nutzende müssen bei Auswertungen und Verknüpfungen die beschriebenen Definitionen, Zeitbezüge und Einschränkungen berücksichtigen. Die Veröffentlichung eines Datenangebots bedeutet keine fachliche Prüfung oder Bestätigung daraus abgeleiteter Ergebnisse durch die Dienststelle.
 
-=== Beispiel für die Erfassung im Browser
+Klären Sie die geltenden Nutzungsbedingungen mit AFIN und AGI. Es gibt keine pauschale Vorgabe, `terms_by` zu verwenden. Für die bestehenden offenen Geodaten bleibt `terms_open` erhalten; aus einem Nutzungshinweis darf keine zusätzliche Pflicht zur Quellenangabe entstehen. Eine Quellenangabe kann zur Nachvollziehbarkeit empfohlen werden, ohne sie als allgemeine Bedingung festzulegen.
+
+Der Datenblatt-Editor bietet derzeit kein Lizenzfeld. Die Verarbeitung erhält vorhandene Lizenzwerte im Katalog; der RDF-Export verwendet derzeit für alle Distributionen `terms_open`. Abweichende Nutzungsbedingungen sind deshalb vor der Publikation mit AGI abzustimmen und technisch umzusetzen. Eine Lizenzangabe allein im Beschreibungstext ändert diese Verarbeitung nicht.
+
+Allgemeine Nutzungshinweise werden zentral gepflegt. Sie müssen keinen Standardtext zu Haftung oder Verantwortung in jedes Datenblatt kopieren. Erfassen Sie stattdessen die konkreten fachlichen Einschränkungen Ihres Angebots. Eine automatische Ergänzung allgemeiner Hinweise durch das Portal ist derzeit nicht Bestandteil des beschriebenen Lieferprozesses.
+
+[[metadaten-beispiel]]
+=== Beispiel für ein beschriebenes Datenangebot
 
 Das folgende fiktive Beispiel zeigt die fachlichen Angaben für ein Datenblatt. Identifier und Kontakt sind für eine tatsächliche Lieferung durch die vereinbarten Werte zu ersetzen.
 
@@ -126,4 +101,3 @@ In *Erhebungsmethode*, *Weitere Verwendungen* und *Hilfsdaten* können Sie <<met
 Das Feld *Datenmodell* füllen Sie nach Abstimmung mit AGI aus. Ist ein Modell hinterlegt, verwendet die Verarbeitung es für eine zusätzliche CSV-Prüfung.
 
 Bei einer Serie erfassen Sie gemeinsame Angaben und Attribute im Serienkopf und pflegen die einzelnen Ausgaben. Prüfen Sie abweichende Angaben jeder Ausgabe und markieren Sie genau eine als aktuelle Ausgabe. Stimmen Sie neue Ausgaben und deren Freigabe mit AFIN ab. Für eine Metadatenkorrektur exportieren Sie das ganze Datenblatt einschliesslich der Ausgaben.
-

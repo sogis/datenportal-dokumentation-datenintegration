@@ -10,11 +10,11 @@
 :section-refsig: Kapitel
 :doctype: book
 :revdate: {localdate}
-:author: Amt für Geoinformation Kanton Solothurn
+:author: Statistikdienst AFIN und Amt für Geoinformation Kanton Solothurn
 
-= Datenpublikation
+= Anleitung für Datenlieferanten
 
-Diese Anleitung begleitet Datenlieferanten der kantonalen Fachämter von der ersten Anmeldung bis zur laufenden Aktualisierung auf daten.so.ch. Sie erklärt, welche Angaben und Dateien Sie vorbereiten, wer Sie unterstützt und wie die Veröffentlichung abläuft.
+Diese Anleitung begleitet Datenlieferanten der kantonalen Fachämter von der ersten Anmeldung bis zur laufenden Aktualisierung auf daten.so.ch. Sie erklärt den CSV-Lieferprozess mit einem begleitenden Datenblatt: welche Angaben und Dateien Sie vorbereiten, wer Sie unterstützt und wie die Veröffentlichung abläuft. Die letzten beiden Kapitel führen Schritt für Schritt durch die Erfassung der Metadaten und die Anlieferung der (Meta-)Daten an das Datenportal.
 
 include::einstieg.adoc[]
 
@@ -22,11 +22,14 @@ include::publikationsprozess.adoc[]
 
 include::datenaufbereitung.adoc[]
 
-include::datenformat_datenstruktur.adoc[]
-
 include::metadaten.adoc[]
 
 include::datenanlieferung.adoc[]
 
+include::aktualisierung.adoc[]
+
 include::fragen_und_unterstuetzung.adoc[]
 
+include::anleitung_datenblatt_editor.adoc[]
+
+include::anleitung_jenkins.adoc[]

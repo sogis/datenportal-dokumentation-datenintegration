@@ -1,0 +1,44 @@
+[[aktualisierung]]
+== Daten nachführen und Fehler korrigieren
+
+Halten Sie Daten und Beschreibungen gemäss der vereinbarten Nachführung aktuell. AFIN pflegt die Übersicht der Aktualisierungsrhythmen und meldet sich bei ausstehenden Lieferungen. Melden Sie absehbare Verzögerungen frühzeitig an die <<kontakt,fachliche Kontaktstelle>>.
+
+=== Regelmässige Datenlieferung
+
+. Prüfen Sie den neuen Datenstand fachlich und anhand der <<lieferpruefung,Lieferprüfliste>>.
+. Behalten Sie CSV-Format, Attributnamen, Reihenfolge und Datentypen bei.
+. Prüfen Sie Kontakt, Nachführung und Zeitbezug im Datenblatt. Liefern Sie nur die CSV, wenn das vorhandene Datenblatt weiterhin zutrifft. Andernfalls bearbeiten und exportieren Sie auch das Datenblatt neu.
+. <<anleitung-jenkins,Liefern Sie die Dateien über Jenkins>> und kontrollieren Sie nach der Veröffentlichung den Portalstand.
+
+=== Neue Serienausgabe
+
+Pflegen Sie Zeitbezug, Beschreibung und gegebenenfalls abweichende Attribute der neuen Ausgabe im Datenblatt. Prüfen Sie die gemeinsame Beschreibung und markieren Sie genau eine Ausgabe als aktuell. Die <<editor-serien,Editoranleitung für Serien>> erläutert die Bearbeitung.
+
+Stimmen Sie die neue Ausgabe und deren Freigabe mit AFIN ab. Liefern Sie die CSV und bei geänderten Metadaten das vollständig exportierte Datenblatt. Geben Sie im Lieferformular die passende Ausgabe an. Eine bisher unbekannte Ausgabe kann technisch angenommen werden, ist dadurch aber noch nicht fachlich freigegeben.
+
+=== Nur Metadaten korrigieren
+
+Importieren Sie das aktuelle vollständige Datenblatt im Editor. Ändern Sie beispielsweise Kontakt, Beschreibung oder Erhebungsmethode, prüfen Sie die Meldungen und exportieren Sie es erneut. Liefern Sie das Datenblatt ohne CSV und ohne Ausgabeangabe an. Bei einer Serie betrifft die Korrektur das ganze Datenblatt einschliesslich seiner Ausgaben.
+
+Die Lieferung korrigiert die fachlichen Angaben, ohne die Daten neu zu konvertieren. Kontrollieren Sie nach der Veröffentlichung die geänderten Angaben im Portal.
+
+[[fehlerkorrektur]]
+=== Fehler in veröffentlichten Daten korrigieren
+
+. Klären Sie, welche Datenstände und Ausgaben betroffen sind. Melden Sie wesentliche Fehler zusätzlich an AFIN und AGI.
+. Erstellen und prüfen Sie die korrigierte CSV. Ändern Sie dabei die vereinbarte Struktur nicht ohne Abstimmung.
+. Dokumentieren Sie die Korrektur mit Datum und einer verständlichen Beschreibung in der passenden Datensatz- oder Ausgabenbeschreibung. Ein Beispiel ist: «Korrektur vom 2026-10-15: Die Werte der Messstelle Nord für 2024 wurden berichtigt.» Verwenden Sie die tatsächlichen Angaben Ihrer Korrektur.
+. Exportieren Sie das angepasste Datenblatt und liefern Sie es zusammen mit der korrigierten CSV an. Beschreiben Sie die Korrektur auch im Lieferkommentar.
+. Kontrollieren Sie nach der Veröffentlichung die korrigierten Werte und den Korrekturhinweis im Portal.
+
+Ein Lieferkommentar allein ersetzt den sichtbaren Korrekturhinweis in den Metadaten nicht. Hinweise auf mögliche Fehler nimmt die im Datenblatt angegebene Kontaktstelle entgegen.
+
+=== Methode oder Datenstruktur ändern
+
+Informieren Sie AFIN bei inhaltlichen oder methodischen Änderungen und ergänzen Sie Beschreibung und Erhebungsmethode. Erläutern Sie insbesondere, ab wann die neue Methode gilt und welche Auswirkungen sie auf Vergleiche mit früheren Daten hat.
+
+Stimmen Sie neue oder entfernte Spalten, andere Datentypen und ein geändertes Erhebungsdesign vorab mit AFIN und AGI ab. Aktualisieren Sie die Attributbeschreibungen und durchlaufen Sie die erforderlichen Prüf- und Freigabeschritte erneut. Ändern Sie Identifier oder die Einordnung als einzelner Datensatz beziehungsweise Serie nicht im normalen Lieferlauf.
+
+=== Weitere Lieferpflichten beachten
+
+Die Publikation im Datenportal ersetzt keine bestehenden Datenlieferungen an das BFS, andere Bundesstellen, Kantone oder Dritte. Führen Sie diese weiterhin über die vereinbarten Kanäle aus. Beschreiben Sie relevante weitere Verwendungen bei Bedarf im Datenblatt.

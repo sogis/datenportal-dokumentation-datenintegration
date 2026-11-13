@@ -1,7 +1,7 @@
 [[datenaufbereitung]]
-== Datenaufbereitung
+== Daten vorbereiten
 
-Bereiten Sie eine Tabelle vor, in der jede Zeile eine Beobachtung und jede Spalte eine Variable enthält. Die verbindlichen Einzelregeln und Beispiele stehen unter <<datenformat,Datenformat und Datenstruktur>>.
+Bereiten Sie eine Tabelle vor, in der jede Zeile eine Beobachtung und jede Spalte eine Variable enthält. Dieses Kapitel führt von der Vorbereitung über den CSV-Export zu den verbindlichen Format- und Strukturvorgaben.
 
 . Entfernen Sie Titelzeilen oberhalb der Spaltennamen, Leerzeilen und verbundene Zellen. Die erste Zeile enthält die eindeutigen Attributnamen.
 . Lösen Sie mehrstufige Tabellenköpfe auf. Kategorien wie Gebiet oder Messstelle erhalten eigene Spalten.
@@ -32,3 +32,15 @@ Für den Namen der angelieferten CSV-Datei gelten verbindliche Zeichenregeln: Vo
 Wenn Sie die Datei über den Integrationsagenten liefern, prüft dieser den ursprünglichen Dateinamen vor der Weitergabe. Bei einem ungültigen Namen meldet er die Abweichung, schlägt einen zulässigen Namen vor und hält die Weitergabe an. Er benennt die Datei nur auf Ihren ausdrücklichen Auftrag um; die Dateiinhalte bleiben dabei unverändert.
 
 Eine Jahreszahl oder ein Datum im Dateinamen ist nicht vorgeschrieben. Die Verarbeitung vergibt die veröffentlichten Dateinamen. Den fachlichen Datenstand beschreiben Sie über den Zeitbezug im Datenblatt und bei Serien über die Ausgabe im Lieferformular. Die verbindlichen Namensregeln für *Attribute* stehen separat unter <<attributnamen,Spaltenüberschriften>>.
+
+include::datenformat_datenstruktur.adoc[]
+
+=== Aufbereitete Daten prüfen
+
+* Die Datei lässt sich als UTF-8-CSV mit Semikolon lesen; die erste Zeile enthält eindeutige Spaltennamen.
+* Jede Zeile enthält eine Beobachtung und gleich viele Spalten. Titel-, Leer- und Fussnotenzeilen sind entfernt.
+* Zahlen, Kennungen, Datumswerte, fehlende Werte und Textbegrenzungen sind kontrolliert.
+* Namen, Reihenfolge und Typen der Spalten stimmen mit dem Datenblatt überein.
+* Die Daten sind fachlich geprüft; Einheiten, Codes und bekannte Einschränkungen sind im Datenblatt erklärt.
+
+Die vollständige <<lieferpruefung,Prüfliste vor der Lieferung>> umfasst auch Freigabe und Metadaten.

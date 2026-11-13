@@ -1,10 +1,5 @@
 [[datenformat]]
-== Datenformat und Datenstruktur
-
-Diese Dokumentation behandelt das Format und die Struktur der anzuliefernden Daten, nicht jedoch die vom Datenportal angebotenen Datenformate.
-
-
-=== Datenformat
+=== CSV-Format
 
 Die Daten müssen im CSV-Format an das Datenportal angeliefert werden. Weil CSV alleine nicht genügend standardisiert ist, müssen weitere Vorgaben gemacht werden.
 
@@ -28,7 +23,7 @@ Der <<csv-aus-excel,CSV-Export aus Excel>> muss auf diese Vorgaben kontrolliert 
 
 === Datenstruktur
 
-Die CSV-Dateien werden nach dem Prinzip https://openscapes.org/blog/2020-10-12-tidy-data/[&laquo;Tidy Data&raquo;] strukturiert. Das heisst:
+Die CSV-Dateien werden nach dem Prinzip https://openscapes.org/blog/2020-10-12-tidy-data/[«Tidy Data»] strukturiert. Das heisst:
 
 - Pro Variable eine Spalte.
 - Pro Beobachtung eine Zeile
@@ -44,7 +39,7 @@ Spaltenüberschriften (Variablen):
 - sind nicht leer und eindeutig, auch bei einem Vergleich ohne Berücksichtigung der Gross- und Kleinschreibung,
 - sind keine alleinstehenden Jahreszahlen oder andere Datumsangaben,
 - beginnen nicht mit einer Zahl,
-- haben keine Leerzeichen, sondern sind entweder zusammengeschrieben (Gross- und Kleinbuchstaben sind möglich) oder besser mittels &laquo;Underscore&raquo; verbunden (z.B. `messstelle_name`),
+- haben keine Leerzeichen, sondern sind entweder zusammengeschrieben (Gross- und Kleinbuchstaben sind möglich) oder besser mittels «Underscore» verbunden (z.B. `messstelle_name`),
 - haben keine Umlaute, sondern sind ausgeschrieben als `ae`, `oe`, `ue` und
 - haben keine Sonderzeichen, sondern sind ausgeschrieben (z.B. `prozent` statt `%`).
 

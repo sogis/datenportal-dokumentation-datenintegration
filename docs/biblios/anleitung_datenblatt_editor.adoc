@@ -1,0 +1,120 @@
+[[anleitung-editor]]
+== Schritt für Schritt im Datenblatt-Editor
+
+Öffnen Sie https://daten.so.ch/datenblatt-editor[den Datenblatt-Editor]. Erstellen Sie ein Datenblatt für einen einzelnen Datensatz oder eine Serie oder importieren Sie ein vorhandenes Datenblatt. Die fachlichen Anforderungen stehen unter <<metadaten,Daten verständlich beschreiben>>.
+
+Als durchgängiges Beispiel verwenden wir «Wasserqualität Grundwasser Kanton Solothurn» mit den Attributen `messstelle`, `messdatum`, `wert` und `ist_nachweisgrenze`. Die Angaben sind fiktiv; übernehmen Sie für Ihre Lieferung die mit AFIN und AGI abgestimmten Werte.
+
+=== Datenblatt anlegen oder importieren
+
+. Stimmen Sie mit AGI den Identifier und die Wahl zwischen einzelnem Datensatz und Serie ab. Eine Serie fasst mehrere einzeln bezeichnete Ausgaben zusammen.
+. Wählen Sie auf der Startseite im passenden Bereich «Neues Datenblatt anlegen». Für das Beispiel beginnen Sie mit einem einzelnen Datensatz.
+. Für die Weiterbearbeitung wählen Sie stattdessen «Datenblatt importieren» und öffnen die aktuelle exportierte XTF- beziehungsweise XML-Datei. Beginnen Sie bei einer Nachführung mit diesem Datenblatt, damit vorhandene Angaben erhalten bleiben.
+
+*Screenshot-Platzhalter E1:* Startseite mit den Bereichen für einzelne Datensätze und Serien sowie den Aktionen «Neues Datenblatt anlegen» und «Datenblatt importieren».
+
+*Ergebnis:* Ein neues oder importiertes Datenblatt ist zur Bearbeitung geöffnet. Ein Import veröffentlicht noch keine Änderungen.
+
+=== Grundangaben und Kontakt erfassen
+
+. Tragen Sie den vereinbarten Identifier ein beziehungsweise behalten Sie ihn bei einem importierten Datenblatt bei.
+. Erfassen Sie Titel und Beschreibung anhand des <<metadaten-beispiel,Grundwasserbeispiels>>. Verwenden Sie verständliche Begriffe und beschreiben Sie Gegenstand und Zweck.
+. Wählen Sie den Datenherrn und erfassen Sie unter «Zuständigkeiten / Kontakt» eine laufend überwachte E-Mail-Adresse. Im Beispiel verwenden wir `mailto:grundwasser@example.com` ausschliesslich als fiktive Adresse.
+. Ergänzen Sie Themen und komma-getrennte Keywords, im Beispiel `Wasserqualität, Grundwasser, Nitrat`.
+. Stimmen Sie Zugänglichkeit und Publikationsstatus mit AFIN ab. Die Auswahl im Editor ersetzt keine Freigabe.
+
+*Screenshot-Platzhalter E2:* Grundangaben des Beispieldatensatzes mit Titel, Beschreibung, Datenherr, Kontakt, Themen und Keywords; nur fiktive Kontaktdaten.
+
+*Ergebnis:* Das Angebot ist verständlich bezeichnet und einer verantwortlichen Stelle zugeordnet.
+
+=== Zeitbezug und fachliche Ergänzungen pflegen
+
+. Wählen Sie die Nachführung, im Beispiel «Jährlich».
+. Wählen Sie unter «Zeitbezug der Daten» einen Zeitraum oder Stichtag. Im Beispiel umfasst der Zeitraum `2003-01-01` bis `2024-12-31`. Verwenden Sie «Kein Zeitbezug» nur, wenn dies fachlich zutrifft.
+. Prüfen Sie «Modified» als Änderungsdatum des Datenblatts. Dieses Datum ist vom fachlichen Zeitraum der Daten zu unterscheiden.
+. Beschreiben Sie bei Bedarf Erhebungsmethode, verfügbare Daten, weitere Verwendungen und Hilfsdaten. Erfassen Sie konkrete Qualitäts- und Interpretationshinweise in der passenden Beschreibung.
+. Füllen Sie «Datenmodell» nur nach Abstimmung mit AGI aus.
+
+*Screenshot-Platzhalter E3:* Zeitbezug und Nachführung des Beispiels sowie das Feld Erhebungsmethode.
+
+*Ergebnis:* Zeitliche Abdeckung und fachliche Grundlagen sind nachvollziehbar beschrieben.
+
+=== Attribute erfassen und mit der CSV abgleichen
+
+. Erfassen Sie für jede CSV-Spalte ein Attribut in derselben Reihenfolge. Der Editor analysiert die CSV nicht automatisch.
+. Pflegen Sie Name, Typ, Beschreibung und gegebenenfalls Einheit und CodeList. Das <<attributbeschreibungen,Attributbeispiel>> enthält die vier Spalten des Grundwasserbeispiels.
+. Kennzeichnen Sie «Pflicht» nur, wenn in der betreffenden CSV-Spalte keine Werte fehlen dürfen. Im Beispiel sind `messstelle` und `messdatum` Pflichtattribute.
+. Verwenden Sie für URL-Spalten derzeit `TEXT`; die angebotene Auswahl `URI` wird von der Lieferverarbeitung noch nicht unterstützt.
+. Vergleichen Sie Namen und Reihenfolge nochmals direkt mit der CSV-Kopfzeile. Prüfen Sie insbesondere Einheiten, Codes und die Bedeutung fehlender Werte.
+
+*Screenshot-Platzhalter E4:* Attributliste mit den vier Beispielspalten, Typ, Beschreibung, Einheit und Pflichtkennzeichnung.
+
+*Ergebnis:* Jede Datenspalte ist fachlich erklärt und passt zur CSV.
+
+[[editor-serien]]
+=== Serien und Ausgaben bearbeiten
+
+. Legen Sie für eine vereinbarte Serie auf der Startseite ein neues Datenblatt im Bereich für Serien an oder importieren Sie das bestehende vollständige Datenblatt.
+. Pflegen Sie gemeinsame Angaben im Serienkopf und die gemeinsamen Attribute unter «Serien-Attribute».
+. Erfassen beziehungsweise bearbeiten Sie die Ausgaben mit den vereinbarten Bezeichnungen, beispielsweise `2025`. Prüfen Sie den Zeitbezug und allfällige von der Serie abweichende Angaben und Attribute jeder Ausgabe.
+. Markieren Sie genau eine Ausgabe als aktuell und stimmen Sie neue Ausgaben sowie deren Freigabe mit AFIN ab.
+. Exportieren Sie stets das ganze Datenblatt einschliesslich der Ausgaben. Eine reine Metadatenlieferung aktualisiert dieses gesamte Datenblatt.
+
+*Screenshot-Platzhalter E5:* Serienkopf und Ausgabenübersicht mit einer als aktuell markierten Ausgabe sowie der Bearbeitung ihres Zeitbezugs.
+
+*Ergebnis:* Die Serie und ihre Ausgaben sind konsistent beschrieben. Bei der CSV-Lieferung wird die passende Ausgabe zusätzlich im Jenkins-Formular angegeben.
+
+[[metadaten-markdown]]
+=== Text mit Markdown strukturieren
+
+Beschreibende Metadaten unterstützen eine eingeschränkte Auswahl an Markdown. Sie können damit die *Beschreibungen von Datensätzen, Serien, Ausgaben und Attributen* sowie die Felder *Erhebungsmethode*, *Hilfsdaten* und *Weitere Verwendungen* strukturieren.
+
+Titel, Identifier, Attributnamen, Datentypen, Einheiten, Keywords, Modellnamen, Kontaktangaben, URLs und *Verfügbare Daten ab* bleiben normale Textwerte. Markdown-Zeichen werden dort wörtlich angezeigt.
+
+[cols="1,2l,3",options="header"]
+|===
+|Zweck |Eingabe |Wirkung
+|Technischer Begriff |`bfs_nummer` |Darstellung in einer Schrift mit gleicher Zeichenbreite.
+|Fett |**Wichtig** |Fette Hervorhebung.
+|Kursiv |*Hinweis* |Kursive Hervorhebung.
+|Zeilenumbruch |Eine tatsächlich erfasste neue Zeile |Sichtbarer Zeilenumbruch auf Detailseiten.
+|Absatz |Eine Leerzeile |Beginn eines neuen Absatzes.
+|Aufzählung |- Eintrag |Unnummerierte Liste; jeder Eintrag beginnt auf einer neuen Zeile.
+|Nummerierte Liste |1. Eintrag |Nummerierte Liste; jeder Eintrag beginnt auf einer neuen Zeile. Die Startnummer bleibt erhalten.
+|Wörtliche Sonderzeichen |\*wörtlich\* |Die Sterne bleiben sichtbar; der Text wird nicht kursiv.
+|===
+
+Verwenden Sie für Zeilenumbrüche tatsächlich neue Zeilen, nicht die Zeichenfolge `\n`. Zwei Leerzeichen am Zeilenende sind nicht erforderlich. Mehrzeilige Inhalte gehören in mehrzeilige Textfelder. Listen und Hervorhebungen können verschachtelt werden. Unterstriche sind ebenfalls als Hervorhebungszeichen möglich; innerhalb eines Namens wie `bfs_nummer` bleiben sie unverändert.
+
+Das folgende Beispiel können Sie als Beschreibung erfassen:
+
+....
+Das Attribut `bfs_nummer` enthält die offizielle Gemeindenummer (BFS-Nummer).
+Es dient als Fremdschlüssel zur Verknüpfung mit anderen Datensätzen.
+
+**Hinweise zur Verwendung:**
+- Verwenden Sie die BFS-Nummer für die Verknüpfung.
+- Beschreiben Sie *fehlende Werte* ausdrücklich.
+....
+
+Backticks kennzeichnen technische Begriffe oder Werte. Sie erzeugen keine automatische Verknüpfung mit dem Attributverzeichnis und keine fachliche Referenzprüfung. Wörtlich gemeinte Markdown-Zeichen können Sie mit einem vorangestellten Backslash maskieren, wie in der Tabelle gezeigt.
+
+HTML, Überschriften, Links, Bilder, Blockzitate, Trennlinien und Codeblöcke werden nicht als Formatierung unterstützt. Sie erscheinen einschliesslich ihrer Auszeichnungszeichen und Linkziele als wörtlicher Text. HTML wird nicht ausgeführt. Unvollständige Auszeichnungen verhindern den Import nicht.
+
+Detailseiten zeigen Absätze, Listen und Zeilenumbrüche. In kompakten Listen- und Kartenansichten werden deren Grenzen als Leerzeichen dargestellt; technische Begriffe sowie fette und kursive Hervorhebungen bleiben erhalten.
+
+[[editor-pruefen]]
+=== Meldungen prüfen und Datenblatt exportieren
+
+. Prüfen Sie die Meldungen des Editors. Fehler verhindern den Export; korrigieren Sie die bezeichneten Angaben und prüfen Sie erneut.
+. Bearbeiten Sie auch Warnungen fachlich, insbesondere fehlende Attributbeschreibungen und doppelte Attributnamen. Ein möglicher Export bestätigt weder die fachliche Richtigkeit noch die Übereinstimmung mit der CSV.
+. Wählen Sie «Datenblatt exportieren» und speichern Sie die XTF-Datei an einem geeigneten Ablageort Ihrer Dienststelle.
+. Verwenden Sie die exportierte Datei für die <<anleitung-jenkins,Anlieferung in Jenkins>> und als Ausgangspunkt für spätere Änderungen.
+
+*Screenshot-Platzhalter E6:* Prüfmeldungen mit einem Fehler- und einem Warnungsbeispiel sowie die Aktion «Datenblatt exportieren» nach Behebung der Fehler.
+
+*Ergebnis:* Ein geprüftes Datenblatt liegt als Datei vor. Erst die anschliessende Anlieferung und Freigabe führen zur Veröffentlichung.
+
+=== Arbeitsstand sichern und später fortsetzen
+
+Der Editor speichert Entwürfe lokal in Ihrem Browser. Diese Speicherung ist keine Einreichung und keine Sicherung ausserhalb des Browsers. Exportieren Sie wichtige Arbeitsstände und bewahren Sie die aktuelle Datei auf. Öffnen Sie sie zur späteren Weiterbearbeitung über «Datenblatt importieren» und exportieren Sie den geänderten Stand erneut.

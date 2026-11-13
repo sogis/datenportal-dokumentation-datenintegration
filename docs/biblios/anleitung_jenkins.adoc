@@ -1,0 +1,67 @@
+[[anleitung-jenkins]]
+== Schritt für Schritt in Jenkins anliefern
+
+Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt bereit. Welche Dateien Sie für welche Änderung benötigen, erläutert <<datenanlieferung,Daten anliefern und Veröffentlichung prüfen>>. Gehen Sie vor jedem Lauf die <<lieferpruefung,Lieferprüfliste>> durch.
+
+[[jenkins-zugang]]
+=== Anmelden und Datenangebot wählen
+
+. Öffnen Sie https://daten.so.ch/anlieferung[die Datenanlieferung] und melden Sie sich mit Ihrem kantonalen Benutzerkonto an.
+. Öffnen Sie den berechtigten Organisationsjob über «Jobs starten» und wählen Sie Ihr Datenangebot.
+. Fehlt Ihre Organisation oder Ihr Datenangebot, wenden Sie sich an AGI. Die technische Kontaktstelle vergibt Berechtigungen und richtet die Verarbeitung ein.
+
+*Screenshot-Platzhalter J1:* Einstieg nach der Anmeldung mit Organisationsjob und Auswahl des Datenangebots; keine Zugangsdaten oder personenbezogenen Laufdaten.
+
+*Ergebnis:* Das Startformular für das gewünschte Datenangebot ist geöffnet.
+
+=== Dateien hochladen
+
+. Wählen Sie «Lieferung verarbeiten».
+. Laden Sie für neue oder korrigierte Daten die CSV hoch. Laden Sie bei geänderten Metadaten das vollständig exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) hoch. Sie können beide Dateien gemeinsam liefern; mindestens eine Datei ist erforderlich.
+. Prüfen Sie die ausgewählten Dateinamen. Für das Grundwasserbeispiel könnte die Datendatei `wasserqualitaet.csv` heissen. Verwenden Sie Ihr tatsächliches Datenblatt und Ihre geprüfte CSV.
+
+*Screenshot-Platzhalter J2:* Modus «Lieferung verarbeiten» mit ausgewählter CSV und Datenblatt sowie den Dateinamen.
+
+*Ergebnis:* Die zur Änderung passenden Dateien sind ausgewählt. Bei einer reinen Metadatenkorrektur bleibt der CSV-Upload leer.
+
+Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gezielten Abgleich eines von AGI beziehungsweise der Themenintegration im Repository gepflegten Datenblatts. Dabei werden keine Dateien hochgeladen. Für Ihre eigenen Dateien verwenden Sie «Lieferung verarbeiten».
+
+=== Serienausgabe und Lieferkommentar prüfen
+
+. Wenn Sie eine CSV für eine Serie liefern, geben Sie im Feld «Ausgabe» die vereinbarte Bezeichnung ein, beispielsweise `2025`. Prüfen Sie, dass CSV, Zeitbezug und ausgewählte Ausgabe zusammenpassen. Bei einer reinen Metadatenlieferung wird keine Ausgabe angegeben.
+. Beschreiben Sie die Änderung im Kommentar, etwa «Jahreslieferung 2025» oder «Erhebungsmethode präzisiert». Bei einer Fehlerkorrektur nennen Sie den betroffenen Stand und die Korrektur.
+. Stimmen Sie mit AGI ab, ob «Portal nach Veröffentlichung neu laden» gesetzt werden soll. Die Option ist standardmässig ausgeschaltet und setzt eine entsprechende Einrichtung voraus.
+
+*Screenshot-Platzhalter J3:* Serienlieferung mit Ausgabe `2025`, Lieferkommentar und der Option «Portal nach Veröffentlichung neu laden».
+
+*Ergebnis:* Die Lieferung ist eindeutig zugeordnet und die Änderung nachvollziehbar beschrieben. Ein Kommentar allein ersetzt keine erforderliche Anpassung der Metadaten.
+
+[[jenkins-ergebnis]]
+=== Verarbeitung starten und Ergebnis prüfen
+
+. Kontrollieren Sie Datenangebot, Dateien, gegebenenfalls Ausgabe und Kommentar.
+. Wählen Sie «Job starten» und öffnen Sie den zugehörigen Lauf.
+. Prüfen Sie nach Abschluss den Status und allfällige Prüfmeldungen. Beachten Sie den betroffenen Job und die Laufnummer, damit Sie bei Rückfragen auf dieselbe Verarbeitung verweisen können.
+
+*Screenshot-Platzhalter J4:* Abgeschlossener erfolgreicher Lauf mit Status, Laufnummer und Zugang zu den Prüfmeldungen.
+
+*Ergebnis:* Sie kennen das Verarbeitungsergebnis. Ein erfolgreicher Lauf allein bestätigt noch nicht die fachliche Freigabe und Sichtbarkeit im Portal.
+
+=== Fehler beheben und erneut liefern
+
+. Lesen Sie die Fehlermeldung. Prüfen Sie beispielsweise abweichende Spaltennamen, vertauschte Reihenfolge, einen Text in einer Zahlenspalte oder fehlende Pflichtwerte.
+. Korrigieren Sie die betroffene CSV beziehungsweise das Datenblatt. Exportieren Sie ein geändertes Datenblatt erneut.
+. Öffnen Sie das Startformular erneut und wählen Sie die korrigierten Dateien bewusst neu aus. Prüfen Sie auch die Ausgabe und den Kommentar.
+. Starten Sie einen neuen Lauf und kontrollieren Sie dessen Ergebnis. Bei unklaren Fehlern senden Sie AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen klären Sie mit AFIN.
+
+*Screenshot-Platzhalter J5:* Fehlgeschlagener Lauf mit einer verständlichen Prüfmeldung zu einer nicht passenden CSV-Spalte.
+
+*Ergebnis:* Die korrigierte Lieferung wurde erneut geprüft oder die zuständige Kontaktstelle hat genügend Angaben zur Abklärung.
+
+=== Veröffentlichung im Portal kontrollieren
+
+Lassen Sie AGI sicherstellen, dass die technische Publikation freigegeben und der neue Stand im Portal geladen ist. Öffnen Sie danach https://daten.so.ch[daten.so.ch] und kontrollieren Sie Titel, Zeitbezug, gegebenenfalls Serienausgabe, Metadaten und Downloads. Prüfen Sie bei einer Korrektur insbesondere die betroffenen Werte und den sichtbaren Korrekturhinweis.
+
+*Screenshot-Platzhalter J6:* Veröffentlichter Beispieldatensatz im Portal mit Zeitbezug und Downloads.
+
+*Ergebnis:* Der erwartete Stand ist im Portal sichtbar. Bleibt der alte Stand bestehen, teilen Sie AGI Datenangebot und Lieferlauf mit.

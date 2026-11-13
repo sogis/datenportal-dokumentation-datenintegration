@@ -3,6 +3,15 @@
 
 Das Datenportal https://daten.so.ch[daten.so.ch] macht öffentliche Statistik- und Verwaltungsdaten des Kantons Solothurn an einem Ort zugänglich: strukturiert, maschinenlesbar und mit Metadaten, die Inhalt und Verwendung erklären. Es ergänzt das https://statistik.so.ch[Statistikportal] und das https://data.geo.so.ch[Geoportal]; es ersetzt diese Angebote nicht.
 
+=== Den passenden Einstieg finden
+
+* *Neues Datenangebot:* Beginnen Sie mit <<publikationsprozess,Ein Datenangebot erstmals publizieren>>.
+* *Bestehendes Angebot:* Folgen Sie <<aktualisierung,Daten nachführen und Fehler korrigieren>>.
+* *Datenblatt bearbeiten:* Die <<anleitung-editor,Schritt-für-Schritt-Anleitung Metadatenerfassung>> führt durch die Erfassung der Metadaten.
+* *Dateien hochladen:* Die <<anleitung-jenkins,Schritt-für-Schritt-Anleitung Datenlieferung>> zeigt die Anlieferung.
+
+Diese Anleitung beschreibt die Lieferung von CSV-Dateien und Datenblättern. Für die Anlieferung von Geodaten stimmen Sie den geeigneten Weg mit AGI ab.
+
 === Wer übernimmt welche Aufgabe
 
 Als Fachamt entscheiden Sie, welche Daten Sie bereitstellen möchten, und bleiben für deren Inhalt und Aktualität verantwortlich. Sie bereiten die Daten auf, beschreiben sie und pflegen sie gemäss dem vereinbarten Intervall.
@@ -12,7 +21,9 @@ Der Statistikdienst des Amts für Finanzen (AFIN) begleitet Anmeldung, Metadaten
 === Vor der Anmeldung klären
 
 * Der Datensatz ist für die Öffentlichkeit bestimmt und enthält keine schützenswerten privaten Daten oder internen Arbeitsdaten.
-* Er enthält keine Personendaten und ermöglicht keine Rückschlüsse auf Einzelpersonen. Unsicherheiten klären Sie mit AFIN, bevor Sie Dateien zur Publikation anliefern.
+* Er enthält keine Personendaten und ermöglicht keine Rückschlüsse auf einzelne Personen oder Firmen. Unsicherheiten klären Sie mit AFIN, bevor Sie Dateien zur Publikation anliefern.
+* Falls die Daten ganz oder teilweise aus einer Erhebung für die Bundesstatistik stammen, ist mit AFIN vorab zu klären, ob und unter welchen Voraussetzungen sie veröffentlicht werden dürfen.
+* Die Daten sind fachlich auf Plausibilität, Vollständigkeit und Übereinstimmung mit der Quelle geprüft. Die Erhebungsmethode und bekannte Einschränkungen sind dokumentiert.
 * Die eigentlichen Daten können als <<datenformat,CSV in UTF-8>> bereitgestellt werden. Bei Schwierigkeiten helfen AFIN und AGI bei der Vorbereitung.
 * Eine verantwortliche Person oder Fachstelle mit laufend überwachter E-Mail-Adresse ist benannt.
 * Das vorgesehene Aktualisierungsintervall ist bekannt, beispielsweise jährlich oder quartalsweise.

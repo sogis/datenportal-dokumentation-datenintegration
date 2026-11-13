@@ -1,9 +1,5 @@
 [[fragen]]
-== Fragen und Unterstützung
-
-=== Wer entscheidet über die Publikation
-
-Sie schlagen die Daten vor, die Ihr Fachamt bereitstellen möchte. AFIN prüft die Eignung und den Datenschutz und erteilt die fachliche Freigabe. AGI übernimmt die technische Veröffentlichung. Der vollständige Ablauf steht unter <<publikationsprozess,Publikationsprozess>>.
+== Unterstützung und häufige Probleme
 
 === Was geschieht bei Personendaten
 
@@ -13,17 +9,17 @@ Daten mit Personendaten oder Rückschlussmöglichkeiten auf Einzelpersonen werde
 
 AFIN unterstützt Sie beim <<metadaten,Erfassen der Metadaten>>. Bei technischen Schwierigkeiten mit dem CSV-Export hilft AGI; die <<csv-aus-excel,Exportanleitung>> beschreibt die wichtigsten Kontrollen. CSV in UTF-8 ist das Anlieferungsformat. XLSX und Parquet werden aus der CSV-Datei erzeugt.
 
-=== Was passiert nach der Anmeldung
-
-AFIN bestätigt Ihre Anmeldung innert weniger Werktage und begleitet die weiteren Schritte. Je nach Umfang und Korrekturbedarf dauert es erfahrungsgemäss einige Wochen bis zur Erstpublikation.
-
-=== Wie oft muss ich aktualisieren
-
-Gemäss dem mit AFIN vereinbarten und im Feld «Nachführung» festgehaltenen Intervall. AFIN meldet sich bei ausstehenden Lieferungen. Für Metadatenkorrekturen und Änderungen am Datenaufbau siehe <<aktualisierung,Aktualisierung>>.
-
 === Weshalb sehe ich trotz erfolgreichem Lauf noch alte Daten
 
 Verarbeitung, Veröffentlichung und Laden des Portalstands sind getrennte Schritte. Lassen Sie AGI prüfen, ob die technische Publikation freigegeben war und der neue Stand im Portal geladen wurde. Ein im Browser gespeicherter Editorentwurf wurde noch nicht angeliefert.
+
+=== Meine Organisation oder mein Datenangebot fehlt in Jenkins
+
+AGI vergibt die Berechtigungen und richtet die Verarbeitung ein. Teilen Sie der technischen Kontaktstelle mit, mit welchem kantonalen Benutzerkonto Sie sich anmelden und welches Datenangebot fehlt. Weitere Schritte stehen unter <<jenkins-zugang,Anmelden und Datenangebot wählen>>.
+
+=== Der Editor exportiert nicht oder die Verarbeitung schlägt fehl
+
+Bearbeiten Sie zuerst die angezeigten Fehler. Die Abschnitte <<editor-pruefen,Editor prüfen und exportieren>> und <<jenkins-ergebnis,Verarbeitungsergebnis prüfen>> erläutern das Vorgehen. Bei unklaren technischen Fehlern senden Sie AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen richten Sie an AFIN.
 
 [[kontakt]]
 === Kontakt und Unterstützung
@@ -39,6 +35,12 @@ Verarbeitung, Veröffentlichung und Laden des Portalstands sind getrennte Schrit
 |Stefan Ziegler, Amt für Geoinformation AGI
 |mailto:Stefan.Ziegler@bd.so.ch[Stefan.Ziegler@bd.so.ch] +
 +41 32 627 75 96
+|Unterstützung bei der Metadatenbeschreibung aus der Praxis
+|Pascal Barrière, Amt für Umwelt
+|mailto:pascal.barriere@bd.so.ch[pascal.barriere@bd.so.ch] +
++41 32 627 24 54
 |===
+
+AFIN und AGI unterstützen Sie auch beim Erstellen einer lieferfähigen CSV aus Excel oder bestehenden Exporten, beim Umstrukturieren ins Long-Format und beim Einrichten der regelmässigen Nachführung.
 
 Das öffentliche Portal erreichen Sie unter https://daten.so.ch[daten.so.ch].
