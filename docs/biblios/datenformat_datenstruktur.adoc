@@ -19,7 +19,7 @@ Jahrgang;Auslaender;Auslaenderinnen;Schweizer;Schweizerinnen
 1929;5;5;45;118
 ```
 
-Der <<csv-aus-excel,CSV-Export aus Excel>> muss auf diese Vorgaben kontrolliert werden; die regionalen Einstellungen können das Ergebnis beeinflussen.
+Der <<csv-aus-excel,CSV-Export aus Excel>> muss auf diese Vorgaben kontrolliert werden.
 
 === Datenstruktur
 
@@ -97,7 +97,7 @@ Werte mit Daten-Format `Uhrzeit` geben wir dem https://www.w3.org/TR/NOTE-dateti
 
 ===== URL
 
-Werte mit Daten-Format `URL` werden standardmässig aufrufbar im Format https://example.com geschrieben.
+Werte mit Daten-Format `URL` werden standardmässig aufrufbar im Format `https://example.com` geschrieben.
 
 ==== Empfehlungen
 
@@ -139,4 +139,4 @@ giftiger Stoff;0.5;false
 gefährlicher Stoff;0.01;true
 ```
 
-In den Metadaten müssen Nachweisgrenzen pro Attribut beschrieben werden, einschliesslich der Bedeutung und der Richtung der Grenze. Das Boolean-Attribut allein unterscheidet nicht zwischen einer unteren und einer oberen Grenze. Falls beide Fälle in derselben Spalte vorkommen, stimmen Sie deren eindeutige Abbildung mit AFIN und AGI ab.
+In den Metadaten müssen Nachweisgrenzen pro Attribut beschrieben werden, einschliesslich der Bedeutung und der Richtung der Grenze. Das Boolean-Attribut allein unterscheidet nicht zwischen einer unteren und einer oberen Grenze. Falls beide Fälle in derselben Spalte vorkommen, stimmen Sie deren eindeutige Abbildung mit dem AFIN und dem AGI ab.

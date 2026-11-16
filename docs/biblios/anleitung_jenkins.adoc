@@ -1,5 +1,5 @@
 [[anleitung-jenkins]]
-== Schritt für Schritt in Jenkins anliefern
+== Schritt für Schritt Datenlieferung
 
 Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt bereit. Welche Dateien Sie für welche Änderung benötigen, erläutert <<datenanlieferung,Daten anliefern und Veröffentlichung prüfen>>. Gehen Sie vor jedem Lauf die <<lieferpruefung,Lieferprüfliste>> durch.
 
@@ -8,7 +8,7 @@ Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt ber
 
 . Öffnen Sie https://daten.so.ch/anlieferung[die Datenanlieferung] und melden Sie sich mit Ihrem kantonalen Benutzerkonto an.
 . Öffnen Sie den berechtigten Organisationsjob über «Jobs starten» und wählen Sie Ihr Datenangebot.
-. Fehlt Ihre Organisation oder Ihr Datenangebot, wenden Sie sich an AGI. Die technische Kontaktstelle vergibt Berechtigungen und richtet die Verarbeitung ein.
+. Fehlt Ihre Organisation oder Ihr Datenangebot, wenden Sie sich an das AGI. Die technische Kontaktstelle vergibt Berechtigungen und richtet die Verarbeitung ein.
 
 *Screenshot-Platzhalter J1:* Einstieg nach der Anmeldung mit Organisationsjob und Auswahl des Datenangebots; keine Zugangsdaten oder personenbezogenen Laufdaten.
 
@@ -17,20 +17,20 @@ Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt ber
 === Dateien hochladen
 
 . Wählen Sie «Lieferung verarbeiten».
-. Laden Sie für neue oder korrigierte Daten die CSV hoch. Laden Sie bei geänderten Metadaten das vollständig exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) hoch. Sie können beide Dateien gemeinsam liefern; mindestens eine Datei ist erforderlich.
-. Prüfen Sie die ausgewählten Dateinamen. Für das Grundwasserbeispiel könnte die Datendatei `wasserqualitaet.csv` heissen. Verwenden Sie Ihr tatsächliches Datenblatt und Ihre geprüfte CSV.
+. Laden Sie für neue oder korrigierte Daten die CSV-Datei hoch. Laden Sie bei geänderten Metadaten das vollständig exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) hoch. Sie können beide Dateien gemeinsam liefern; mindestens eine Datei ist erforderlich.
+. Prüfen Sie die ausgewählten Dateinamen. Für das Grundwasserbeispiel könnte die Datendatei `wasserqualitaet.csv` heissen. Verwenden Sie Ihr tatsächliches Datenblatt und Ihre geprüfte CSV-Datei.
 
-*Screenshot-Platzhalter J2:* Modus «Lieferung verarbeiten» mit ausgewählter CSV und Datenblatt sowie den Dateinamen.
+*Screenshot-Platzhalter J2:* Modus «Lieferung verarbeiten» mit ausgewählter CSV-Datei und Datenblatt sowie den Dateinamen.
 
 *Ergebnis:* Die zur Änderung passenden Dateien sind ausgewählt. Bei einer reinen Metadatenkorrektur bleibt der CSV-Upload leer.
 
-Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gezielten Abgleich eines von AGI beziehungsweise der Themenintegration im Repository gepflegten Datenblatts. Dabei werden keine Dateien hochgeladen. Für Ihre eigenen Dateien verwenden Sie «Lieferung verarbeiten».
+Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gezielten Abgleich eines vom AGI beziehungsweise von der Themenintegration im Repository gepflegten Datenblatts. Dabei werden keine Dateien hochgeladen. Für Ihre eigenen Dateien verwenden Sie «Lieferung verarbeiten».
 
 === Serienausgabe und Lieferkommentar prüfen
 
-. Wenn Sie eine CSV für eine Serie liefern, geben Sie im Feld «Ausgabe» die vereinbarte Bezeichnung ein, beispielsweise `2025`. Prüfen Sie, dass CSV, Zeitbezug und ausgewählte Ausgabe zusammenpassen. Bei einer reinen Metadatenlieferung wird keine Ausgabe angegeben.
+. Wenn Sie eine CSV-Datei für eine Serie liefern, geben Sie im Feld «Ausgabe» die vereinbarte Bezeichnung ein, beispielsweise `2025`. Prüfen Sie, dass CSV-Datei, Zeitbezug und ausgewählte Ausgabe zusammenpassen. Bei einer reinen Metadatenlieferung wird keine Ausgabe angegeben.
 . Beschreiben Sie die Änderung im Kommentar, etwa «Jahreslieferung 2025» oder «Erhebungsmethode präzisiert». Bei einer Fehlerkorrektur nennen Sie den betroffenen Stand und die Korrektur.
-. Stimmen Sie mit AGI ab, ob «Portal nach Veröffentlichung neu laden» gesetzt werden soll. Die Option ist standardmässig ausgeschaltet und setzt eine entsprechende Einrichtung voraus.
+. Stimmen Sie mit dem AGI ab, ob «Portal nach Veröffentlichung neu laden» gesetzt werden soll. Die Option ist standardmässig ausgeschaltet und setzt eine entsprechende Einrichtung voraus.
 
 *Screenshot-Platzhalter J3:* Serienlieferung mit Ausgabe `2025`, Lieferkommentar und der Option «Portal nach Veröffentlichung neu laden».
 
@@ -50,9 +50,9 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 === Fehler beheben und erneut liefern
 
 . Lesen Sie die Fehlermeldung. Prüfen Sie beispielsweise abweichende Spaltennamen, vertauschte Reihenfolge, einen Text in einer Zahlenspalte oder fehlende Pflichtwerte.
-. Korrigieren Sie die betroffene CSV beziehungsweise das Datenblatt. Exportieren Sie ein geändertes Datenblatt erneut.
+. Korrigieren Sie die betroffene CSV-Datei beziehungsweise das Datenblatt. Exportieren Sie ein geändertes Datenblatt erneut.
 . Öffnen Sie das Startformular erneut und wählen Sie die korrigierten Dateien bewusst neu aus. Prüfen Sie auch die Ausgabe und den Kommentar.
-. Starten Sie einen neuen Lauf und kontrollieren Sie dessen Ergebnis. Bei unklaren Fehlern senden Sie AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen klären Sie mit AFIN.
+. Starten Sie einen neuen Lauf und kontrollieren Sie dessen Ergebnis. Bei unklaren Fehlern senden Sie dem AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen klären Sie mit dem AFIN.
 
 *Screenshot-Platzhalter J5:* Fehlgeschlagener Lauf mit einer verständlichen Prüfmeldung zu einer nicht passenden CSV-Spalte.
 
@@ -60,8 +60,8 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 
 === Veröffentlichung im Portal kontrollieren
 
-Lassen Sie AGI sicherstellen, dass die technische Publikation freigegeben und der neue Stand im Portal geladen ist. Öffnen Sie danach https://daten.so.ch[daten.so.ch] und kontrollieren Sie Titel, Zeitbezug, gegebenenfalls Serienausgabe, Metadaten und Downloads. Prüfen Sie bei einer Korrektur insbesondere die betroffenen Werte und den sichtbaren Korrekturhinweis.
+Lassen Sie das AGI sicherstellen, dass die technische Publikation freigegeben und der neue Stand im Portal geladen ist. Öffnen Sie danach https://daten.so.ch[daten.so.ch] und kontrollieren Sie Titel, Zeitbezug, gegebenenfalls Serienausgabe, Metadaten und Downloads. Prüfen Sie bei einer Korrektur insbesondere die betroffenen Werte und den sichtbaren Korrekturhinweis.
 
 *Screenshot-Platzhalter J6:* Veröffentlichter Beispieldatensatz im Portal mit Zeitbezug und Downloads.
 
-*Ergebnis:* Der erwartete Stand ist im Portal sichtbar. Bleibt der alte Stand bestehen, teilen Sie AGI Datenangebot und Lieferlauf mit.
+*Ergebnis:* Der erwartete Stand ist im Portal sichtbar. Bleibt der alte Stand bestehen, teilen Sie dem AGI Datenangebot und Lieferlauf mit.

@@ -1,7 +1,7 @@
 [[datenaufbereitung]]
 == Daten vorbereiten
 
-Bereiten Sie eine Tabelle vor, in der jede Zeile eine Beobachtung und jede Spalte eine Variable enthält. Dieses Kapitel führt von der Vorbereitung über den CSV-Export zu den verbindlichen Format- und Strukturvorgaben.
+Dieses Kapitel zeigt am Beispiel von Excel, wie Sie Daten vorbereiten und als CSV-Datei bereitstellen. Andere Bereitstellungswege sind ebenfalls möglich; die dafür erforderlichen Arbeitsschritte richten sich nach der jeweiligen Datenquelle und dem verwendeten System. Beachten Sie dabei die verbindlichen Format- und Strukturvorgaben.
 
 . Entfernen Sie Titelzeilen oberhalb der Spaltennamen, Leerzeilen und verbundene Zellen. Die erste Zeile enthält die eindeutigen Attributnamen.
 . Lösen Sie mehrstufige Tabellenköpfe auf. Kategorien wie Gebiet oder Messstelle erhalten eigene Spalten.
@@ -12,9 +12,9 @@ Bereiten Sie eine Tabelle vor, in der jede Zeile eine Beobachtung und jede Spalt
 . Gleichen Sie Spaltennamen und Reihenfolge mit der <<attributbeschreibungen,Attributliste im Datenblatt>> ab.
 
 [[csv-aus-excel]]
-=== CSV aus Excel vorbereiten
+=== CSV-Datei aus Excel vorbereiten
 
-Bewahren Sie Ihre Arbeitsmappe als Arbeitsgrundlage auf und exportieren Sie das aufbereitete Tabellenblatt separat als CSV mit UTF-8-Kodierung. Eine CSV-Datei enthält eine einzelne Tabelle; Formatierungen, Formeln und weitere Tabellenblätter werden nicht als Arbeitsmappe mitgeliefert. Kontrollieren Sie die exportierten Werte, insbesondere berechnete Ergebnisse.
+Bewahren Sie Ihre Arbeitsmappe als Arbeitsgrundlage auf und exportieren Sie das aufbereitete Tabellenblatt separat als CSV-Datei mit UTF-8-Kodierung. Eine CSV-Datei enthält eine einzelne Tabelle; Formatierungen, Formeln und weitere Tabellenblätter werden nicht als Arbeitsmappe mitgeliefert. Kontrollieren Sie die exportierten Werte, insbesondere berechnete Ergebnisse.
 
 Die Bezeichnung der Exportoption und das verwendete Trennzeichen hängen von Excel-Version und regionalen Einstellungen ab. Verlassen Sie sich deshalb nicht allein auf die Dateiendung oder die Anzeige in Excel:
 
@@ -23,21 +23,19 @@ Die Bezeichnung der Exportoption und das verwendete Trennzeichen hängen von Exc
 . Prüfen Sie die Kopfzeile sowie einige Datenzeilen auf vollständige Spalten, erhaltene führende Nullen und Datumswerte gemäss der technischen Referenz.
 . Prüfen Sie Texte mit Semikolons oder Anführungszeichen gemäss <<csv-text,Textwerte in CSV>>.
 
-Erfüllt der Export die Vorgaben nicht, passen Sie die Exportmöglichkeiten an oder lassen Sie sich von AGI unterstützen. Ersetzen Sie Trennzeichen nicht pauschal in der gesamten Datei: Dadurch können Textwerte und Dezimalzahlen verändert werden.
+Erfüllt der Export die Vorgaben nicht, passen Sie die Exportmöglichkeiten an oder lassen Sie sich vom AGI unterstützen. Ersetzen Sie Trennzeichen nicht pauschal in der gesamten Datei: Dadurch können Textwerte und Dezimalzahlen verändert werden.
 
 === Datei benennen
 
 Für den Namen der angelieferten CSV-Datei gelten verbindliche Zeichenregeln: Vor der Dateiendung sind ausschliesslich die Buchstaben `A` bis `Z` und `a` bis `z`, die Ziffern `0` bis `9` sowie Unterstriche (`_`) erlaubt. Leerzeichen, Umlaute und andere Zeichen, beispielsweise Bindestriche oder zusätzliche Punkte, sind unzulässig. Die Endung lautet `.csv`; ihre Gross- und Kleinschreibung ist beliebig, sodass auch `.CSV` zulässig ist. Verwenden Sie einen einfachen, sprechenden Namen, beispielsweise `bevoelkerung_so.csv` oder `wasserqualitaet.csv`. Unterstriche können Wörter trennen.
 
-Wenn Sie die Datei über den Integrationsagenten liefern, prüft dieser den ursprünglichen Dateinamen vor der Weitergabe. Bei einem ungültigen Namen meldet er die Abweichung, schlägt einen zulässigen Namen vor und hält die Weitergabe an. Er benennt die Datei nur auf Ihren ausdrücklichen Auftrag um; die Dateiinhalte bleiben dabei unverändert.
-
-Eine Jahreszahl oder ein Datum im Dateinamen ist nicht vorgeschrieben. Die Verarbeitung vergibt die veröffentlichten Dateinamen. Den fachlichen Datenstand beschreiben Sie über den Zeitbezug im Datenblatt und bei Serien über die Ausgabe im Lieferformular. Die verbindlichen Namensregeln für *Attribute* stehen separat unter <<attributnamen,Spaltenüberschriften>>.
+Eine Jahreszahl oder ein Datum im Dateinamen ist nicht vorgeschrieben. Die Verarbeitung vergibt die veröffentlichten Dateinamen. Den fachlichen Datenstand beschreiben Sie über den Zeitbezug im Datenblatt und bei Serien über die Ausgabe im Lieferformular. Die verbindlichen Namensregeln für Attribute stehen separat unter <<attributnamen,Spaltenüberschriften>>.
 
 include::datenformat_datenstruktur.adoc[]
 
 === Aufbereitete Daten prüfen
 
-* Die Datei lässt sich als UTF-8-CSV mit Semikolon lesen; die erste Zeile enthält eindeutige Spaltennamen.
+* Die Datei lässt sich als UTF-8-kodierte CSV-Datei mit Semikolon lesen; die erste Zeile enthält eindeutige Spaltennamen.
 * Jede Zeile enthält eine Beobachtung und gleich viele Spalten. Titel-, Leer- und Fussnotenzeilen sind entfernt.
 * Zahlen, Kennungen, Datumswerte, fehlende Werte und Textbegrenzungen sind kontrolliert.
 * Namen, Reihenfolge und Typen der Spalten stimmen mit dem Datenblatt überein.

@@ -3,23 +3,24 @@
 
 === Was geschieht bei Personendaten
 
-Daten mit Personendaten oder Rückschlussmöglichkeiten auf Einzelpersonen werden im beschriebenen Publikationsprozess nicht veröffentlicht. AFIN bespricht mit Ihnen, ob eine geeignete Aggregation möglich ist. Klären Sie dies vor der Anlieferung.
+Daten mit Personendaten oder Rückschlussmöglichkeiten auf Einzelpersonen werden im beschriebenen Publikationsprozess nicht veröffentlicht. Das AFIN bespricht mit Ihnen, ob eine geeignete Aggregation möglich ist. Klären Sie dies vor der Anlieferung.
 
-=== Wer hilft bei Metadaten und CSV
+[[_wer_hilft_bei_metadaten_und_csv]]
+=== Wer hilft bei Metadaten und CSV-Dateien
 
-AFIN unterstützt Sie beim <<metadaten,Erfassen der Metadaten>>. Bei technischen Schwierigkeiten mit dem CSV-Export hilft AGI; die <<csv-aus-excel,Exportanleitung>> beschreibt die wichtigsten Kontrollen. CSV in UTF-8 ist das Anlieferungsformat. XLSX und Parquet werden aus der CSV-Datei erzeugt.
+Das AFIN unterstützt Sie beim <<metadaten,Erfassen der Metadaten>>. Bei technischen Schwierigkeiten mit dem CSV-Export hilft das AGI; die <<csv-aus-excel,Exportanleitung>> beschreibt die wichtigsten Kontrollen. CSV in UTF-8 ist das Anlieferungsformat. XLSX- und Parquet-Dateien werden aus der CSV-Datei erzeugt.
 
 === Weshalb sehe ich trotz erfolgreichem Lauf noch alte Daten
 
-Verarbeitung, Veröffentlichung und Laden des Portalstands sind getrennte Schritte. Lassen Sie AGI prüfen, ob die technische Publikation freigegeben war und der neue Stand im Portal geladen wurde. Ein im Browser gespeicherter Editorentwurf wurde noch nicht angeliefert.
+Verarbeitung, Veröffentlichung und Laden des Portalstands sind getrennte Schritte. Lassen Sie das AGI prüfen, ob die technische Publikation freigegeben war und der neue Stand im Portal geladen wurde. Ein im Browser gespeicherter Editorentwurf wurde noch nicht angeliefert.
 
-=== Meine Organisation oder mein Datenangebot fehlt in Jenkins
+=== Meine Organisation oder mein Datenangebot fehlt in der Anlieferungsanwendung
 
-AGI vergibt die Berechtigungen und richtet die Verarbeitung ein. Teilen Sie der technischen Kontaktstelle mit, mit welchem kantonalen Benutzerkonto Sie sich anmelden und welches Datenangebot fehlt. Weitere Schritte stehen unter <<jenkins-zugang,Anmelden und Datenangebot wählen>>.
+Das AGI vergibt die Berechtigungen und richtet die Verarbeitung ein. Teilen Sie der technischen Kontaktstelle mit, mit welchem kantonalen Benutzerkonto Sie sich anmelden und welches Datenangebot fehlt. Weitere Schritte stehen unter <<jenkins-zugang,Anmelden und Datenangebot wählen>>.
 
 === Der Editor exportiert nicht oder die Verarbeitung schlägt fehl
 
-Bearbeiten Sie zuerst die angezeigten Fehler. Die Abschnitte <<editor-pruefen,Editor prüfen und exportieren>> und <<jenkins-ergebnis,Verarbeitungsergebnis prüfen>> erläutern das Vorgehen. Bei unklaren technischen Fehlern senden Sie AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen richten Sie an AFIN.
+Bearbeiten Sie zuerst die angezeigten Fehler. Die Abschnitte <<editor-pruefen,Editor prüfen und exportieren>> und <<jenkins-ergebnis,Verarbeitungsergebnis prüfen>> erläutern das Vorgehen. Bei unklaren technischen Fehlern senden Sie dem AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen richten Sie an das AFIN.
 
 [[kontakt]]
 === Kontakt und Unterstützung
@@ -41,6 +42,6 @@ Bearbeiten Sie zuerst die angezeigten Fehler. Die Abschnitte <<editor-pruefen,Ed
 +41 32 627 24 54
 |===
 
-AFIN und AGI unterstützen Sie auch beim Erstellen einer lieferfähigen CSV aus Excel oder bestehenden Exporten, beim Umstrukturieren ins Long-Format und beim Einrichten der regelmässigen Nachführung.
+Das AFIN und das AGI unterstützen Sie auch beim Erstellen einer lieferfähigen CSV-Datei aus Excel oder bestehenden Exporten, beim Umstrukturieren ins Long-Format und beim Einrichten der regelmässigen Nachführung.
 
 Das öffentliche Portal erreichen Sie unter https://daten.so.ch[daten.so.ch].

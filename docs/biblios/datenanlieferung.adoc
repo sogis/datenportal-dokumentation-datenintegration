@@ -1,16 +1,16 @@
 [[datenanlieferung]]
 == Daten anliefern und Veröffentlichung prüfen
 
-Wenn Sie die CSV-Datei vorbereitet und das Datenblatt exportiert haben, öffnen Sie die https://daten.so.ch/anlieferung[Datenanlieferung]. Dort gelangen Sie zur Anlieferungsoberfläche in Jenkins, über die Sie Ihre Dateien hochladen und die Verarbeitung starten.
+Wenn Sie die CSV-Datei vorbereitet und das Datenblatt exportiert haben, öffnen Sie die https://daten.so.ch/anlieferung[Datenanlieferung]. Dort gelangen Sie zur Anlieferungsoberfläche, über die Sie Ihre Dateien hochladen und die Verarbeitung starten.
 
-Melden Sie sich mit Ihrem kantonalen Benutzerkonto an. AGI vergibt die Berechtigungen für die Datenanlieferung. Wenn Ihre Organisation oder Ihr Datenangebot nicht zur Auswahl steht, wenden Sie sich an die <<kontakt,technische Kontaktstelle>>.
+Melden Sie sich mit Ihrem kantonalen Benutzerkonto an. Das AGI vergibt die Berechtigungen für die Datenanlieferung. Wenn Ihre Organisation oder Ihr Datenangebot nicht zur Auswahl steht, wenden Sie sich an die <<kontakt,technische Kontaktstelle>>.
 
 [[lieferpruefung]]
 === Vor der Lieferung prüfen
 
-* Die fachliche Vorbereitung und die Abstimmung mit AFIN sind erfolgt. Daten und Metadaten enthalten keine Angaben, die einer öffentlichen Publikation entgegenstehen.
+* Die fachliche Vorbereitung und die Abstimmung mit dem AFIN sind erfolgt. Daten und Metadaten enthalten keine Angaben, die einer öffentlichen Publikation entgegenstehen.
 * Die Datendatei erfüllt die <<datenformat,Format- und Strukturvorgaben>>: CSV, UTF-8, Semikolon, eindeutige Spaltennamen, einheitliche Datentypen und keine Erläuterungs- oder Leerzeilen.
-* Spaltennamen und Reihenfolge entsprechen der Attributliste; Einheiten, Codes, Rundungen und fehlende Werte sind verständlich beschrieben.
+* Spaltennamen entsprechen der Attributliste; Einheiten, Codes, Rundungen und fehlende Werte sind verständlich beschrieben.
 * Das Datenblatt lässt sich im Editor exportieren. Prüfen Sie Warnungen ebenfalls fachlich.
 * Datenherr, Kontakt, Nachführung und Zeitbezug sind aktuell. Bei Serien ist klar, welche Ausgabe Sie liefern.
 
@@ -18,26 +18,24 @@ Melden Sie sich mit Ihrem kantonalen Benutzerkonto an. AGI vergibt die Berechtig
 
 Der Datenblatt-Editor prüft unter anderem Pflichtangaben, Datumswerte und den Zeitbezug. Fehlende Attributbeschreibungen und doppelte Attributnamen führen dort zu Warnungen. Ein exportierbares Datenblatt ist deshalb noch kein Nachweis für die fachliche Qualität oder eine passende CSV-Datei.
 
-Die Lieferverarbeitung prüft nichtleere, eindeutige CSV-Spaltennamen. Ist eine Attributliste hinterlegt, prüft sie deren Namen und Reihenfolge, die Konvertierbarkeit in die deklarierten Datentypen und fehlende Werte in Pflichtspalten. Eine zusätzliche Prüfung gegen ein Datenmodell erfolgt nur, wenn ein solches Modell hinterlegt ist. Die Verarbeitung erstellt XLSX und Parquet aus den CSV-Daten.
+Die Lieferverarbeitung prüft nichtleere, eindeutige CSV-Spaltennamen. Ist eine Attributliste hinterlegt, prüft sie deren Namen, die Konvertierbarkeit in die deklarierten Datentypen und fehlende Werte in Pflichtspalten. Eine zusätzliche Prüfung gegen ein Datenmodell erfolgt nur, wenn ein solches Modell hinterlegt ist. Die Verarbeitung erstellt XLSX- und Parquet-Dateien aus den CSV-Daten.
 
-Die Einhaltung aller redaktionellen Vorgaben, fachliche Plausibilität, Vollständigkeit der Beschreibungen und Datenschutz beurteilen Fachamt und AFIN beziehungsweise AGI. Eine erfolgreiche automatische Prüfung ersetzt diese Aufgaben nicht.
+Die Einhaltung aller redaktionellen Vorgaben, fachliche Plausibilität, Vollständigkeit der Beschreibungen und Datenschutz beurteilen das Fachamt und das AFIN beziehungsweise das AGI. Eine erfolgreiche automatische Prüfung ersetzt diese Aufgaben nicht.
 
 === Die passenden Dateien liefern
 
-Wählen Sie die Dateien anhand der folgenden Tabelle. Die <<anleitung-jenkins,Schritt-für-Schritt-Anleitung zu Jenkins>> zeigt die Auswahl, den Upload und den Start der Verarbeitung.
+Wählen Sie die Dateien anhand der folgenden Tabelle. Die <<anleitung-jenkins,Schritt-für-Schritt-Anleitung Datenlieferung>> zeigt die Auswahl, den Upload und den Start der Verarbeitung.
 
 [cols="1,2,2",options="header"]
 |===
 |Änderung |Dateien |Wirkung
-|Neue oder korrigierte Daten |CSV |Verwendet das bereits angenommene Datenblatt; falls noch keines vorhanden ist, das für das Thema im Repository bereitgestellte Datenblatt.
+|Neue oder korrigierte Daten |CSV-Datei |Verwendet das bereits angenommene Datenblatt; falls noch keines vorhanden ist, das für das Thema im Repository bereitgestellte Datenblatt.
 |Nur Metadaten |Datenblatt |Aktualisiert die fachlichen Angaben des gesamten Datenblatts. Vorhandene technische Lieferinformationen bleiben erhalten; Daten werden nicht neu konvertiert.
-|Daten und Metadaten |CSV und Datenblatt |Übernimmt die geänderten Beschreibungen und verarbeitet die CSV damit.
+|Daten und Metadaten |CSV-Datei und Datenblatt |Übernimmt die geänderten Beschreibungen und verarbeitet die CSV-Datei damit.
 |===
 
-Bei Serien geben Sie bei einer CSV-Lieferung die vereinbarte Ausgabe an. Eine reine Metadatenlieferung betrifft das gesamte Datenblatt und benötigt keine Ausgabe. Stimmen Sie neue Ausgaben zuvor mit AFIN ab.
+Bei Serien geben Sie bei einer CSV-Lieferung die vereinbarte Ausgabe an. Eine reine Metadatenlieferung betrifft das gesamte Datenblatt und benötigt keine Ausgabe. Stimmen Sie neue Ausgaben zuvor mit dem AFIN ab.
 
 === Rückmeldungen bearbeiten und Veröffentlichung kontrollieren
 
-Bei einem Fehler prüfen Sie die Meldung und korrigieren die betroffene Datei. Beispiele sind abweichende Spaltennamen, eine vertauschte Spaltenreihenfolge, ein Text in einer Zahlenspalte oder ein fehlender Pflichtwert. Exportieren Sie ein korrigiertes Datenblatt erneut und liefern Sie die betroffenen Dateien nochmals an. Bei unklaren technischen Fehlern teilen Sie AGI den betroffenen Job, den Lauf und die Fehlermeldung mit; fachliche Fragen klären Sie mit AFIN.
-
-Ein erfolgreicher Lauf bedeutet nicht in jedem Fall, dass der neue Stand schon im Portal sichtbar ist. Die technische Publikation muss freigegeben sein; ausserdem muss das Portal den veröffentlichten Stand neu laden. AGI übernimmt die technische Freischaltung und kontrolliert den Ladevorgang. Prüfen Sie danach Titel, Zeitbezug, Ausgabe, Metadaten und Downloads im Portal. Ist weiterhin der alte Stand sichtbar, kontaktieren Sie AGI.
+Bei einem Fehler prüfen Sie die Meldung und korrigieren die betroffene Datei. Beispiele sind abweichende Spaltennamen, ein Text in einer Zahlenspalte oder ein fehlender Pflichtwert. Exportieren Sie ein korrigiertes Datenblatt erneut und liefern Sie die betroffenen Dateien nochmals an. Bei unklaren technischen Fehlern teilen Sie dem AGI den betroffenen Job, den Lauf und die Fehlermeldung mit; fachliche Fragen klären Sie mit dem AFIN.

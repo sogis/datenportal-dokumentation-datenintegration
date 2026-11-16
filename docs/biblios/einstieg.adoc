@@ -10,7 +10,7 @@ Das Datenportal https://daten.so.ch[daten.so.ch] macht öffentliche Statistik- u
 * *Datenblatt bearbeiten:* Die <<anleitung-editor,Schritt-für-Schritt-Anleitung Metadatenerfassung>> führt durch die Erfassung der Metadaten.
 * *Dateien hochladen:* Die <<anleitung-jenkins,Schritt-für-Schritt-Anleitung Datenlieferung>> zeigt die Anlieferung.
 
-Diese Anleitung beschreibt die Lieferung von CSV-Dateien und Datenblättern. Für die Anlieferung von Geodaten stimmen Sie den geeigneten Weg mit AGI ab.
+Diese Anleitung beschreibt die Lieferung von CSV-Dateien und Datenblättern. Für die Anlieferung von Geodaten stimmen Sie den geeigneten Weg mit dem AGI ab.
 
 === Wer übernimmt welche Aufgabe
 
@@ -21,11 +21,11 @@ Der Statistikdienst des Amts für Finanzen (AFIN) begleitet Anmeldung, Metadaten
 === Vor der Anmeldung klären
 
 * Der Datensatz ist für die Öffentlichkeit bestimmt und enthält keine schützenswerten privaten Daten oder internen Arbeitsdaten.
-* Er enthält keine Personendaten und ermöglicht keine Rückschlüsse auf einzelne Personen oder Firmen. Unsicherheiten klären Sie mit AFIN, bevor Sie Dateien zur Publikation anliefern.
-* Falls die Daten ganz oder teilweise aus einer Erhebung für die Bundesstatistik stammen, ist mit AFIN vorab zu klären, ob und unter welchen Voraussetzungen sie veröffentlicht werden dürfen.
+* Er enthält keine Personendaten und ermöglicht keine Rückschlüsse auf einzelne Personen oder Firmen. Unsicherheiten klären Sie mit dem AFIN, bevor Sie Dateien zur Publikation anliefern.
+* Falls die Daten ganz oder teilweise aus einer Erhebung für die Bundesstatistik stammen, ist mit dem AFIN vorab zu klären, ob und unter welchen Voraussetzungen sie veröffentlicht werden dürfen.
 * Die Daten sind fachlich auf Plausibilität, Vollständigkeit und Übereinstimmung mit der Quelle geprüft. Die Erhebungsmethode und bekannte Einschränkungen sind dokumentiert.
-* Die eigentlichen Daten können als <<datenformat,CSV in UTF-8>> bereitgestellt werden. Bei Schwierigkeiten helfen AFIN und AGI bei der Vorbereitung.
+* Die eigentlichen Daten können als <<datenformat,CSV-Datei in UTF-8>> angeliefert werden. Bei Schwierigkeiten helfen das AFIN und das AGI bei der Vorbereitung.
 * Eine verantwortliche Person oder Fachstelle mit laufend überwachter E-Mail-Adresse ist benannt.
 * Das vorgesehene Aktualisierungsintervall ist bekannt, beispielsweise jährlich oder quartalsweise.
 
-Metadaten beschreiben das Datenangebot und seine Attribute. Sie werden im <<metadaten,Datenblatt-Editor>> erfasst und getrennt von der CSV-Datei als Datenblatt exportiert. XLSX und Parquet entstehen bei der Verarbeitung aus der CSV-Datei und werden nicht zusätzlich angeliefert.
+Metadaten beschreiben das Datenangebot und seine Attribute. Sie werden im <<metadaten,Datenblatt-Editor>> erfasst und getrennt von der CSV-Datei als Datenblatt exportiert. XLSX- und Parquet-Dateien entstehen bei der Verarbeitung aus der CSV-Datei und werden nicht zusätzlich angeliefert.

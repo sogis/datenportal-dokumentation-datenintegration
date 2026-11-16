@@ -57,7 +57,7 @@ Vorrang. Diese Matrix ist ein redaktioneller Nachweis, kein Teil der Website.
 | Vorspann: Zielgruppe, Unterstützung | `master.adoc`, `fragen_und_unterstuetzung.adoc` | Übernommen; Kontakte zentral statt mehrfach aufgeführt. |
 | 1: Was ist das Datenportal? | `einstieg.adoc` | Zweck, ergänzende Portale und Rollen übernommen. |
 | 2: Voraussetzungen | `einstieg.adoc` | Als Checkliste übernommen; CSV als einziges Datenanlieferungsformat präzisiert; A-Feldnummern durch sichtbare Feldnamen ersetzt. |
-| 3: Publikationsprozess | `publikationsprozess.adoc` | Sieben Schritte und Zuständigkeiten übernommen; formelle AFIN-Freigabe, technische Publikation und Sichtbarkeit im Portal getrennt. Einrichtung durch AGI statt pauschal ein neuer GRETL-Job je Datensatz. |
+| 3: Publikationsprozess | `publikationsprozess.adoc` | Sieben Schritte und Zuständigkeiten übernommen; formelle AFIN-Freigabe, technische Publikation und Sichtbarkeit im Portal getrennt. Einrichtung durch das AGI statt pauschal ein neuer GRETL-Job je Datensatz. |
 | 4: Datenformat | `datenaufbereitung.adoc`, `datenformat_datenstruktur.adoc` | Bestehende technische Referenz führt. Keine zusätzliche XLSX-/Parquet-Lieferung; keine verpflichtende Versionierung im Dateinamen. CSV-Dateinamen verbindlich auf ASCII-Buchstaben, Ziffern und Unterstriche vor der Endung `.csv` (Gross-/Kleinschreibung beliebig) beschränkt; Attributnamen separat verbindlich. Beobachtungsbezogene Hinweisspalten gemäss Repo bleiben erlaubt. |
 | 5: Metadatenformular | `metadaten.adoc` | Fachliche Angaben übernommen, mit aktuellem Editor abgeglichen. Keine Zusage «21 Felder / 8 Pflichtfelder» oder ungeprüfte Automatikliste. Attributbeschreibungen hervorgehoben. Ergänzende Angaben aufgenommen; keine automatische I14Y-Publikation zugesagt. |
 | 6: Aktualisierung | `datenanlieferung.adoc` | Intervalle, AFIN-Erinnerungen, Meldung von Inhalts-/Methodenänderungen und erneute Abstimmung bei Strukturänderungen übernommen. CSV-, Metadaten- und gemeinsame Lieferung unterschieden. |
@@ -89,9 +89,9 @@ Quellrepos. Sie dienen der Pflege, nicht als zusätzliche Anweisungen an Liefera
 | Thema | Beleg | Entscheidung |
 | --- | --- | --- |
 | Editorfelder und Pflichtangaben | `datenportal-datenblatt-editor/src/components/DatasetForm.vue`, `SharedMetadataSections.vue`, `src/domain/validation.ts` | Sichtbare Feldnamen verwenden; Identifier, Zugänglichkeit, Publikationsstatus, Themen und Modified nicht als automatisch gesetzt darstellen. Keywords sind komma-, nicht semikolongetrennt. |
-| Lizenz | Editor ohne Lizenzfeld; `datenportal-themenrepo/shared/sql/publication/assemble.sql`, `shared/xsl/opendata/catalog.xsl` | Word-Empfehlung `terms_by` nicht als auswählbare Lizenz übernehmen. Katalogwerte bleiben erhalten, RDF verwendet fest `terms_open`. Abweichende Nutzungsbedingungen vor Publikation mit AFIN/AGI klären und technisch umsetzen. |
-| Editorbedienung | `datenportal-datenblatt-editor/src/components/StartPage.vue`, `src/app/App.vue`, `README.md` | Lokale Dateien importieren und als XTF exportieren; Browserentwurf ist keine Einreichung. Keine Anleitung zum derzeit deaktivierten Quellenimport. Vom Auftraggeber bestätigter Einstieg: https://daten.so.ch/datenblatt-editor. |
-| Einstieg zur Anlieferung | Vom Auftraggeber bestätigte Zieladresse und Anmeldung | https://daten.so.ch/anlieferung führt zur Anlieferungsoberfläche in Jenkins. Übergang von der vorbereiteten CSV und dem exportierten Datenblatt zur Anlieferung ergänzt. Die Anmeldung erfolgt mit dem kantonalen Benutzerkonto via AD/LDAP; AGI vergibt die Berechtigungen für die Datenanlieferung. Die Zieladressen wurden übernommen, ihre künftige Erreichbarkeit ist keine Voraussetzung der Dokumentationsprüfung. |
+| Lizenz | Editor ohne Lizenzfeld; `datenportal-themenrepo/shared/sql/publication/assemble.sql`, `shared/xsl/opendata/catalog.xsl` | Word-Empfehlung `terms_by` nicht als auswählbare Lizenz übernehmen. Katalogwerte bleiben erhalten, RDF verwendet fest `terms_open`. Abweichende Nutzungsbedingungen vor Publikation mit dem AFIN und dem AGI klären und technisch umsetzen. |
+| Editorbedienung | `datenportal-datenblatt-editor/src/components/StartPage.vue`, `src/app/App.vue`, `README.md` | Lokale Dateien importieren und als XTF-Datei exportieren; Browserentwurf ist keine Einreichung. Keine Anleitung zum derzeit deaktivierten Quellenimport. Vom Auftraggeber bestätigter Einstieg: https://daten.so.ch/datenblatt-editor. |
+| Einstieg zur Anlieferung | Vom Auftraggeber bestätigte Zieladresse und Anmeldung | https://daten.so.ch/anlieferung führt zur Anlieferungsoberfläche in Jenkins. Übergang von der vorbereiteten CSV und dem exportierten Datenblatt zur Anlieferung ergänzt. Die Anmeldung erfolgt mit dem kantonalen Benutzerkonto via AD/LDAP; das AGI vergibt die Berechtigungen für die Datenanlieferung. Die Zieladressen wurden übernommen, ihre künftige Erreichbarkeit ist keine Voraussetzung der Dokumentationsprüfung. |
 | Attribute | `datenportal-datenblatt-editor/src/components/AttributeTable.vue`, `src/domain/validation.ts`; `datenportal-themenrepo/shared/sql/publication/delivery.sql` | Attributnamen und Reihenfolge abgleichen. Fehlende Beschreibungen und doppelte Namen sind Editorwarnungen; doppelte CSV-Kopfzeilen sind Verarbeitungsfehler. `URI` wird zwar im Editor angeboten, in der CSV-Verarbeitung aber nicht unterstützt; URL-Spalten als `TEXT` deklarieren. |
 | Lieferprüfung und Konvertierung | `datenportal-themenrepo/shared/sql/publication/delivery.sql`, `shared/gradle/datenportal-publication.gradle` | Nichtleere/eindeutige Kopfzeilen; bei Attributliste Namen/Reihenfolge, Typkonvertierung und Pflichtwerte; zusätzliche CsvValidator-Prüfung nur bei hinterlegtem Modell. XLSX und Parquet entstehen aus der typisierten Tabelle. |
 | CSV-Dateibenennung | `datenportal-themenintegrator-agent/skills/datenportal-themenintegrator/SKILL.md`, Abschnitt «CSV-Dateinamen prüfen» | Verbindlicher vollständiger Abgleich des ursprünglichen Basisdateinamens mit `(?i)^[a-z0-9_]+\.csv$`. Der Agent prüft Chat-Anhänge und direkte CSV-Pfade lokal vor der Weitergabe; ungültige Namen führen zu Meldung, Namensvorschlag und Stopp. Umbenennung nur auf ausdrücklichen Auftrag ohne Inhaltsänderung. Keine zusätzliche Namensprüfung in Jenkins behaupten. |
@@ -103,14 +103,14 @@ Quellrepos. Sie dienen der Pflege, nicht als zusätzliche Anweisungen an Liefera
 ## Abnahmeszenarien
 
 1. **Erstpublikation:** Voraussetzungen → Anmeldung → Datenaufbereitung und
-   Datenblatt → fachliche/technische Prüfung → AFIN-Freigabe → durch AGI
+   Datenblatt → fachliche/technische Prüfung → AFIN-Freigabe → durch das AGI
    eingerichtete Lieferung → Kontrolle des tatsächlich geladenen Portalstands.
 2. **Regelmässige Lieferung:** Vereinbartes Intervall → CSV prüfen → vorhandenes
    Datenblatt weiterverwenden oder aktualisieren → bei Serie Ausgabe angeben →
    Lieferung und Sichtbarkeit kontrollieren. Kein Datumszwang im Dateinamen.
 3. **Metadaten- oder Strukturänderung:** Aktuelles vollständiges Datenblatt
-   importieren → Metadaten ohne CSV korrigieren; bei Struktur-/Methodenänderungen
-   vorab AFIN/AGI einbeziehen und Prüf-/Freigabeschritte erneut durchlaufen.
+   importieren → Metadaten ohne CSV-Datei korrigieren; bei Struktur-/Methodenänderungen
+   vorab das AFIN und das AGI einbeziehen und Prüf-/Freigabeschritte erneut durchlaufen.
 
 Zur technischen Abnahme die zentrale Biblios-Vorschau mit lokalen Arbeitsständen
 erzeugen und Navigation, interne Verweise, Tabellen und CSV-Beispiele prüfen.
