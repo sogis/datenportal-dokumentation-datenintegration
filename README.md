@@ -7,10 +7,10 @@ unter der bestehenden Quellen-ID `datenpublikation` eingebunden.
 
 Die fachlichen Kapitel führen von den Voraussetzungen über die Erstpublikation
 bis zur Nachführung. Die letzten beiden Kapitel enthalten die Bedienungsanleitungen
-für den Datenblatt-Editor und Jenkins. Zwölf benannte Screenshot-Platzhalter
-werden später durch Aufnahmen der tatsächlichen Oberflächen ersetzt. HTML und
-PDF verwenden dieselben AsciiDoc-Quellen; PDF-Ausgabe und Layout werden separat
-mit Biblios geprüft und eingerichtet.
+für den Datenblatt-Editor und Jenkins. Die Editor-Anleitung enthält Screenshots
+zum Grundwasserbeispiel. Die Jenkins-Anleitung enthält sechs Screenshot-Platzhalter.
+HTML und PDF verwenden dieselben AsciiDoc-Quellen. PDF-Ausgabe und Layout werden
+separat mit Biblios geprüft und eingerichtet.
 
 Die [Übernahmematrix](docs/redaktion/uebernahmematrix.md) hält die Integration
 der Word-Anleitung einschliesslich aller Kommentare und die technischen
