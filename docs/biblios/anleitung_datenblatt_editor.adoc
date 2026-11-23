@@ -1,7 +1,7 @@
 [[anleitung-editor]]
 == Schritt für Schritt im Datenblatt-Editor
 
-Öffnen Sie https://daten.so.ch/datenblatt-editor[den Datenblatt-Editor]. Erstellen Sie ein Datenblatt für einen einzelnen Datensatz oder eine Serie oder importieren Sie ein vorhandenes Datenblatt. Die fachlichen Anforderungen stehen unter <<metadaten,Daten verständlich beschreiben>>.
+Öffnen Sie https://datenportal-test.apps.ocp.so.ch/datenblatt-editor[den Datenblatt-Editor]. Erstellen Sie ein Datenblatt für einen einzelnen Datensatz oder eine Serie oder importieren Sie ein vorhandenes Datenblatt. Die fachlichen Anforderungen stehen unter <<metadaten,Daten verständlich beschreiben>>.
 
 Als durchgängiges Beispiel verwenden wir «Wasserqualität Grundwasser Kanton Solothurn» mit den Attributen `messstelle`, `messdatum`, `wert` und `ist_nachweisgrenze`. Die Angaben sind fiktiv; übernehmen Sie für Ihre Lieferung die mit dem AFIN und dem AGI abgestimmten Werte.
 

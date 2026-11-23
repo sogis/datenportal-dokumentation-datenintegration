@@ -1,7 +1,7 @@
 [[einstieg]]
 == Einstieg und Voraussetzungen
 
-Das Datenportal https://daten.so.ch[daten.so.ch] macht öffentliche Statistik- und Verwaltungsdaten des Kantons Solothurn an einem Ort zugänglich: strukturiert, maschinenlesbar und mit Metadaten, die Inhalt und Verwendung erklären. Es ergänzt das https://statistik.so.ch[Statistikportal] und das https://data.geo.so.ch[Geoportal]; es ersetzt diese Angebote nicht.
+Das https://datenportal-test.apps.ocp.so.ch/[Datenportal] macht öffentliche Statistik- und Verwaltungsdaten des Kantons Solothurn an einem Ort zugänglich: strukturiert, maschinenlesbar und mit Metadaten, die Inhalt und Verwendung erklären. Es ergänzt das https://statistik.so.ch[Statistikportal] und das https://data.geo.so.ch[Geoportal]; es ersetzt diese Angebote nicht.
 
 === Den passenden Einstieg finden
 

@@ -6,7 +6,7 @@ Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt ber
 [[jenkins-zugang]]
 === Anmelden und Datenangebot wählen
 
-. Öffnen Sie https://daten.so.ch/anlieferung[die Datenanlieferung] und melden Sie sich mit Ihrem kantonalen Benutzerkonto an.
+. Öffnen Sie https://datenportal-test.apps.ocp.so.ch/anlieferung[die Datenanlieferung] und melden Sie sich mit Ihrem kantonalen Benutzerkonto an.
 . Öffnen Sie den berechtigten Organisationsjob über «Jobs starten» und wählen Sie Ihr Datenangebot.
 . Fehlt Ihre Organisation oder Ihr Datenangebot, wenden Sie sich an das AGI. Die technische Kontaktstelle vergibt Berechtigungen und richtet die Verarbeitung ein.
 
@@ -60,7 +60,7 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 
 === Veröffentlichung im Portal kontrollieren
 
-Lassen Sie das AGI sicherstellen, dass die technische Publikation freigegeben und der neue Stand im Portal geladen ist. Öffnen Sie danach https://daten.so.ch[daten.so.ch] und kontrollieren Sie Titel, Zeitbezug, gegebenenfalls Serienausgabe, Metadaten und Downloads. Prüfen Sie bei einer Korrektur insbesondere die betroffenen Werte und den sichtbaren Korrekturhinweis.
+Lassen Sie das AGI sicherstellen, dass die technische Publikation freigegeben und der neue Stand im Portal geladen ist. Öffnen Sie danach das https://datenportal-test.apps.ocp.so.ch/[Datenportal] und kontrollieren Sie Titel, Zeitbezug, gegebenenfalls Serienausgabe, Metadaten und Downloads. Prüfen Sie bei einer Korrektur insbesondere die betroffenen Werte und den sichtbaren Korrekturhinweis.
 
 *Screenshot-Platzhalter J6:* Veröffentlichter Beispieldatensatz im Portal mit Zeitbezug und Downloads.
 

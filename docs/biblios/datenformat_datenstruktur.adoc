@@ -129,14 +129,64 @@ jahr;geprueft;teilweise_geprueft;total
 
 Es kann Fälle geben, wo die Angabe einer Gesamtsumme oder eines Totals sinnvoll sind, z.B. wenn aus Gründen stark gerundet werden muss o.ä.
 
-===== Ausserhalb Nachweisgrenze
+===== Messwerte und Nachweisgrenzen
 
-Insbesondere bei Messungen kann es vorkommen, dass einzelne Messwerte unter oder über einer Nachweisgrenze sind. In diesem Fall darf bei einer Nachweisgrenze von z.B. `0.01` nicht der Text `< 0.01`, sondern es muss der Wert der Nachweisgrenze eingetragen werden (`0.01`) und es benötigt ein zusätzliches Boolean-Attribut `ist_nachweisgrenze`:
+Bei Messungen kann es vorkommen, dass ein Messwert nicht exakt bestimmt werden kann, sondern lediglich bekannt ist, dass er unterhalb oder oberhalb eines bestimmten Wertes liegt. Zudem können Messwerte fehlen, weil keine Bestimmung durchgeführt wurde oder kein Ergebnis vorliegt.
 
-```csv 
-stoff;wert;ist_nachweisgrenze
-giftiger Stoff;0.5;false
-gefährlicher Stoff;0.01;true
-```
+Damit diese Fälle eindeutig und maschinenlesbar abgebildet werden können, sind zwei Attribute zu verwenden:
 
-In den Metadaten müssen Nachweisgrenzen pro Attribut beschrieben werden, einschliesslich der Bedeutung und der Richtung der Grenze. Das Boolean-Attribut allein unterscheidet nicht zwischen einer unteren und einer oberen Grenze. Falls beide Fälle in derselben Spalte vorkommen, stimmen Sie deren eindeutige Abbildung mit dem AFIN und dem AGI ab.
+* `wert`: Numerischer Messwert beziehungsweise Zahlenwert, auf den sich der Vergleichsoperator bezieht.
+* `operator`: Gibt an, wie der Zahlenwert zu interpretieren ist.
+
+Folgende Operatoren sind zulässig:
+
+[cols="1,2,5",options="header"]
+|===
+| Operator | Bedeutung | Beschreibung
+
+| `EQ`
+| Gleich
+| Der angegebene Wert ist der tatsächliche Messwert.
+
+| `LT`
+| Kleiner als
+| Der tatsächliche Messwert liegt unter dem angegebenen Wert.
+
+| `GT`
+| Grösser als
+| Der tatsächliche Messwert liegt über dem angegebenen Wert.
+
+| `ND`
+| Nicht bestimmt
+| Es liegt kein bestimmter Messwert vor.
+|===
+
+Bei `EQ`, `LT` und `GT` muss das Attribut `wert` eine Zahl enthalten.
+Bei `ND` muss das Attribut `wert` leer bleiben.
+Das Attribut `operator` muss immer einen der vier zulässigen Codes enthalten.
+
+Im Attribut `wert` dürfen keine Vergleichszeichen (`<`, `>`) oder Texte wie `NULL` enthalten sein.
+Ein fehlender Wert wird in CSV durch ein leeres Feld dargestellt.
+
+.Beispiel einer CSV-Datei
+[source,csv]
+----
+stoff;wert;operator
+giftiger Stoff;0.5;EQ
+gefährlicher Stoff;0.005;LT
+weiterer Stoff;500;GT
+nicht bestimmter Stoff;;ND
+----
+
+Im Beispiel bedeutet `0.005;LT`, dass der tatsächliche Messwert kleiner als `0.005` ist.
+Bei `500;GT` liegt der Messwert über `500`.
+In der letzten Zeile bleibt das Attribut `wert` leer, da kein bestimmter Messwert vorliegt.
+
+Die Nachweisgrenze (NG/LOD) beziehungsweise Bestimmungsgrenze (BG/LOQ) wird in den Metadaten zum jeweiligen Messparameter beschrieben.
+Dabei sind die Art und die Höhe der Grenze anzugeben, sofern solche Grenzen für den Messparameter relevant sind.
+
+Der mit `LT` oder `GT` angegebene Zahlenwert muss nicht zwingend einer dokumentierten Nachweis- oder Bestimmungsgrenze entsprechen.
+Er beschreibt die für den jeweiligen Messwert geltende obere beziehungsweise untere Schranke.
+
+Beispielsweise kann die Bestimmungsgrenze eines Parameters bei `0.01` liegen, während ein einzelnes Messergebnis als `LT` mit dem Wert `0.005` geliefert wird.
+Dies bedeutet, dass der tatsächliche Messwert kleiner als `0.005` ist.

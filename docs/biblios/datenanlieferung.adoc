@@ -1,7 +1,7 @@
 [[datenanlieferung]]
 == Daten anliefern und Veröffentlichung prüfen
 
-Wenn Sie die CSV-Datei vorbereitet und das Datenblatt exportiert haben, öffnen Sie die https://daten.so.ch/anlieferung[Datenanlieferung]. Dort gelangen Sie zur Anlieferungsoberfläche, über die Sie Ihre Dateien hochladen und die Verarbeitung starten.
+Wenn Sie die CSV-Datei vorbereitet und das Datenblatt exportiert haben, öffnen Sie die https://datenportal-test.apps.ocp.so.ch/anlieferung[Datenanlieferung]. Dort gelangen Sie zur Anlieferungsoberfläche, über die Sie Ihre Dateien hochladen und die Verarbeitung starten.
 
 Melden Sie sich mit Ihrem kantonalen Benutzerkonto an. Das AGI vergibt die Berechtigungen für die Datenanlieferung. Wenn Ihre Organisation oder Ihr Datenangebot nicht zur Auswahl steht, wenden Sie sich an die <<kontakt,technische Kontaktstelle>>.
 

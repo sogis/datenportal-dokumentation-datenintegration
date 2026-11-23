@@ -11,14 +11,19 @@
 :doctype: book
 :revdate: {localdate}
 :author: Statistikdienst AFIN und Amt für Geoinformation Kanton Solothurn
-:glossar-datenangebot-url: https://daten.so.ch/dokumentation/glossar/main/#datenangebot-und-metadaten
+:glossar-datenangebot-url: https://datenportal-test.apps.ocp.so.ch/dokumentation/glossar/main/#datenangebot-und-metadaten
 ifdef::backend-html5[]
 :glossar-datenangebot-url: /glossar/main/#datenangebot-und-metadaten
 endif::[]
 
 = Anleitung für Datenlieferanten
 
-Diese Anleitung begleitet Datenlieferanten der kantonalen Fachämter von der ersten Anmeldung bis zur laufenden Aktualisierung auf daten.so.ch. Sie erklärt den CSV-Lieferprozess mit einem begleitenden Datenblatt: welche Angaben und Dateien Sie vorbereiten, wer Sie unterstützt und wie die Veröffentlichung abläuft. Die letzten beiden Kapitel führen Schritt für Schritt durch die Erfassung der Metadaten und die Anlieferung der (Meta-)Daten an das Datenportal.
+[NOTE]
+====
+Das Datenportal befindet sich derzeit in der Testphase. Bitte nutzen Sie während dieser Zeit die https://datenportal-test.apps.ocp.so.ch/[Testumgebung des Datenportals].
+====
+
+Diese Anleitung begleitet Datenlieferanten der kantonalen Fachämter von der ersten Anmeldung bis zur laufenden Aktualisierung im Datenportal. Sie erklärt den CSV-Lieferprozess mit einem begleitenden Datenblatt: welche Angaben und Dateien Sie vorbereiten, wer Sie unterstützt und wie die Veröffentlichung abläuft. Die letzten beiden Kapitel führen Schritt für Schritt durch die Erfassung der Metadaten und die Anlieferung der (Meta-)Daten an das Datenportal.
 
 include::einstieg.adoc[]
 

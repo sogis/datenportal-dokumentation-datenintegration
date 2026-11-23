@@ -37,7 +37,7 @@ Das AGI richtet (einmalig) die Verarbeitung und die notwendigen Zugänge ein. Ih
 
 === Eintrag und Downloads kontrollieren
 
-Kontrollieren Sie gemeinsam mit dem AFIN beziehungsweise dem AGI den Eintrag auf https://daten.so.ch[daten.so.ch]: Titel, Beschreibung, Kontakt, Zeitbezug, gegebenenfalls Serienausgabe und die herunterladbaren Daten. Melden Sie Abweichungen an die zuständige <<kontakt,Kontaktstelle>>.
+Kontrollieren Sie gemeinsam mit dem AFIN beziehungsweise dem AGI den Eintrag auf https://datenportal-test.apps.ocp.so.ch/[Datenportal]: Titel, Beschreibung, Kontakt, Zeitbezug, gegebenenfalls Serienausgabe und die herunterladbaren Daten. Melden Sie Abweichungen an die zuständige <<kontakt,Kontaktstelle>>.
 
 *Ergebnis:* Das Datenangebot ist auffindbar, verständlich beschrieben und mit den richtigen Daten verfügbar.
 

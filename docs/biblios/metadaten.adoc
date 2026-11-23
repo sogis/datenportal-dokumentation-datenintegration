@@ -1,7 +1,7 @@
 [[metadaten]]
 == Daten verständlich beschreiben
 
-Metadaten erklären, was Ihre Daten bedeuten, woher sie stammen und wie sie verwendet werden können. Erfassen Sie diese Angaben mit Unterstützung des AFIN im https://daten.so.ch/datenblatt-editor[Datenblatt-Editor].
+Metadaten erklären, was Ihre Daten bedeuten, woher sie stammen und wie sie verwendet werden können. Erfassen Sie diese Angaben mit Unterstützung des AFIN im https://datenportal-test.apps.ocp.so.ch/datenblatt-editor[Datenblatt-Editor].
 
 Die <<anleitung-editor,Schritt-für-Schritt-Anleitung>> zeigt die Bedienung. Bereiten Sie zuerst die fachlichen Angaben in diesem Kapitel vor.
 

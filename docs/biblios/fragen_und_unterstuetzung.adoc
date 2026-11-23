@@ -44,4 +44,4 @@ Bearbeiten Sie zuerst die angezeigten Fehler. Die Abschnitte <<editor-pruefen,Ed
 
 Das AFIN und das AGI unterstützen Sie auch beim Erstellen einer lieferfähigen CSV-Datei aus Excel oder bestehenden Exporten, beim Umstrukturieren ins Long-Format und beim Einrichten der regelmässigen Nachführung.
 
-Das öffentliche Portal erreichen Sie unter https://daten.so.ch[daten.so.ch].
+Das Portal erreichen Sie über die https://datenportal-test.apps.ocp.so.ch/[Testumgebung des Datenportals].
