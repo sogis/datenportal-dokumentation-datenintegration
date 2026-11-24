@@ -15,7 +15,7 @@ endif::[]
 
 Öffnen Sie https://datenportal-test.apps.ocp.so.ch/datenblatt-editor[den Datenblatt-Editor]. Erstellen Sie ein Datenblatt für einen einzelnen Datensatz oder eine Serie oder importieren Sie ein vorhandenes Datenblatt. Die fachlichen Anforderungen stehen unter <<metadaten,Daten verständlich beschreiben>>.
 
-Als durchgängiges Beispiel verwenden wir «Wasserqualität Grundwasser Kanton Solothurn» mit den Attributen `messstelle`, `messdatum`, `wert` und `ist_nachweisgrenze`. Die Angaben sind fiktiv; übernehmen Sie für Ihre Lieferung die mit dem AFIN und dem AGI abgestimmten Werte.
+Als durchgängiges Beispiel verwenden wir «Wasserqualität Grundwasser Kanton Solothurn» mit den Attributen `messstelle`, `messdatum`, `wert` und `ist_routineprobe`. Die Angaben sind fiktiv. Übernehmen Sie für Ihre Lieferung die mit dem AFIN und dem AGI abgestimmten Werte.
 
 === Datenblatt anlegen oder importieren
 
@@ -66,13 +66,13 @@ image::editor-e3-zeitbezug.png["Jährliche Nachführung und Zeitraum vom 01.01.2
 
 . Erfassen Sie für jede CSV-Spalte ein Attribut in derselben Reihenfolge. Der Editor analysiert die CSV-Datei nicht automatisch.
 . Pflegen Sie Name, Typ, Beschreibung und gegebenenfalls Einheit und CodeList. Das <<attributbeschreibungen,Attributbeispiel>> enthält die vier Spalten des Grundwasserbeispiels.
-. Kennzeichnen Sie «Pflicht» nur, wenn in der betreffenden CSV-Spalte keine Werte fehlen dürfen. Im Beispiel sind `messstelle` und `messdatum` Pflichtattribute.
+. Kennzeichnen Sie «Pflicht» nur, wenn in der betreffenden CSV-Spalte keine Werte fehlen dürfen. Im Beispiel sind `messstelle`, `messdatum` und `wert` Pflichtattribute.
 . Verwenden Sie für URL-Spalten derzeit `TEXT`; die angebotene Auswahl `URI` wird von der Lieferverarbeitung noch nicht unterstützt.
 . Vergleichen Sie Namen und Reihenfolge nochmals direkt mit der CSV-Kopfzeile. Prüfen Sie insbesondere Einheiten, Codes und die Bedeutung fehlender Werte.
 
 .Die vier Attribute des Grundwasserbeispiels in der Reihenfolge der CSV-Spalten
 [.editor-screenshot]
-image::editor-e4-datensatzattribute.png["Datensatzattribute messstelle (TEXT), messdatum (DATE), wert (DECIMAL, mg/l) und ist_nachweisgrenze (BOOLEAN). messstelle und messdatum sind als Pflicht markiert.",width=724,link="images/editor-e4-datensatzattribute.png"]
+image::editor-e4-datensatzattribute.png["Datensatzattribute messstelle (TEXT), messdatum (DATE), wert (DECIMAL, mg/l) und ist_routineprobe (BOOLEAN). messstelle, messdatum und wert sind als Pflicht markiert.",width=724,link="images/editor-e4-datensatzattribute.png"]
 
 *Ergebnis:* Jede Datenspalte ist fachlich erklärt und passt zur CSV-Datei.
 

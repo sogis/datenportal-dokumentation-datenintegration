@@ -38,7 +38,7 @@ Beschreiben Sie die Daten so, dass Dritte ihre Aussagekraft beurteilen können. 
 
 Ordnen Sie diese Hinweise der Beschreibung des Datenangebots, der Erhebungsmethode oder dem betroffenen Attribut zu. Ein eigenes Feld «Bemerkungen» wird im aktuellen Editor nicht angeboten.
 
-Ein Hinweis zur zeitlichen Vergleichbarkeit könnte beispielsweise lauten: «Ab 2020 wurde die Messmethode geändert. Die Werte früherer Jahre sind deshalb nur eingeschränkt vergleichbar.» Verwenden Sie solche Hinweise nur, wenn sie auf den tatsächlichen Datensatz zutreffen. Wie Nachweisgrenzen beschrieben werden, zeigt das <<attributbeschreibungen,Attributbeispiel>>.
+Ein Hinweis zur zeitlichen Vergleichbarkeit könnte beispielsweise lauten: «Ab 2020 wurde die Messmethode geändert. Die Werte früherer Jahre sind deshalb nur eingeschränkt vergleichbar.» Verwenden Sie solche Hinweise nur, wenn sie auf den tatsächlichen Datensatz zutreffen. Wie Sie Nachweisgrenzen dokumentieren, steht unter <<_messwerte_und_nachweisgrenzen,Messwerte und Nachweisgrenzen>>.
 
 [[nutzungsbedingungen]]
 === Nutzungsbedingungen und Verantwortung
@@ -58,7 +58,7 @@ Das folgende fiktive Beispiel zeigt die fachlichen Angaben für ein Datenblatt. 
 |===
 |Feld |Beispieleingabe
 |Titel |Wasserqualität Grundwasser Kanton Solothurn
-|Beschreibung |Messwerte ausgewählter Stoffe im Grundwasser des Kantons Solothurn. Die Daten dienen dem langfristigen Monitoring. Werte an der Nachweisgrenze sind gekennzeichnet; Einzelheiten stehen in den Attributbeschreibungen.
+|Beschreibung |Gemessene Nitratkonzentrationen im Grundwasser des Kantons Solothurn. Die Daten umfassen Proben aus der regelmässigen Überwachung und Proben aus besonderem Anlass.
 |Datenherr |Das Amt für Umwelt aus dem Katalog auswählen
 |Organisationseinheit |Abteilung Wasser
 |E-Mail / URI |`mailto:grundwasser@example.com` (fiktive Kontaktadresse)
@@ -77,18 +77,18 @@ Verwenden Sie unter «Attribute» beziehungsweise «Serien-Attribute» die Felde
 
 Im Feld `Beschreibung` können Sie <<metadaten-markdown,Text mit Markdown strukturieren>>.
 
-Das folgende fiktive Beispiel beschreibt einen Messwert unter einer unteren Nachweisgrenze:
+Im folgenden fiktiven Grundwasserbeispiel liegt für jede Probe eine gemessene Nitratkonzentration vor.
 
 [cols="1,1,3,1,1",options="header"]
 |===
 |Name |Typ |Beschreibung |Einheit |Pflicht
 |messstelle |TEXT |Kennung der Messstelle; führende Nullen gehören zur Kennung. |Keine |Ja
 |messdatum |DATE |Datum der Probenahme. |Keine |Ja
-|wert |DECIMAL |Stoffkonzentration. Zulässige Werte sind nicht negativ. Leer bedeutet: kein Messwert verfügbar. Bei `ist_nachweisgrenze=true` ist der eingetragene Wert die untere Nachweisgrenze, nicht eine exakt gemessene Konzentration. |mg/l |Nein
-|ist_nachweisgrenze |BOOLEAN |`true`: Wert liegt unter der angegebenen Nachweisgrenze; `false`: regulärer Messwert. Leer, wenn `wert` leer ist. |Keine |Nein
+|wert |DECIMAL |Gemessene Nitratkonzentration. |mg/l |Ja
+|ist_routineprobe |BOOLEAN |`true` steht für eine Probe aus der regelmässigen Überwachung, `false` für eine Probe aus besonderem Anlass. Das Feld bleibt leer, wenn die Probenart nicht dokumentiert ist. |Keine |Nein
 |===
 
-`Pflicht=Ja` bedeutet, dass in dieser Spalte keine Werte fehlen dürfen. Es wird keine externe Codeliste benötigt; «CodeList» bleibt leer. Beschreiben Sie für Ihren Datensatz insbesondere Wertebereiche, Codes, Rundungen, fehlende Werte und die Richtung einer Nachweisgrenze. Verwenden Sie keine erfundenen Grenzwerte aus dem Beispiel für reale Daten.
+`Pflicht=Ja` bedeutet, dass in dieser Spalte keine Werte fehlen dürfen. In diesem Beispiel bleibt «CodeList» leer. Beschreiben Sie für Ihren Datensatz insbesondere Wertebereiche, Codes, Rundungen und fehlende Werte.
 
 Für die Anlieferung werden die Typen `TEXT`, `INTEGER`, `NUMERIC`, `DECIMAL`, `BOOLEAN`, `DATE` und `DATETIME` verarbeitet. Für eine Spalte mit URLs verwenden Sie derzeit `TEXT`: Die im Editor ebenfalls angebotene Auswahl `URI` wird von der CSV-Verarbeitung noch nicht unterstützt.
 
