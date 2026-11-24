@@ -3,14 +3,22 @@
 
 Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt bereit. Welche Dateien Sie für welche Änderung benötigen, erläutert <<datenanlieferung,Daten anliefern und Veröffentlichung prüfen>>. Gehen Sie vor jedem Lauf die <<lieferpruefung,Lieferprüfliste>> durch.
 
+Die Abbildungen zeigen die Lieferung der Ausgabe `2025` des fiktiven <<metadaten-beispiel,Grundwasserbeispiels>> in einer lokalen Testumgebung.
+
 [[jenkins-zugang]]
 === Anmelden und Datenangebot wählen
 
 . Öffnen Sie https://datenportal-test.apps.ocp.so.ch/anlieferung[die Datenanlieferung] und melden Sie sich mit Ihrem kantonalen Benutzerkonto an.
-. Öffnen Sie den berechtigten Organisationsjob über «Jobs starten» und wählen Sie Ihr Datenangebot.
+. Öffnen Sie «Jobs starten». Wählen Sie bei Ihrer Organisation «Starten» und anschliessend im Feld «Datensatz» Ihr Datenangebot.
 . Fehlt Ihre Organisation oder Ihr Datenangebot, wenden Sie sich an das AGI. Die technische Kontaktstelle vergibt Berechtigungen und richtet die Verarbeitung ein.
 
-*Screenshot-Platzhalter J1:* Einstieg nach der Anmeldung mit Organisationsjob und Auswahl des Datenangebots; keine Zugangsdaten oder personenbezogenen Laufdaten.
+.Organisationsjob des Amts für Umwelt unter «Jobs starten»
+[.jenkins-screenshot]
+image::jenkins-j1-jobs.png["Jobliste mit dem Eintrag Amt für Umwelt und der Schaltfläche Starten",width=724,link="images/jenkins-j1-jobs.png"]
+
+.Ausgewähltes Grundwasserangebot im Startformular
+[.jenkins-screenshot]
+image::jenkins-j1-datenangebot.png["Startformular des Amts für Umwelt mit der Serie Wasserqualität Grundwasser Kanton Solothurn im Feld Datensatz",width=724,link="images/jenkins-j1-datenangebot.png"]
 
 *Ergebnis:* Das Startformular für das gewünschte Datenangebot ist geöffnet.
 
@@ -20,7 +28,9 @@ Halten Sie die geprüfte CSV-Datei und bei Bedarf das exportierte Datenblatt ber
 . Laden Sie für neue oder korrigierte Daten die CSV-Datei hoch. Laden Sie bei geänderten Metadaten das vollständig exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) hoch. Sie können beide Dateien gemeinsam liefern; mindestens eine Datei ist erforderlich.
 . Prüfen Sie die ausgewählten Dateinamen. Für das Grundwasserbeispiel könnte die Datendatei `wasserqualitaet.csv` heissen. Verwenden Sie Ihr tatsächliches Datenblatt und Ihre geprüfte CSV-Datei.
 
-*Screenshot-Platzhalter J2:* Modus «Lieferung verarbeiten» mit ausgewählter CSV-Datei und Datenblatt sowie den Dateinamen.
+.CSV-Datei und Serien-Datenblatt im Modus «Lieferung verarbeiten»
+[.jenkins-screenshot]
+image::jenkins-j2-dateien.png["Im Modus Lieferung verarbeiten sind grundwasser-serie.xtf und wasserqualitaet.csv ausgewählt",width=724,link="images/jenkins-j2-dateien.png"]
 
 *Ergebnis:* Die zur Änderung passenden Dateien sind ausgewählt. Bei einer reinen Metadatenkorrektur bleibt der CSV-Upload leer.
 
@@ -32,7 +42,9 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 . Beschreiben Sie die Änderung im Kommentar, etwa «Jahreslieferung 2025» oder «Erhebungsmethode präzisiert». Bei einer Fehlerkorrektur nennen Sie den betroffenen Stand und die Korrektur.
 . Stimmen Sie mit dem AGI ab, ob «Portal nach Veröffentlichung neu laden» gesetzt werden soll. Die Option ist standardmässig ausgeschaltet und setzt eine entsprechende Einrichtung voraus.
 
-*Screenshot-Platzhalter J3:* Serienlieferung mit Ausgabe `2025`, Lieferkommentar und der Option «Portal nach Veröffentlichung neu laden».
+.Jahreslieferung 2025 mit aktiviertem Portal-Reload
+[.jenkins-screenshot]
+image::jenkins-j3-serienlieferung.png["Ausgabe 2025, Kommentar Jahreslieferung 2025 und aktivierte Option Portal nach Veröffentlichung neu laden",width=724,link="images/jenkins-j3-serienlieferung.png"]
 
 *Ergebnis:* Die Lieferung ist eindeutig zugeordnet und die Änderung nachvollziehbar beschrieben. Ein Kommentar allein ersetzt keine erforderliche Anpassung der Metadaten.
 
@@ -41,9 +53,11 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 
 . Kontrollieren Sie Datenangebot, Dateien, gegebenenfalls Ausgabe und Kommentar.
 . Wählen Sie «Job starten» und öffnen Sie den zugehörigen Lauf.
-. Prüfen Sie nach Abschluss den Status und allfällige Prüfmeldungen. Beachten Sie den betroffenen Job und die Laufnummer, damit Sie bei Rückfragen auf dieselbe Verarbeitung verweisen können.
+. Prüfen Sie nach Abschluss den Status und allfällige Prüfmeldungen. Über «Logfile öffnen» gelangen Sie zum vollständigen Protokoll. Beachten Sie den betroffenen Job und die Laufnummer, damit Sie bei Rückfragen auf dieselbe Verarbeitung verweisen können.
 
-*Screenshot-Platzhalter J4:* Abgeschlossener erfolgreicher Lauf mit Status, Laufnummer und Zugang zu den Prüfmeldungen.
+.Erfolgreicher Lieferlauf mit Laufnummer und Zugang zum Protokoll
+[.jenkins-screenshot]
+image::jenkins-j4-erfolg.png["AfU-Lauf 1 mit Status Erfolgreich und den Links Logfile öffnen und Artefakte öffnen",width=724,link="images/jenkins-j4-erfolg.png"]
 
 *Ergebnis:* Sie kennen das Verarbeitungsergebnis. Ein erfolgreicher Lauf allein bestätigt noch nicht die fachliche Freigabe und Sichtbarkeit im Portal.
 
@@ -54,7 +68,15 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 . Öffnen Sie das Startformular erneut und wählen Sie die korrigierten Dateien bewusst neu aus. Prüfen Sie auch die Ausgabe und den Kommentar.
 . Starten Sie einen neuen Lauf und kontrollieren Sie dessen Ergebnis. Bei unklaren Fehlern senden Sie dem AGI den betroffenen Job, den Lauf und die Fehlermeldung; fachliche Fragen klären Sie mit dem AFIN.
 
-*Screenshot-Platzhalter J5:* Fehlgeschlagener Lauf mit einer verständlichen Prüfmeldung zu einer nicht passenden CSV-Spalte.
+Im Beispiel enthält die fehlerhafte CSV die Spalte `messwert`. Das Datenblatt erwartet an dieser Stelle `wert`.
+
+.Fehlgeschlagener Lieferlauf mit der fehlerhaften CSV-Datei
+[.jenkins-screenshot]
+image::jenkins-j5-fehlgeschlagen.png["AfU-Lauf 2 mit Status Fehlgeschlagen und wasserqualitaet-spaltenfehler.csv in den Laufparametern",width=724,link="images/jenkins-j5-fehlgeschlagen.png"]
+
+.Prüfmeldung zur Abweichung zwischen CSV-Spalten und Attributliste
+[.jenkins-screenshot]
+image::jenkins-j5-csv-spaltenfehler.png["Protokoll von Lauf 2. Die CSV-Spalten stimmen laut Meldung nicht mit den deklarierten Attributen überein.",width=724,link="images/jenkins-j5-csv-spaltenfehler.png"]
 
 *Ergebnis:* Die korrigierte Lieferung wurde erneut geprüft oder die zuständige Kontaktstelle hat genügend Angaben zur Abklärung.
 
@@ -62,6 +84,12 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 
 Lassen Sie das AGI sicherstellen, dass die technische Publikation freigegeben und der neue Stand im Portal geladen ist. Öffnen Sie danach das https://datenportal-test.apps.ocp.so.ch/[Datenportal] und kontrollieren Sie Titel, Zeitbezug, gegebenenfalls Serienausgabe, Metadaten und Downloads. Prüfen Sie bei einer Korrektur insbesondere die betroffenen Werte und den sichtbaren Korrekturhinweis.
 
-*Screenshot-Platzhalter J6:* Veröffentlichter Beispieldatensatz im Portal mit Zeitbezug und Downloads.
+.Veröffentlichte Ausgabe 2025 mit Downloads im Datenportal
+[.jenkins-screenshot]
+image::jenkins-j6-portal-downloads.png["Grundwasserqualität für 2025 mit der Kennzeichnung Aktuelle Ausgabe und Downloads als CSV, XLSX und Parquet",width=724,link="images/jenkins-j6-portal-downloads.png"]
+
+.Zeitliche Abdeckung der Ausgabe 2025
+[.jenkins-screenshot]
+image::jenkins-j6-zeitbezug.png["Detailseite der veröffentlichten Ausgabe mit dem Zeitraum vom 01.01.2025 bis 31.12.2025",width=724,link="images/jenkins-j6-zeitbezug.png"]
 
 *Ergebnis:* Der erwartete Stand ist im Portal sichtbar. Bleibt der alte Stand bestehen, teilen Sie dem AGI Datenangebot und Lieferlauf mit.
