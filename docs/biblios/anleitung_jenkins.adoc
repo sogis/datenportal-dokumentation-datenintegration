@@ -24,8 +24,8 @@ image::jenkins-j1-datenangebot.png["Startformular des Amts für Umwelt mit der S
 
 === Dateien hochladen
 
-. Wählen Sie «Lieferung verarbeiten».
-. Laden Sie für neue oder korrigierte Daten die CSV-Datei hoch. Laden Sie bei geänderten Metadaten das vollständig exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) hoch. Sie können beide Dateien gemeinsam liefern; mindestens eine Datei ist erforderlich.
+. Wählen Sie im Feld «Verarbeitung» die Option «Lieferung verarbeiten».
+. Laden Sie für neue oder korrigierte Daten die CSV-Datei unter «Daten hochladen» hoch. Laden Sie bei geänderten Metadaten das vollständig exportierte Datenblatt (`.xtf` beziehungsweise `.xml`) unter «Metadaten hochladen» hoch. Sie können beide Dateien gemeinsam liefern. Mindestens eine Datei ist erforderlich.
 . Prüfen Sie die ausgewählten Dateinamen. Für das Grundwasserbeispiel könnte die Datendatei `wasserqualitaet.csv` heissen. Verwenden Sie Ihr tatsächliches Datenblatt und Ihre geprüfte CSV-Datei.
 
 .CSV-Datei und Serien-Datenblatt im Modus «Lieferung verarbeiten»
@@ -39,7 +39,7 @@ Die zusätzliche Auswahl «Datenblatt aus Repository übernehmen» dient dem gez
 === Serienausgabe und Lieferkommentar prüfen
 
 . Wenn Sie eine CSV-Datei für eine Serie liefern, geben Sie im Feld «Ausgabe» die vereinbarte Bezeichnung ein, beispielsweise `2025`. Prüfen Sie, dass CSV-Datei, Zeitbezug und ausgewählte Ausgabe zusammenpassen. Bei einer reinen Metadatenlieferung wird keine Ausgabe angegeben.
-. Beschreiben Sie die Änderung im Kommentar, etwa «Jahreslieferung 2025» oder «Erhebungsmethode präzisiert». Bei einer Fehlerkorrektur nennen Sie den betroffenen Stand und die Korrektur.
+. Beschreiben Sie die Änderung im Feld «Kommentar», etwa «Jahreslieferung 2025» oder «Erhebungsmethode präzisiert». Bei einer Fehlerkorrektur nennen Sie den betroffenen Stand und die Korrektur.
 . Stimmen Sie mit dem AGI ab, ob «Portal nach Veröffentlichung neu laden» gesetzt werden soll. Die Option ist standardmässig ausgeschaltet und setzt eine entsprechende Einrichtung voraus.
 
 .Jahreslieferung 2025 mit aktiviertem Portal-Reload
@@ -53,7 +53,7 @@ image::jenkins-j3-serienlieferung.png["Ausgabe 2025, Kommentar Jahreslieferung 2
 
 . Kontrollieren Sie Datenangebot, Dateien, gegebenenfalls Ausgabe und Kommentar.
 . Wählen Sie «Job starten» und öffnen Sie den zugehörigen Lauf.
-. Prüfen Sie nach Abschluss den Status und allfällige Prüfmeldungen. Über «Logfile öffnen» gelangen Sie zum vollständigen Protokoll. Beachten Sie den betroffenen Job und die Laufnummer, damit Sie bei Rückfragen auf dieselbe Verarbeitung verweisen können.
+. Prüfen Sie nach Abschluss den Status, im Beispiel «Erfolgreich», und allfällige Prüfmeldungen. Über «Logfile öffnen» gelangen Sie zum vollständigen Protokoll. Beachten Sie den betroffenen Job und die Laufnummer, damit Sie bei Rückfragen auf dieselbe Verarbeitung verweisen können.
 
 .Erfolgreicher Lieferlauf mit Laufnummer und Zugang zum Protokoll
 [.jenkins-screenshot]

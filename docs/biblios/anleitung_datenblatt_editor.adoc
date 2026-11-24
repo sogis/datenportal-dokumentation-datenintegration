@@ -32,11 +32,11 @@ image::editor-e1-startseite.png["Startseite mit je einer Aktion zum Anlegen und 
 
 === Grundangaben und Kontakt erfassen
 
-. Tragen Sie den vereinbarten Identifier ein beziehungsweise behalten Sie ihn bei einem importierten Datenblatt bei.
-. Erfassen Sie Titel und Beschreibung anhand des <<metadaten-beispiel,Grundwasserbeispiels>>. Verwenden Sie verständliche Begriffe und beschreiben Sie Gegenstand und Zweck.
-. Wählen Sie den Datenherrn und erfassen Sie unter «Zuständigkeiten / Kontakt» eine laufend überwachte E-Mail-Adresse. Im Beispiel verwenden wir `mailto:grundwasser@example.com` ausschliesslich als fiktive Adresse.
-. Ergänzen Sie Themen und komma-getrennte Keywords, im Beispiel `Wasserqualität, Grundwasser, Nitrat`.
-. Stimmen Sie Zugänglichkeit und Publikationsstatus mit dem AFIN ab. Die Auswahl im Editor ersetzt keine Freigabe.
+. Tragen Sie im Feld «Identifier» den vereinbarten Wert ein beziehungsweise behalten Sie ihn bei einem importierten Datenblatt bei.
+. Füllen Sie «Titel» und «Beschreibung» anhand des <<metadaten-beispiel,Grundwasserbeispiels>> aus. Verwenden Sie verständliche Begriffe und beschreiben Sie Gegenstand und Zweck.
+. Wählen Sie unter «Datenherr» die zuständige Stelle. Erfassen Sie unter «Zuständigkeiten / Kontakt» im Feld «E-Mail / URI» eine laufend überwachte E-Mail-Adresse. Im Beispiel verwenden wir `mailto:grundwasser@example.com` ausschliesslich als fiktive Adresse.
+. Wählen Sie unter «Themen» die passenden Einträge. Trennen Sie die Begriffe im Feld «Keywords» mit Kommas, im Beispiel `Wasserqualität, Grundwasser, Nitrat`.
+. Stimmen Sie die Auswahl unter «Zugänglichkeit» und «Publikationsstatus» mit dem AFIN ab. Im Beispiel steht der Status auf «Veröffentlicht». Die Auswahl im Editor ersetzt keine Freigabe.
 
 .Grundangaben des Beispieldatensatzes
 [.editor-screenshot]
@@ -50,10 +50,10 @@ image::editor-e2-kontakt-themen-keywords.png["Fiktive Kontaktadresse grundwasser
 
 === Zeitbezug und fachliche Ergänzungen pflegen
 
-. Wählen Sie die Nachführung, im Beispiel «Jährlich».
-. Wählen Sie unter «Zeitbezug der Daten» einen Zeitraum oder Stichtag. Im Beispiel umfasst der Zeitraum `2003-01-01` bis `2024-12-31`. Verwenden Sie «Kein Zeitbezug» nur, wenn dies fachlich zutrifft.
+. Wählen Sie unter «Nachführung» das passende Intervall, im Beispiel «Jährlich».
+. Wählen Sie unter «Zeitbezug der Daten» die Option «Zeitraum» oder «Stichtag». Im Beispiel umfasst der Zeitraum `2003-01-01` bis `2024-12-31`. Verwenden Sie «Kein Zeitbezug» nur, wenn dies fachlich zutrifft.
 . Prüfen Sie «Modified» als Änderungsdatum des Datenblatts. Dieses Datum ist vom fachlichen Zeitraum der Daten zu unterscheiden.
-. Beschreiben Sie bei Bedarf Erhebungsmethode, verfügbare Daten, weitere Verwendungen und Hilfsdaten. Erfassen Sie konkrete Qualitäts- und Interpretationshinweise in der passenden Beschreibung.
+. Ergänzen Sie bei Bedarf die Felder «Erhebungsmethode», «Verfügbare Daten ab», «Weitere Verwendungen» und «Hilfsdaten». Erfassen Sie konkrete Qualitäts- und Interpretationshinweise in der passenden Beschreibung.
 . Füllen Sie «Datenmodell» nur nach Abstimmung mit dem AGI aus.
 
 .Jährliche Nachführung, Zeitraum und Erhebungsmethode
@@ -65,9 +65,9 @@ image::editor-e3-zeitbezug.png["Jährliche Nachführung und Zeitraum vom 01.01.2
 [[_attribute_erfassen_und_mit_der_csv_abgleichen]]
 === Attribute erfassen und mit der CSV-Datei abgleichen
 
-. Erfassen Sie für jede CSV-Spalte ein Attribut in derselben Reihenfolge. Der Editor analysiert die CSV-Datei nicht automatisch.
-. Pflegen Sie Name, Typ, Beschreibung und gegebenenfalls Einheit und CodeList. Das <<attributbeschreibungen,Attributbeispiel>> enthält die vier Spalten des Grundwasserbeispiels.
-. Kennzeichnen Sie «Pflicht» nur, wenn in der betreffenden CSV-Spalte keine Werte fehlen dürfen. Im Beispiel sind `messstelle`, `messdatum` und `wert` Pflichtattribute.
+. Erfassen Sie unter «Datensatzattribute» für jede CSV-Spalte ein Attribut in derselben Reihenfolge. Der Editor analysiert die CSV-Datei nicht automatisch.
+. Füllen Sie «Name», «Typ», «Beschreibung» und gegebenenfalls «Einheit» und «CodeList» aus. Das <<attributbeschreibungen,Attributbeispiel>> enthält die vier Spalten des Grundwasserbeispiels.
+. Aktivieren Sie «Pflicht» nur, wenn in der betreffenden CSV-Spalte keine Werte fehlen dürfen. Im Beispiel sind `messstelle`, `messdatum` und `wert` Pflichtattribute.
 . Verwenden Sie für URL-Spalten derzeit `TEXT`; die angebotene Auswahl `URI` wird von der Lieferverarbeitung noch nicht unterstützt.
 . Vergleichen Sie Namen und Reihenfolge nochmals direkt mit der CSV-Kopfzeile. Prüfen Sie insbesondere Einheiten, Codes und die Bedeutung fehlender Werte.
 
@@ -82,8 +82,8 @@ image::editor-e4-datensatzattribute.png["Datensatzattribute messstelle (TEXT), m
 
 . Legen Sie für eine vereinbarte Serie auf der Startseite ein neues Datenblatt im Bereich für Serien an oder importieren Sie das bestehende vollständige Datenblatt.
 . Pflegen Sie gemeinsame Angaben im Serienkopf und die gemeinsamen Attribute unter «Serien-Attribute».
-. Erfassen beziehungsweise bearbeiten Sie die Ausgaben mit den vereinbarten Bezeichnungen, beispielsweise `2025`. Prüfen Sie den Zeitbezug und allfällige von der Serie abweichende Angaben und Attribute jeder Ausgabe.
-. Markieren Sie genau eine Ausgabe als aktuell und stimmen Sie neue Ausgaben sowie deren Freigabe mit dem AFIN ab.
+. Erfassen beziehungsweise bearbeiten Sie unter «Ausgaben» die einzelnen Ausgaben. Tragen Sie jeweils im Feld «IssueLabel» die vereinbarte Bezeichnung ein, beispielsweise `2025`. Prüfen Sie den Zeitbezug und allfällige von der Serie abweichende Angaben und Attribute jeder Ausgabe.
+. Aktivieren Sie bei genau einer Ausgabe «Als aktuelle Ausgabe markieren». Stimmen Sie neue Ausgaben sowie deren Freigabe mit dem AFIN ab.
 . Exportieren Sie stets das ganze Datenblatt einschliesslich der Ausgaben. Eine reine Metadatenlieferung aktualisiert dieses gesamte Datenblatt.
 
 .Gemeinsame Grundangaben im Serienkopf
@@ -103,9 +103,9 @@ image::editor-e5-ausgabe-zeitbezug.png["Zeitbezug der Ausgabe 2025 mit ausgewäh
 [[metadaten-markdown]]
 === Text mit Markdown strukturieren
 
-Beschreibende Metadaten unterstützen eine eingeschränkte Auswahl an Markdown. Sie können damit die *Beschreibungen von Datensätzen, Serien, Ausgaben und Attributen* sowie die Felder *Erhebungsmethode*, *Hilfsdaten* und *Weitere Verwendungen* strukturieren.
+Beschreibende Metadaten unterstützen eine eingeschränkte Auswahl an Markdown. Sie können damit den Inhalt der Felder «Beschreibung» von Datensätzen, Serien, Ausgaben und Attributen sowie «Erhebungsmethode», «Hilfsdaten» und «Weitere Verwendungen» strukturieren.
 
-Titel, Identifier, Attributnamen, Datentypen, Einheiten, Keywords, Modellnamen, Kontaktangaben, URLs und *Verfügbare Daten ab* bleiben normale Textwerte. Markdown-Zeichen werden dort wörtlich angezeigt.
+«Titel», «Identifier», Attributnamen, Datentypen, Einheiten, «Keywords», Modellnamen, Kontaktangaben, URLs und «Verfügbare Daten ab» bleiben normale Textwerte. Markdown-Zeichen werden dort wörtlich angezeigt.
 
 [cols="1,2l,3",options="header"]
 |===
@@ -142,7 +142,7 @@ Detailseiten zeigen Absätze, Listen und Zeilenumbrüche. In kompakten Listen- u
 [[editor-pruefen]]
 === Meldungen prüfen und Datenblatt exportieren
 
-. Prüfen Sie die Meldungen des Editors. Fehler verhindern den Export; korrigieren Sie die bezeichneten Angaben und prüfen Sie erneut.
+. Prüfen Sie die Meldungen unter «Prüfstatus». Fehler verhindern den Export. Korrigieren Sie die bezeichneten Angaben und prüfen Sie erneut.
 . Bearbeiten Sie auch Warnungen fachlich, insbesondere fehlende Attributbeschreibungen und doppelte Attributnamen. Ein möglicher Export bestätigt weder die fachliche Richtigkeit noch die Übereinstimmung mit der CSV-Datei.
 . Wählen Sie «Datenblatt exportieren» und speichern Sie die XTF-Datei an einem geeigneten Ablageort Ihrer Dienststelle.
 . Verwenden Sie die exportierte Datei für die <<anleitung-jenkins,Datenanlieferung>> und als Ausgangspunkt für spätere Änderungen.

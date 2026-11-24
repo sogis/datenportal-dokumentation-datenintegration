@@ -39,7 +39,7 @@ Spaltenüberschriften (Variablen):
 - sind nicht leer und eindeutig, auch bei einem Vergleich ohne Berücksichtigung der Gross- und Kleinschreibung,
 - sind keine alleinstehenden Jahreszahlen oder andere Datumsangaben,
 - beginnen nicht mit einer Zahl,
-- haben keine Leerzeichen, sondern sind entweder zusammengeschrieben (Gross- und Kleinbuchstaben sind möglich) oder besser mittels «Underscore» verbunden (z.B. `messstelle_name`),
+- haben keine Leerzeichen, sondern werden zusammengeschrieben (Gross- und Kleinbuchstaben sind möglich) oder vorzugsweise mit Unterstrichen (`_`) verbunden, wie in `messstelle_name`,
 - haben keine Umlaute, sondern sind ausgeschrieben als `ae`, `oe`, `ue` und
 - haben keine Sonderzeichen, sondern sind ausgeschrieben (z.B. `prozent` statt `%`).
 
@@ -54,15 +54,9 @@ Namen und Reihenfolge stimmen mit der <<attributbeschreibungen,Attributliste im 
 
 ==== Pro Wert eine Zelle
 
-Alle Zellen einer Spalte haben dasselbe Daten-Format. Die häufigsten sind:
+Alle Zellen einer Spalte haben dasselbe Datenformat. Häufig sind Text, Zahlen, Datums- und Uhrzeitwerte sowie URLs.
 
-- `Text`
-- `Zahl`
-- `Datum`
-- `Uhrzeit`
-- `URL`
-
-Einheitsangaben dürfen nicht zusammen mit Werten in derselben Zelle stehen. 
+Einheitsangaben dürfen nicht zusammen mit Werten in derselben Zelle stehen.
 
 [[csv-text]]
 ===== Text
@@ -82,22 +76,22 @@ bezeichnung;jahr
 
 ===== Zahl
 
-Werte mit Daten-Format `Zahl` werden einheitlich ohne Hochkommas, Leerzeichen oder andere 1000er-Trennzeichen formatiert.
+Zahlenwerte werden einheitlich ohne Hochkommas, Leerzeichen oder andere 1000er-Trennzeichen formatiert.
 
 - Als Dezimaltrennzeichen wird der Punkt verwendet.
 - Ob man rundet oder nicht, kommt auf den Datensatz und die Nutzung an. Falls gerundet wird, muss dies aber in den Metadaten deklariert werden.
 
 ===== Datum
 
-Werte mit Daten-Format `Datum` geben wir nicht als Zeichenketten (z.B. `24. Dez. 2021`) an, sondern verwenden den https://www.w3.org/TR/NOTE-datetime[internationalen Standard ISO 8601]: `YYYY-MM-DD` (z.B. `2021-12-24`).
+Datumswerte folgen dem https://www.w3.org/TR/NOTE-datetime[internationalen Standard ISO 8601]. Verwenden Sie das Format `YYYY-MM-DD`, beispielsweise `2021-12-24`.
 
 ===== Uhrzeit
 
-Werte mit Daten-Format `Uhrzeit` geben wir dem https://www.w3.org/TR/NOTE-datetime[internationalen Standard ISO 8601] gemäss an als hh:mm:ss. Wir verwenden die Zeitzone `UTC+1`: `YYYY-MM-DDThh:mm:ssTZD` (z.B. `2021-12-24T19:20:30+01:00`). 
+Uhrzeiten werden gemäss dem https://www.w3.org/TR/NOTE-datetime[internationalen Standard ISO 8601] als `hh:mm:ss` angegeben. Für Zeitstempel verwenden wir die Zeitzone `UTC+1` und das Format `YYYY-MM-DDThh:mm:ssTZD`, beispielsweise `2021-12-24T19:20:30+01:00`.
 
 ===== URL
 
-Werte mit Daten-Format `URL` werden standardmässig aufrufbar im Format `https://example.com` geschrieben.
+URLs werden als aufrufbare Adressen angegeben, beispielsweise `https://example.com`.
 
 ==== Empfehlungen
 
@@ -118,9 +112,7 @@ Deutsch;235;2026
 
 ===== Redundanzen
 
-Auf Redundanzen ist zu verzichten. Es sollen keine `Total`-Spalten oder ähnliches verwendet werden. 
-
-Spalte `total` ist überflüssig:
+Verzichten Sie auf redundante Summenspalten. Im folgenden Beispiel ist die Spalte `total` überflüssig.
 
 ```csv 
 jahr;geprueft;teilweise_geprueft;total

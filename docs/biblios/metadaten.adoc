@@ -12,19 +12,18 @@ Bereiten Sie die folgenden acht Angaben vor. Die Tabelle ordnet sie den sichtbar
 [cols="1,2,3",options="header"]
 |===
 |Angabe |Feld im Editor |Was Sie vorbereiten
-|Thema | Thema |Thematische Zuordnung des Datensatzes. Wählen Sie mindestens ein passendes Thema aus.
 |Titel |Titel |Aussagekräftiger Name mit geografischem Bezug, mindestens auf Deutsch.
 |Beschreibung |Beschreibung |Inhalt, Zweck, Erhebungsgegenstand und fachliche Einschränkungen. Der Editor erlaubt bis zu 1024 Zeichen.
-|Thema | Thema |Thematische Zuordnung des Datensatzes. Wählen Sie mindestens ein passendes Thema aus.
+|Thema |Themen |Thematische Zuordnung des Datensatzes. Wählen Sie mindestens ein passendes Thema aus.
 |Herausgeber beziehungsweise fachlich verantwortliche Organisation |Datenherr |Das verantwortliche Amt aus der Liste wählen. Fehlt es, das AGI kontaktieren.
-|Kontaktstelle |Zuständigkeiten / Kontakt |Name, Organisationseinheit und laufend überwachte Adresse unter «E-Mail / URI»; bei Bedarf Telefon und URL ergänzen.
+|Kontaktstelle |Zuständigkeiten / Kontakt |«Name», «Organisationseinheit» und eine laufend überwachte Adresse unter «E-Mail / URI» angeben. Bei Bedarf «Telefon» und «URL» ergänzen.
 |Lizenz beziehungsweise Nutzungsbedingungen |Kein Eingabefeld |Mit dem AFIN und dem AGI klären; siehe <<nutzungsbedingungen,Nutzungsbedingungen>>.
 |Stichwörter |Keywords |Aussagekräftige Begriffe mit Kommas trennen, beispielsweise `Wasserqualität, Grundwasser, Nitrat`.
 |Aktualisierungsintervall |Nachführung |Die passende Auswahl verwenden, beispielsweise «Jährlich», «Quartalsweise» oder «Monatlich».
 |Zeitliche Abdeckung |Zeitbezug der Daten |«Zeitraum» mit «Von» und «Bis» oder «Stichtag» mit «Datum» wählen. Datumswerte werden als `YYYY-MM-DD` geführt. «Kein Zeitbezug» nur wählen, wenn fachlich zutreffend.
 |===
 
-Übernehmen Sie den mit dem AGI vereinbarten `Identifier` unverändert und ordnen Sie dem Datensatz mindestens ein Thema zu. Stimmen Sie die `Zugänglichkeit` mit dem AFIN ab. Die Auswahl des `Publikationsstatus` ist bis auf Weiteres nicht relevant und wird bei der Verarbeitung ignoriert. Die formelle Freigabe erfolgt unabhängig davon. `Modified` wird bei der Verarbeitung der Datenlieferung automatisch auf das Datum des Annahmetags gesetzt. Dieses technische Änderungsdatum ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden.
+Übernehmen Sie im Feld «Identifier» den mit dem AGI vereinbarten Wert unverändert und ordnen Sie dem Datensatz mindestens ein Thema zu. Stimmen Sie die Auswahl unter «Zugänglichkeit» mit dem AFIN ab. Die Auswahl unter «Publikationsstatus» wird bei der Verarbeitung bis auf Weiteres ignoriert. Die formelle Freigabe erfolgt unabhängig davon. Bei der Verarbeitung erhält das Feld «Modified» automatisch das Datum des Annahmetags. Dieses technische Änderungsdatum ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden.
 
 [[qualitaet-und-interpretation]]
 === Qualität und Grenzen der Interpretation erklären
@@ -59,13 +58,13 @@ Das folgende fiktive Beispiel zeigt die fachlichen Angaben für ein Datenblatt. 
 |Feld |Beispieleingabe
 |Titel |Wasserqualität Grundwasser Kanton Solothurn
 |Beschreibung |Gemessene Nitratkonzentrationen im Grundwasser des Kantons Solothurn. Die Daten umfassen Proben aus der regelmässigen Überwachung und Proben aus besonderem Anlass.
-|Datenherr |Das Amt für Umwelt aus dem Katalog auswählen
+|Datenherr |«Amt für Umwelt» aus dem Katalog auswählen
 |Organisationseinheit |Abteilung Wasser
 |E-Mail / URI |`mailto:grundwasser@example.com` (fiktive Kontaktadresse)
-|Themen |Raum und Umwelt
+|Themen |«Raum und Umwelt»
 |Keywords |`Wasserqualität, Grundwasser, Nitrat`
-|Nachführung |Jährlich
-|Zeitbezug der Daten |Zeitraum: Von `2003-01-01` bis `2024-12-31`
+|Nachführung |«Jährlich»
+|Zeitbezug der Daten |«Zeitraum» wählen. Unter «Von» `2003-01-01` und unter «Bis» `2024-12-31` eintragen.
 |===
 
 [[attributbeschreibungen]]
@@ -73,31 +72,46 @@ Das folgende fiktive Beispiel zeigt die fachlichen Angaben für ein Datenblatt. 
 
 Beschreiben Sie jedes Attribut so, dass auch Personen ohne Kenntnis der Erhebung den Wert richtig verstehen. Das hilft bei der Weiterverwendung und insbesondere bei der Interpretation durch KI-Anwendungen. Der Editor analysiert die CSV-Datei nicht automatisch; die Attributliste ist von Ihnen zu erfassen und mit den Daten abzugleichen.
 
-Verwenden Sie unter «Attribute» beziehungsweise «Serien-Attribute» die Felder `Name`, `Typ`, `Beschreibung`, `Einheit`, `CodeList` und `Pflicht`. Namen und Reihenfolge müssen mit den CSV-Spalten übereinstimmen. `Pflicht` bedeutet, dass in dieser Spalte keine Werte fehlen dürfen. `CodeList` nimmt eine URI zur Codeliste auf; einzelne Codes und ihre Bedeutung können Sie in der Beschreibung erläutern.
+Verwenden Sie unter «Datensatzattribute» beziehungsweise «Serien-Attribute» die Felder «Name», «Typ», «Beschreibung», «Einheit», «CodeList» und «Pflicht». Namen und Reihenfolge müssen mit den CSV-Spalten übereinstimmen. Aktivieren Sie «Pflicht», wenn in der betreffenden CSV-Spalte keine Werte fehlen dürfen. Im Feld «CodeList» können Sie die URI einer Codeliste angeben. Einzelne Codes und ihre Bedeutung können Sie in der Beschreibung erläutern.
 
-Im Feld `Beschreibung` können Sie <<metadaten-markdown,Text mit Markdown strukturieren>>.
+Im Feld «Beschreibung» können Sie <<metadaten-markdown,Text mit Markdown strukturieren>>.
 
 Im folgenden fiktiven Grundwasserbeispiel liegt für jede Probe eine gemessene Nitratkonzentration vor.
 
-[cols="1,1,3,1,1",options="header"]
+ifdef::backend-html5[]
+++++
+<style>
+.doc-content .grundwasser-attributtabelle {
+    overflow-x: auto;
+}
+</style>
+<div class="grundwasser-attributtabelle" role="region" aria-label="Attribute des Grundwasserbeispiels" tabindex="0">
+++++
+endif::[]
+[cols="2,1,4,1,1",options="header"]
 |===
 |Name |Typ |Beschreibung |Einheit |Pflicht
-|messstelle |TEXT |Kennung der Messstelle; führende Nullen gehören zur Kennung. |Keine |Ja
-|messdatum |DATE |Datum der Probenahme. |Keine |Ja
-|wert |DECIMAL |Gemessene Nitratkonzentration. |mg/l |Ja
-|ist_routineprobe |BOOLEAN |`true` steht für eine Probe aus der regelmässigen Überwachung, `false` für eine Probe aus besonderem Anlass. Das Feld bleibt leer, wenn die Probenart nicht dokumentiert ist. |Keine |Nein
+|`messstelle` |`TEXT` |Kennung der Messstelle. Führende Nullen gehören zur Kennung. |Keine |Ja
+|`messdatum` |`DATE` |Datum der Probenahme. |Keine |Ja
+|`wert` |`DECIMAL` |Gemessene Nitratkonzentration. |`mg/l` |Ja
+|`ist_routineprobe` |`BOOLEAN` |`true` steht für eine Probe aus der regelmässigen Überwachung, `false` für eine Probe aus besonderem Anlass. Das Feld bleibt leer, wenn die Probenart nicht dokumentiert ist. |Keine |Nein
 |===
+ifdef::backend-html5[]
+++++
+</div>
+++++
+endif::[]
 
-`Pflicht=Ja` bedeutet, dass in dieser Spalte keine Werte fehlen dürfen. In diesem Beispiel bleibt «CodeList» leer. Beschreiben Sie für Ihren Datensatz insbesondere Wertebereiche, Codes, Rundungen und fehlende Werte.
+In diesem Beispiel bleibt «CodeList» leer. Beschreiben Sie für Ihren Datensatz insbesondere Wertebereiche, Codes, Rundungen und fehlende Werte.
 
 Für die Anlieferung werden die Typen `TEXT`, `INTEGER`, `NUMERIC`, `DECIMAL`, `BOOLEAN`, `DATE` und `DATETIME` verarbeitet. Für eine Spalte mit URLs verwenden Sie derzeit `TEXT`: Die im Editor ebenfalls angebotene Auswahl `URI` wird von der CSV-Verarbeitung noch nicht unterstützt.
 
 === Ergänzende Angaben und Serien
 
-Ergänzen Sie bei Bedarf `Erhebungsmethode`, `Verfügbare Daten ab`, `Weitere Verwendungen` und `Hilfsdaten`. Fachliche Bemerkungen gehören in die passende Beschreibung. Diese Angaben helfen auch bei der weiteren Katalogisierung und Interoperabilität.
+Ergänzen Sie bei Bedarf die Felder «Erhebungsmethode», «Verfügbare Daten ab», «Weitere Verwendungen» und «Hilfsdaten». Fachliche Bemerkungen gehören in die passende Beschreibung. Diese Angaben helfen auch bei der weiteren Katalogisierung und Interoperabilität.
 
-In `Erhebungsmethode`, `Weitere Verwendungen` und `Hilfsdaten` können Sie <<metadaten-markdown,Markdown verwenden>>. `Verfügbare Daten ab` bleibt ein normaler Textwert.
+In «Erhebungsmethode», «Weitere Verwendungen» und «Hilfsdaten» können Sie <<metadaten-markdown,Markdown verwenden>>. «Verfügbare Daten ab» bleibt ein normaler Textwert.
 
-Das Feld `Datenmodell` füllen Sie nach Abstimmung mit dem AGI aus. Ist ein Modell hinterlegt, verwendet die Verarbeitung es für eine zusätzliche CSV-Prüfung.
+Das Feld «Datenmodell» füllen Sie nach Abstimmung mit dem AGI aus. Ist ein Modell hinterlegt, verwendet die Verarbeitung es für eine zusätzliche CSV-Prüfung.
 
 Bei einer Serie erfassen Sie gemeinsame Angaben und Attribute im Serienkopf und pflegen die einzelnen Ausgaben. Prüfen Sie abweichende Angaben jeder Ausgabe und markieren Sie genau eine als aktuelle Ausgabe. Stimmen Sie neue Ausgaben und deren Freigabe mit dem AFIN ab. Für eine Metadatenkorrektur exportieren Sie das ganze Datenblatt einschliesslich der Ausgaben.
