@@ -36,9 +36,10 @@ image::editor-e1-startseite.png["Startseite mit je einer Aktion zum Anlegen und 
 . Füllen Sie «Titel» und «Beschreibung» anhand des <<metadaten-beispiel,Grundwasserbeispiels>> aus. Verwenden Sie verständliche Begriffe und beschreiben Sie Gegenstand und Zweck.
 . Wählen Sie unter «Datenherr» die zuständige Stelle. Erfassen Sie unter «Zuständigkeiten / Kontakt» im Feld «E-Mail / URI» eine laufend überwachte E-Mail-Adresse. Im Beispiel verwenden wir `mailto:grundwasser@example.com` ausschliesslich als fiktive Adresse.
 . Wählen Sie unter «Themen» die passenden Einträge. Trennen Sie die Begriffe im Feld «Keywords» mit Kommas, im Beispiel `Wasserqualität, Grundwasser, Nitrat`.
-. Stimmen Sie die Auswahl unter «Zugänglichkeit» und «Publikationsstatus» mit dem AFIN ab. Im Beispiel steht der Status auf «Veröffentlicht». Die Auswahl im Editor ersetzt keine Freigabe.
 
-.Grundangaben des Beispieldatensatzes
+Die Felder «Zugänglichkeit» und «Publikationsstatus» brauchen Sie nicht auszufüllen. Der Editor verwendet derzeit «Öffentlich, frei zugänglich» für die Zugänglichkeit und «Veröffentlicht» für den Publikationsstatus.
+
+.Grundangaben des Beispieldatensatzes. Die Aufnahme zeigt «Zugänglichkeit» und «Publikationsstatus» noch als Auswahlfelder.
 [.editor-screenshot]
 image::editor-e2-grundangaben.png["Grundangaben für Wasserqualität Grundwasser Kanton Solothurn mit Titel, Beschreibung, Publikationsstatus Veröffentlicht und Amt für Umwelt als Datenherr",width=724,link="images/editor-e2-grundangaben.png"]
 

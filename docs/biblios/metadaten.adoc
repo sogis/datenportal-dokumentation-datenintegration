@@ -17,13 +17,16 @@ Bereiten Sie die folgenden acht Angaben vor. Die Tabelle ordnet sie den sichtbar
 |Thema |Themen |Thematische Zuordnung des Datensatzes. Wählen Sie mindestens ein passendes Thema aus.
 |Herausgeber beziehungsweise fachlich verantwortliche Organisation |Datenherr |Das verantwortliche Amt aus der Liste wählen. Fehlt es, das AGI kontaktieren.
 |Kontaktstelle |Zuständigkeiten / Kontakt |«Name», «Organisationseinheit» und eine laufend überwachte Adresse unter «E-Mail / URI» angeben. Bei Bedarf «Telefon» und «URL» ergänzen.
-|Lizenz beziehungsweise Nutzungsbedingungen |Kein Eingabefeld |Mit dem AFIN und dem AGI klären; siehe <<nutzungsbedingungen,Nutzungsbedingungen>>.
 |Stichwörter |Keywords |Aussagekräftige Begriffe mit Kommas trennen, beispielsweise `Wasserqualität, Grundwasser, Nitrat`.
 |Aktualisierungsintervall |Nachführung |Die passende Auswahl verwenden, beispielsweise «Jährlich», «Quartalsweise» oder «Monatlich».
 |Zeitliche Abdeckung |Zeitbezug der Daten |«Zeitraum» mit «Von» und «Bis» oder «Stichtag» mit «Datum» wählen. Datumswerte werden als `YYYY-MM-DD` geführt. «Kein Zeitbezug» nur wählen, wenn fachlich zutreffend.
 |===
 
-Übernehmen Sie im Feld «Identifier» den mit dem AGI vereinbarten Wert unverändert und ordnen Sie dem Datensatz mindestens ein Thema zu. Stimmen Sie die Auswahl unter «Zugänglichkeit» mit dem AFIN ab. Die Auswahl unter «Publikationsstatus» wird bei der Verarbeitung bis auf Weiteres ignoriert. Die formelle Freigabe erfolgt unabhängig davon. Bei der Verarbeitung erhält das Feld «Modified» automatisch das Datum des Annahmetags. Dieses technische Änderungsdatum ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden.
+Übernehmen Sie im Feld «Identifier» den mit dem AGI vereinbarten Wert unverändert und ordnen Sie dem Datensatz mindestens ein Thema zu.
+
+Die Felder «Zugänglichkeit» und «Publikationsstatus» brauchen Sie nicht auszufüllen. Der Editor verwendet derzeit «Öffentlich, frei zugänglich» für die Zugänglichkeit und «Veröffentlicht» für den Publikationsstatus.
+
+Bei der Verarbeitung erhält das Feld «Modified» automatisch das Datum des Annahmetags. Dieses technische Änderungsdatum ist vom fachlichen Zeitraum oder Stichtag der Daten zu unterscheiden.
 
 [[qualitaet-und-interpretation]]
 === Qualität und Grenzen der Interpretation erklären
@@ -44,7 +47,7 @@ Ein Hinweis zur zeitlichen Vergleichbarkeit könnte beispielsweise lauten: «Ab 
 
 Die Dienststelle verantwortet Inhalt und Qualität der gelieferten Daten im Rahmen der dokumentierten Methode. Nutzende müssen bei Auswertungen und Verknüpfungen die beschriebenen Definitionen, Zeitbezüge und Einschränkungen berücksichtigen. Die Veröffentlichung eines Datenangebots bedeutet keine fachliche Prüfung oder Bestätigung daraus abgeleiteter Ergebnisse durch die Dienststelle.
 
-Der Datenblatt-Editor bietet derzeit kein Lizenzfeld. Momentan wird für alle Distributionen `terms_open` gesetzt. Eine Lizenzangabe allein im Beschreibungstext ändert diese Verarbeitung nicht.
+Für Distributionen im RDF-Katalog wird derzeit `terms_open` verwendet.
 
 Allgemeine Nutzungshinweise werden zentral gepflegt. Sie müssen keinen Standardtext zu Haftung oder Verantwortung in jedes Datenblatt kopieren. Erfassen Sie stattdessen die konkreten fachlichen Einschränkungen Ihres Angebots. Eine automatische Ergänzung allgemeiner Hinweise durch das Portal ist derzeit nicht Bestandteil des beschriebenen Lieferprozesses.
 
