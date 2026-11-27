@@ -47,9 +47,17 @@ Ein Hinweis zur zeitlichen Vergleichbarkeit könnte beispielsweise lauten: «Ab 
 
 Die Dienststelle verantwortet Inhalt und Qualität der gelieferten Daten im Rahmen der dokumentierten Methode. Nutzende müssen bei Auswertungen und Verknüpfungen die beschriebenen Definitionen, Zeitbezüge und Einschränkungen berücksichtigen. Die Veröffentlichung eines Datenangebots bedeutet keine fachliche Prüfung oder Bestätigung daraus abgeleiteter Ergebnisse durch die Dienststelle.
 
-Für Distributionen im RDF-Katalog wird derzeit `terms_open` verwendet.
+Lizenz: Es wird derzeit https://opendata.swiss/de/terms-of-use#terms_open[`terms_open`] verwendet.
 
-Allgemeine Nutzungshinweise werden zentral gepflegt. Sie müssen keinen Standardtext zu Haftung oder Verantwortung in jedes Datenblatt kopieren. Erfassen Sie stattdessen die konkreten fachlichen Einschränkungen Ihres Angebots. Eine automatische Ergänzung allgemeiner Hinweise durch das Portal ist derzeit nicht Bestandteil des beschriebenen Lieferprozesses.
+Die Nutzungshinweise werden zentral gepflegt. Sie müssen keinen Standardtext zu Haftung oder Verantwortung in jedes Datenblatt kopieren. Erfassen Sie stattdessen die konkreten fachlichen Einschränkungen Ihres Angebots. Eine automatische Ergänzung allgemeiner Hinweise durch das Portal ist derzeit nicht Bestandteil des beschriebenen Lieferprozesses.
+
+Nutzungshinweise:
+
+_«Die Daten wurden für den in den Metadaten beschriebenen Zweck sorgfältig erhoben, aufbereitet und fachlich geprüft. Sie sind unter Berücksichtigung der dokumentierten Methoden, Definitionen und Einschränkungen zu interpretieren. Sie stellen keine rechtsverbindliche Auskunft dar. Die Nutzung der veröffentlichten Daten erfolgt auf eigene Verantwortung. Der Kanton Solothurn haftet, soweit gesetzlich zulässig, nicht für Schäden oder Nachteile, die aus der Nutzung, der Nichtverfügbarkeit, der Unvollständigkeit, der Unrichtigkeit oder der mangelnden Aktualität der Daten entstehen._
+
+_Die zuständige Dienststelle stellt die Qualität der Daten im Rahmen der dokumentierten Methoden sicher. Festgestellte Fehler werden so rasch wie möglich berichtigt. Berichtigungen werden in den Metadaten mit Datum ausgewiesen. Hinweise zu möglichen Fehlern oder Unstimmigkeiten nimmt die in den Metadaten bezeichnete Kontaktstelle entgegen._
+
+_Für die Verknüpfung mit Daten anderer Herkunft, für daraus abgeleitete Ergebnisse und Schlussfolgerungen sowie für die Weiterverwendung solcher Ergebnisse übernimmt der Kanton Solothurn weder Gewähr noch Haftung, soweit gesetzlich zulässig. Die Verantwortung für eine sachgerechte Interpretation liegt bei den Nutzenden.»_
 
 [[metadaten-beispiel]]
 === Beispiel für ein beschriebenes Datenangebot
